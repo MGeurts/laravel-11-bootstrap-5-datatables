@@ -70,13 +70,13 @@ This demo Larevel project is open-sourced software licensed under the [MIT licen
 ## Screenshots
 
 <p align="center">
-    <img src="https://www.kreaweb.be/wp-content/uploads/2021/10/laravel-bootstrap-datatables-02.png"/>
+    <img src="https://www.kreaweb.be/wp-content/uploads/2023/03/laravel-10-bootstrap-datatables-02.jpg"/>
 </p>
 
 <p align="center">
-    <img src="https://www.kreaweb.be/wp-content/uploads/2021/10/laravel-bootstrap-datatables-03.png"/>
+    <img src="https://www.kreaweb.be/wp-content/uploads/2023/03/laravel-10-bootstrap-datatables-03.jpg"/>
 </p>
 
 <p align="center">
-    <img src="https://www.kreaweb.be/wp-content/uploads/2021/10/laravel-bootstrap-datatables-04.png"/>
+    <img src="https://www.kreaweb.be/wp-content/uploads/2023/03/laravel-10-bootstrap-datatables-03.jpg"/>
 </p>
