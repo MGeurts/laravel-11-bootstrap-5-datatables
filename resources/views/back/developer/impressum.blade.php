@@ -66,10 +66,10 @@
             <div id="collapseWebserver" class="accordion-collapse collapse" aria-labelledby="headingWebserver" data-bs-parent="#accordionImpressum">
                 <div class="accordion-body">
                     <div class="row">
-                        <div class="col-6">
+                        <div class="col-md-7">
                             <table width="100%">
                                 <tr>
-                                    <td colspan="5" class="text-center">
+                                    <td colspan="4" class="text-center">
                                         <a target="_blank" href="https://github.com/leokhoa/laragon/releases">
                                             <img src="{{ asset('img/general/laragon.png') }}" alt="LARAGON" width="200px" />
                                         </a>
@@ -77,10 +77,10 @@
                                 </tr>
 
                                 <tr>
-                                    <td colspan="5" class="text-center">6.0.0</td>
+                                    <td colspan="4" class="text-center">6.0.0</td>
                                 </tr>
                                 <tr>
-                                    <td colspan="5"><br /><br /></td>
+                                    <td colspan="4"><br /><br /></td>
                                 </tr>
 
                                 <tr>
@@ -107,7 +107,7 @@
                                 </tr>
 
                                 <tr>
-                                    <td colspan="5"></td>
+                                    <td colspan="4"></td>
                                 </tr>
 
                                 <tr>
@@ -122,11 +122,31 @@
                                     <td class="text-center">8.0.32</td>
                                     <td class="text-center">5.2.1</td>
                                 </tr>
-                            </table>
 
+                                <tr>
+                                    <td colspan="4"><br /><br /></td>
+                                </tr>
+
+                                <tr>
+                                    <td colspan="4" class="text-center">
+                                        <a target="_blank" href="https://jquery.com/">
+                                            <img src="{{ asset('img/general/jquery-001.png') }}" alt="jQuery" />
+                                        </a>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td colspan="4" class="text-center jQuery_version"></td>
+                                </tr>
+
+                                <tr>
+                                    <td colspan="4"><br /><br /></td>
+                                </tr>
+                            </table>
                         </div>
-                        <div class="col-6 text-center">
-                            <img src="{{ asset('img/general/datatables-serverside-processing.png') }}" alt="Datatables-SSP" />
+
+                        <div class="col-md-5 text-center">
+                            <img src="{{ asset('img/general/datatables-serverside-processing.png') }}" class="img-fluid" alt="Datatables-SSP" />
                         </div>
                     </div>
                 </div>

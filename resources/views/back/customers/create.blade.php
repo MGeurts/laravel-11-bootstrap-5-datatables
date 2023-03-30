@@ -9,7 +9,7 @@
         @csrf
 
         <div class="row">
-            <div class="col-7">
+            <div class="col-md-7">
                 <div class="card mb-3">
                     <div class="card-header">
                         <div class="row">
@@ -279,7 +279,7 @@
                 </div>
             </div>
 
-            <div class="col-5">
+            <div class="col-md-5">
                 <div class="card mb-3">
                     <div class="card-header bg-info text-white">
                         <div class="row">

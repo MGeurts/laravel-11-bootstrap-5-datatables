@@ -11,7 +11,7 @@
         @method('GET')
 
         <div class="row">
-            <div class="col-6 offset-3">
+            <div class="col-md-6 offset-md-3">
                 <div class="card mb-2">
                     <div class="card-header">
                         <div class="row">
@@ -27,7 +27,7 @@
                         <div class="row mb-2">
                             <label for="value" class="col-3 col-form-label">Value :</label>
 
-                            <div class="col-8">
+                            <div class="col-9">
                                 <input id="value" name="value" type="text" class="form-control" value="{{ $value }}" autofocus>
                             </div>
                         </div>
@@ -42,8 +42,7 @@
 
                     <div class="card-footer">
                         <div class="row">
-                            <div class="col">
-                            </div>
+                            <div class="col"></div>
 
                             <div class="col text-end">
                                 <button type="submit" class="btn btn-primary text-white btn-sm" tabindex="-1">Generate</button>
