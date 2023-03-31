@@ -9,7 +9,7 @@
         @csrf
 
         <div class="row">
-            <div class="col-md-7">
+            <div class="col-lg-7">
                 <div class="card mb-3">
                     <div class="card-header">
                         <div class="row">
@@ -194,7 +194,7 @@
                                     <i class="bi bi-trash"></i>
                                 </button>
 
-                                <button type="button" class="btn btn-outline-secondary btn-sm" id="btnCopy" name="btnCopy" title="Copy delivery address" tabindex="-1">
+                                <button type="button" class="btn btn-outline-secondary btn-sm" id="btnCopy" name="btnCopy" title="Copy customer address" tabindex="-1">
                                     <i class="bi bi-clipboard-plus"></i>
                                 </button>
                             </div>
@@ -279,7 +279,7 @@
                 </div>
             </div>
 
-            <div class="col-md-5">
+            <div class="col-lg-5">
                 <div class="card mb-3">
                     <div class="card-header bg-info text-white">
                         <div class="row">

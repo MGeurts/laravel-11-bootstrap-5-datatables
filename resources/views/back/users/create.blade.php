@@ -6,11 +6,11 @@
 
 @section('content')
     <div class="row">
-        <div class="col-md-6 mb-3">
+        <div class="col-lg-6">
             <form method="POST" action="{{ route('back.users.store') }}">
                 @csrf
 
-                <div class="card">
+                <div class="card mb-3">
                     <div class="card-header">
                         <div class="row">
                             <div class="col">User - Add</div>
@@ -101,8 +101,8 @@
             </form>
         </div>
 
-        <div class="col-md-6 mb-3">
-            <div class="card">
+        <div class="col-lg-6">
+            <div class="card mb-3">
                 <div class="card-header bg-info text-white">
                     <div class="row">
                         <div class="col">Help</div>

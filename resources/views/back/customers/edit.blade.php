@@ -10,11 +10,11 @@
         @method('PUT')
 
         <div class="row">
-            <div class="col-md-7">
+            <div class="col-lg-7">
                 <div class="card mb-3">
                     <div class="card-header">
                         <div class="row">
-                            <div class="col">Customert - Edit</div>
+                            <div class="col">Customer - Edit</div>
 
                             <div class="col text-center">
                                 <strong>{{ str_pad($customer->id, 5, '0', STR_PAD_LEFT) }}</strong>
@@ -204,7 +204,7 @@
                                     <i class="bi bi-trash"></i>
                                 </button>
 
-                                <button type="button" class="btn btn-outline-secondary btn-sm" id="btnCopy" name="btnCopy" title="Copy delivery address" tabindex="-1">
+                                <button type="button" class="btn btn-outline-secondary btn-sm" id="btnCopy" name="btnCopy" title="Copy customer address" tabindex="-1">
                                     <i class="bi bi-clipboard-plus"></i>
                                 </button>
                             </div>
@@ -250,8 +250,7 @@
                                     <option value="">Choose ...</option>
                                     @foreach ($countries as $country)
                                         @if ($country->iso2 == $customer->delivery_address_country)
-                                            <option value="{{ $country->iso2 }}" selected>{{ $country->name }}
-                                            </option>
+                                            <option value="{{ $country->iso2 }}" selected>{{ $country->name }}</option>
                                         @else
                                             <option value="{{ $country->iso2 }}">{{ $country->name }}</option>
                                         @endif
@@ -294,7 +293,7 @@
                 </div>
             </div>
 
-            <div class="col-md-5">
+            <div class="col-lg-5">
                 <div class="card mb-3">
                     <div class="card-header">
                         <div class="row">
@@ -400,8 +399,7 @@
         $('#btnCopy').click(function() {
             $('#delivery_address_street').val($('#address_street').val());
             $('#delivery_address_number').val($('#address_number').val());
-            $('#delivery_address_country').val($('#address_country').find("option:selected").val())
-                .trigger('change');
+            $('#delivery_address_country').val($('#address_country').find("option:selected").val()).trigger('change');
             $('#delivery_address_postal_code').val($('#address_postal_code').val());
             $('#delivery_address_place').val($('#address_place').val());
         });
