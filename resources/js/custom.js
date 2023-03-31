@@ -75,7 +75,7 @@ window.showToast = function showToast(parameters) {
             toastr.options.timeOut = 3000;
             break;
         case "info":
-            toastr.options.timeOut = 6000;
+            toastr.options.timeOut = 5000;
             break;
         case "warning":
             toastr.options.timeOut = 10000;
@@ -84,7 +84,7 @@ window.showToast = function showToast(parameters) {
             toastr.options.timeOut = 15000;
             break;
         default:
-            toastr.options.timeOut = 5000;
+            toastr.options.timeOut = 4000;
     }
 
     toastr[parameters.type](parameters.message, parameters.title + "<hr />");
