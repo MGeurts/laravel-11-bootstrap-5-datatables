@@ -50,14 +50,18 @@ In this demo project, 3 models are already implemented :
 </ul>
 You can use their controller and the corresponding views as a base to create new datatables utilising your own project models.
 
+## Documentation
+
+<a href="https://www.kreaweb.be/laravel-10-bootstrap-5-datatables/" target="_blank">https://www.kreaweb.be/laravel-10-bootstrap-5-datatables/</a>
+
+## Online demo
+
+<a href="https://demo.kreaweb.be/" target="_blank">https://demo.kreaweb.be/</a>
+
 ## Credentials
 
 <p>Name : <b>admin@admin.com</b></p>
 <p>Password : <b>password</b></p>
-
-## Documentation and online demo
-
-<a href="https://www.kreaweb.be/laravel-10-bootstrap-5-datatables/" target="_blank">https://www.kreaweb.be/laravel-10-bootstrap-5-datatables/</a>
 
 ## PHP
 

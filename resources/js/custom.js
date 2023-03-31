@@ -65,7 +65,7 @@ window.showToast = function showToast(parameters) {
         target: "body",
         timeOut: 5000,
         titleClass: "toast-title",
-        toastClass: "toast"
+        toastClass: "toast",
     };
 
     parameters.type = typeof parameters.type === "undefined" ? "info" : parameters.type;
