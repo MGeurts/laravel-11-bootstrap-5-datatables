@@ -15,7 +15,6 @@
         "datatables.net": "^1.13.4",
         "datatables.net-bs5": "^1.13.4",
         "datatables.net-buttons-bs5": "^2.3.6",
-        "datatables.net-plugins": "^1.13.4",
         "datatables.net-responsive-bs5": "^2.4.1",
         "datatables.net-select-bs5": "^1.6.2",
         "dayjs": "^1.11.7",
