@@ -11,47 +11,63 @@
 
             <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionImpressum">
                 <div class="accordion-body">
-                    <p>Laravel :</p>
+                    <div class="row">
+                        <div class="col-4">
+                            <p>Laravel :</p>
 
-                    <ul>
-                        <li><a target="_blank" href="https://github.com/yajra/laravel-datatables/">yajra/laravel-datatables</a> - 10.3.1</li>
-                        <li><a target="_blank" href="https://github.com/ARCANEDEV/LogViewer/">ARCANEDEV/LogViewer</a> - 10.0.0</li>
-                    </ul>
-                    <br />
+                            <ul>
+                                <li><a target="_blank" href="https://github.com/yajra/laravel-datatables/">yajra/laravel-datatables</a> - 10.4.0</li>
+                            </ul>
 
-                    <p>Bootstrap :</p>
+                            <ul>
+                                <li><a target="_blank" href="https://github.com/ARCANEDEV/LogViewer/">ARCANEDEV/LogViewer</a> - 10.0.0</li>
+                            </ul>
+                        </div>
 
-                    <ul>
-                        <li><a target="_blank" href="https://getbootstrap.com/">Bootstrap</a> - 5.2.3</li>
-                        <li><a target="_blank" href="http://bootboxjs.com/documentation.html">Bootbox</a> - 6.0.0</li>
-                    </ul>
-                    <br />
+                        <div class="col-4">
+                            <p>jQuery :</p>
 
-                    <p>jQuery :</p>
+                            <ul>
+                                <li><a target="_blank" href="http://jquery.com/">jQuery</a> - <span class="jQuery_version"></span></li>
+                            </ul>
 
-                    <ul>
-                        <li><a target="_blank" href="http://jquery.com/">jQuery</a> - <span class="jQuery_version"></span></li>
-                    </ul>
+                            <ul>
+                                <li><a target="_blank" href="https://getbootstrap.com/">Bootstrap</a> - 5.2.3</li>
+                                <li><a target="_blank" href="https://icons.getbootstrap.com//">Bootstrap Icons</a> - 1.10.4</li>
+                                <li><a target="_blank" href="https://github.com/coliff/bootstrap-print-css/">Bootstrap Print CSS</a> - 1.0.1</li>
+                            </ul>
 
-                    <ul>
-                        <li><a target="_blank" href="https://select2.org/">Select2</a> - 4.1.0-rc0</li>
-                        <li><a target="_blank" href="https://apalfrey.github.io/select2-bootstrap-5-theme/">Select2 - Bootstrap 5 - Theme</a> - 1.3.0</li>
-                    </ul>
+                            <ul>
+                                <li><a target="_blank" href="https://select2.org/">Select2</a> - 4.1.0-rc0</li>
+                                <li><a target="_blank" href="https://github.com/apalfrey/select2-bootstrap-5-theme/">Select2 - Bootstrap 5 Theme</a> - 1.3.0</li>
+                            </ul>
 
-                    <ul>
-                        <li><a target="_blank" href="https://codeseven.github.io/toastr/">Toastr</a> - 2.1.4</li>
-                    </ul>
+                            <ul>
+                                <li><a target="_blank" href="https://codeseven.github.io/toastr/">Toastr</a> - 2.1.4</li>
+                            </ul>
 
-                    <ul>
-                        <li><a target="_blank" href="https://datatables.net/download/packages">DataTables</a> - 1.13.4</li>
-                    </ul>
-                    <br />
+                            <ul>
+                                <li><a target="_blank" href="https://datatables.net/download/packages">DataTables</a> - 1.13.4</li>
+                            </ul>
+                        </div>
 
-                    <p>Javascript :</p>
+                        <div class="col-4">
+                            <p>JavaScript :</p>
 
-                    <ul>
-                        <li><a target="_blank" href="https://github.com/iamkun/dayjs/">dayjs</a> - 1.11.7</li>
-                    </ul>
+                            <ul>
+                                <li><a target="_blank" href="http://bootboxjs.com/">Bootbox</a> - 6.0.0</li>
+                            </ul>
+
+                            <ul>
+                                <li><a target="_blank" href="https://stuk.github.io/jszip/">JSZip</a> - 3.10.1</li>
+                                <li><a target="_blank" href="https://github.com/bpampuch/pdfmake/">PDFMake</a> - 0.2.7</li>
+                            </ul>
+
+                            <ul>
+                                <li><a target="_blank" href="https://github.com/iamkun/dayjs/">dayjs</a> - 1.11.7</li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

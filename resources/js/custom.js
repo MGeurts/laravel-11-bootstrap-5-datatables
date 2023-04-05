@@ -68,7 +68,7 @@ window.showToast = function showToast(parameters) {
         toastClass: "toast",
     };
 
-    parameters.type = typeof parameters.type === "undefined" ? "info" : parameters.type;
+    parameters.type = typeof parameters.type === "undefined" || !['success', 'info', 'warning', 'error'].includes(parameters.type) ? "info" : parameters.type;
 
     switch (parameters.type.toLowerCase()) {
         case "success":
