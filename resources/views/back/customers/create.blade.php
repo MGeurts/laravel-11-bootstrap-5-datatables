@@ -291,7 +291,7 @@
 
                     <div class="card-body">
                         <ul>
-                            <li>Specify the values.</li>
+                            <li>Specify the requested values.</li>
                             <li>Click the <strong>Send</strong> button to save.</li>
                         </ul>
                     </div>

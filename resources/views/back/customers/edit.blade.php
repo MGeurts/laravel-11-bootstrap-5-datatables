@@ -309,14 +309,14 @@
                         <div class="row mb-2">
                             <label for="created_at" class="col-md-5 col-form-label">Date created :</label>
                             <div class="col-md-6">
-                                <input type="text" readonly class="form-control-plaintext" id="created_at" value="{{ $customer->created_at }}">
+                                <input type="text" readonly class="form-control-plaintext" id="created_at" value="{{ $customer->created_at }}" tabindex="-1">
                             </div>
                         </div>
 
                         <div class="row mb-2">
                             <label for="updated_at" class="col-md-5 col-form-label">Date updated :</label>
                             <div class="col-md-6">
-                                <input type="text" readonly class="form-control-plaintext" id="updated_at" value="{{ $customer->updated_at }}">
+                                <input type="text" readonly class="form-control-plaintext" id="updated_at" value="{{ $customer->updated_at }}" tabindex="-1">
                             </div>
                         </div>
                     </div>
@@ -333,7 +333,7 @@
 
                     <div class="card-body">
                         <ul>
-                            <li>Specify the values.</li>
+                            <li>Specify the requested values.</li>
                             <li>Click the <strong>Send</strong> button to save.</li>
                         </ul>
                     </div>
