@@ -23,7 +23,7 @@ return new class extends Migration
 
             $table->string('address_street', 50)->nullable()->index();
             $table->string('address_number', 20)->nullable()->index();
-            $table->string('address_country', 3)->nullable();
+            $table->string('address_country', 2)->nullable();
             $table->string('address_postal_code', 10)->nullable()->index();
             $table->string('address_place', 100)->nullable()->index();
 
@@ -32,7 +32,7 @@ return new class extends Migration
 
             $table->string('delivery_address_street', 50)->nullable();
             $table->string('delivery_address_number', 20)->nullable();
-            $table->string('delivery_address_country', 3)->nullable();
+            $table->string('delivery_address_country', 2)->nullable();
             $table->string('delivery_address_postal_code', 10)->nullable();
             $table->string('delivery_address_place', 50)->nullable();
 

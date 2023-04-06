@@ -145,11 +145,11 @@
                                 <div class="input-group">
                                     <input id="phone" name="phone" type="text" class="form-control @error('phone') is-invalid @enderror" value="{{ old('phone') }}">
                                     <span class="input-group-text"><i class="bi bi-telephone"></i></span>
-                                </div>
 
-                                @error('phone')
-                                    <span class="invalid-feedback" role="alert">{{ $message }}</span>
-                                @enderror
+                                    @error('phone')
+                                        <span class="invalid-feedback" role="alert">{{ $message }}</span>
+                                    @enderror
+                                </div>
                             </div>
                         </div>
 

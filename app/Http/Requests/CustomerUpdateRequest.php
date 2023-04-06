@@ -27,27 +27,27 @@ class CustomerUpdateRequest extends FormRequest
         return [
             'customer_last_name' => [
                 'nullable',
-                'required_without_all:customer_first_name,company_name',
                 'string',
                 'max:50',
+                'required_without_all:customer_first_name,company_name',
             ],
             'customer_first_name' => [
                 'nullable',
-                'required_without_all:customer_last_name,company_name',
                 'string',
                 'max:50',
+                'required_without_all:customer_last_name,company_name',
             ],
             'company_name' => [
                 'nullable',
-                'required_without_all:customer_last_name,customer_first_name',
                 'string',
                 'max:50',
+                'required_without_all:customer_last_name,customer_first_name',
             ],
             'email' => [
                 'nullable',
                 'string',
-                'email',
                 'max:191',
+                'email',
                 Rule::unique('customers', 'email')->whereNull('deleted_at')->ignore($this->customer),
             ],
         ];

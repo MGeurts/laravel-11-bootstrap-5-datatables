@@ -33,8 +33,8 @@ class UserUpdateRequest extends FormRequest
             'email' => [
                 'required',
                 'string',
-                'email',
                 'max:191',
+                'email',
                 Rule::unique('users', 'email')->whereNull('deleted_at')->ignore($this->user),
             ],
             'is_developer' => [
