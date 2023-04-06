@@ -3,6 +3,8 @@
 namespace App\Models;
 
 // use Illuminate\Contracts\Auth\MustVerifyEmail;
+
+use Illuminate\Database\Eloquent\Casts\Attribute;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use Illuminate\Foundation\Auth\User as Authenticatable;
@@ -43,50 +45,25 @@ class User extends Authenticatable
      */
     protected $casts = [
         'email_verified_at' => 'datetime',
+        'is_developer' => 'boolean',
     ];
 
     /* -------------------------------------------------------------------------------------------- */
-    // Mutators (SET) Attribute
+    // Accessors & Mutators
     /* -------------------------------------------------------------------------------------------- */
-    public function setNameAttribute($value)
+    protected function Name(): Attribute
     {
-        $this->attributes['name'] = $value ? ucwords($value) : null;
-    }
-    public function setPasswordAttribute($value)
-    {
-        $this->attributes['password'] = app('hash')->needsRehash($value) ? Hash::make($value) : $value;
-    }
-    /* -------------------------------------------------------------------------------------------- */
-    // Accessors (GET) Attribute (APPENDED)
-    /* -------------------------------------------------------------------------------------------- */
-    public function getIsDeveloperAttribute()
-    {
-        return $this->attributes['is_developer'] == 1;
+        return new Attribute(
+            set:fn($value) => $value ? ucwords($value) : null,
+        );
     }
 
-    /* -------------------------------------------------------------------------------------------- */
-    // Accessors (GET) Attribute
-    /* -------------------------------------------------------------------------------------------- */
-
-    /* -------------------------------------------------------------------------------------------- */
-    // Overrides
-    /* -------------------------------------------------------------------------------------------- */
-
-    /* -------------------------------------------------------------------------------------------- */
-    // Relationships
-    /* -------------------------------------------------------------------------------------------- */
-
-    /* -------------------------------------------------------------------------------------------- */
-    // Actions
-    /* -------------------------------------------------------------------------------------------- */
-
-    /* -------------------------------------------------------------------------------------------- */
-    // Functions
-    /* -------------------------------------------------------------------------------------------- */
-
-    /* -------------------------------------------------------------------------------------------- */
-    // Construction
-    /* -------------------------------------------------------------------------------------------- */
+    protected function Password(): Attribute
+    {
+        return new Attribute(
+            set:fn($value) => app('hash')->needsRehash($value) ? Hash::make($value) : $value,
+        );
+    }
 
     /* -------------------------------------------------------------------------------------------- */
     // Relationships

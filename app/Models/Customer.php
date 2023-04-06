@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use Illuminate\Database\Eloquent\Casts\Attribute;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
@@ -45,23 +46,41 @@ class Customer extends Model
     ];
 
     /* -------------------------------------------------------------------------------------------- */
-    // Mutators (SET) Attribute
+    // Accessors & Mutators
     /* -------------------------------------------------------------------------------------------- */
-    public function setCustomerLastNameAttribute($value)
+    protected function CustomerLastName(): Attribute
     {
-        $this->attributes['customer_last_name'] = $value ? strtoupper($value) : null;
+        return new Attribute(
+            set:fn($value) => $value ? strtoupper($value) : null,
+        );
     }
-    public function setCustomerFirstNameAttribute($value)
+
+    protected function CustomerFirstName(): Attribute
     {
-        $this->attributes['customer_first_name'] = $value ? ucwords($value) : null;
+        return new Attribute(
+            set:fn($value) => $value ? ucwords($value) : null,
+        );
     }
-    public function setAddressPlaceAttribute($value)
+
+    protected function AddressStreet(): Attribute
     {
-        $this->attributes['address_place'] = $value ? strtoupper($value) : null;
+        return new Attribute(
+            set:fn($value) => $value ? ucwords($value) : null,
+        );
     }
-    public function setEmailAttribute($value)
+
+    protected function AddressPlace(): Attribute
     {
-        $this->attributes['email'] = $value ? strtolower($value) : null;
+        return new Attribute(
+            set:fn($value) => $value ? strtoupper($value) : null,
+        );
+    }
+
+    protected function Email(): Attribute
+    {
+        return new Attribute(
+            set:fn($value) => $value ? strtolower($value) : null,
+        );
     }
 
     /* -------------------------------------------------------------------------------------------- */
@@ -71,6 +90,7 @@ class Customer extends Model
     {
         return implode(' ', array_filter([$this->attributes['customer_last_name'], $this->attributes['customer_first_name']]));
     }
+
     public function getAddressAttribute()
     {
         return implode(' ', array_filter([
@@ -78,28 +98,9 @@ class Customer extends Model
             $this->attributes['address_number'],
         ]));
     }
+
     public function getPlaceAttribute()
     {
         return implode(' ', array_filter([$this->attributes['address_postal_code'], $this->attributes['address_place']]));
     }
-
-    /* -------------------------------------------------------------------------------------------- */
-    // Accessors (GET) Attribute
-    /* -------------------------------------------------------------------------------------------- */
-
-    /* -------------------------------------------------------------------------------------------- */
-    // Overrides
-    /* -------------------------------------------------------------------------------------------- */
-
-    /* -------------------------------------------------------------------------------------------- */
-    // Relationships
-    /* -------------------------------------------------------------------------------------------- */
-
-    /* -------------------------------------------------------------------------------------------- */
-    // Actions
-    /* -------------------------------------------------------------------------------------------- */
-
-    /* -------------------------------------------------------------------------------------------- */
-    // Construction
-    /* -------------------------------------------------------------------------------------------- */
 }

@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use Illuminate\Database\Eloquent\Casts\Attribute;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
@@ -16,47 +17,31 @@ class Country extends Model
         'is_eu',
     ];
 
-    // protected $casts = [
-    //     'is_eu' => 'boolean',
-    // ];
+    protected $casts = [
+        'is_eu' => 'boolean',
+    ];
 
     /* -------------------------------------------------------------------------------------------- */
-    // Mutators (SET) Attribute
+    // Accessors & Mutators
     /* -------------------------------------------------------------------------------------------- */
-    public function setNameAttribute($value)
+    protected function Name(): Attribute
     {
-        $this->attributes['name'] = $value ? ucwords($value) : null;
-    }
-    public function setIso2Attribute($value)
-    {
-        $this->attributes['iso2'] = $value ? strtoupper($value) : null;
-    }
-    public function setIso3Attribute($value)
-    {
-        $this->attributes['iso3'] = $value ? strtoupper($value) : null;
+        return new Attribute(
+            set:fn($value) => $value ? ucwords($value) : null,
+        );
     }
 
-    /* -------------------------------------------------------------------------------------------- */
-    // Accessors (GET) Attribute (APPENDED)
-    /* -------------------------------------------------------------------------------------------- */
+    protected function Iso2(): Attribute
+    {
+        return new Attribute(
+            set:fn($value) => $value ? strtoupper($value) : null,
+        );
+    }
 
-    /* -------------------------------------------------------------------------------------------- */
-    // Accessors (GET) Attribute
-    /* -------------------------------------------------------------------------------------------- */
-
-    /* -------------------------------------------------------------------------------------------- */
-    // Overrides
-    /* -------------------------------------------------------------------------------------------- */
-
-    /* -------------------------------------------------------------------------------------------- */
-    // Relationships
-    /* -------------------------------------------------------------------------------------------- */
-
-    /* -------------------------------------------------------------------------------------------- */
-    // Actions
-    /* -------------------------------------------------------------------------------------------- */
-
-    /* -------------------------------------------------------------------------------------------- */
-    // Construction
-    /* -------------------------------------------------------------------------------------------- */
+    protected function Iso3(): Attribute
+    {
+        return new Attribute(
+            set:fn($value) => $value ? strtoupper($value) : null,
+        );
+    }
 }
