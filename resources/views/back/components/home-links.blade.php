@@ -14,7 +14,7 @@
         You could use this card to display all kind of <b>hyperlinks</b> or buttons to navigate quickly to certain parts
         of your applcation.
         <hr />
-        This application requires at least <a href="https://www.php.net/" target="_blank">PHP 8.1</a> and is build using :
+        This application requires at least <a href="https://www.php.net/" target="_blank">PHP 8.1</a> and is built using :
         <ul>
             <li><a href="https://laravel.com/" target="_blank">Laravel 10</a> (featuring <a href="https://vitejs.dev/" target="_blank">Vite</a>)</li>
             <li><a href="https://getbootstrap.com/" target="_blank">Bootstrap 5</a></li>
@@ -25,7 +25,7 @@
         <ul>
             <li><b>Top button bar</b> to quickly navigate to the main parts of your application</li>
             <li><b>Offcanvas menu</b> to access less frequently used parts</li>
-            <li><b>Datatables</b>, fully integrated with build in :</li>
+            <li><b>Datatables</b>, fully integrated with built-in :</li>
             <ul>
                 <li>Create - Show - Update - Delete (CRUD) with
                     <a href="http://bootboxjs.com/" target="_blank">Bootbox.js</a> dialogs and
