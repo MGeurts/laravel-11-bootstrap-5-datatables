@@ -4,7 +4,7 @@
 
 ## About this project
 
-This application requires at least PHP 8.1 compatible and build using :
+This application requires at least PHP 8.1 and is built using :
 <ul>
     <li><a href="https://laravel.com/" target="_blank">Laravel 10</a> (featuring <a href="https://vitejs.dev/" target="_blank">Vite</a>)</li>
     <li><a href="https://getbootstrap.com/" target="_blank">Bootstrap 5</a></li>
@@ -16,7 +16,7 @@ This application requires at least PHP 8.1 compatible and build using :
 <ul>
     <li><b>Top button bar</b> to quickly navigate to the main parts of your application</li>
     <li><b>Offcanvas menu</b> to access less frequently used parts</li>
-    <li><b>Datatables</b>, fully integrated with build in :</li>
+    <li><b>Datatables</b>, fully integrated with built-in :</li>
     <ul>
         <li>Create - Show - Update - Delete (CRUD) with
             <a href="http://bootboxjs.com/" target="_blank">Bootbox.js</a> dialogs and
@@ -30,9 +30,9 @@ This application requires at least PHP 8.1 compatible and build using :
         <li>Search with result highlighting</li>
         <li>Server-side pagination and filtering</li>
         <li>Multiple row selection (for mass deletes)</li>
-        <li>Inline boolean field toggable</li>
+        <li>Inline boolean toggable</li>
         <li>Help</li>
-        <li>Datatables are responsive on smaller screens</li>
+        <li>Datatables are fully responsive on smaller screens</li>
     </ul>
 </ul>
 
@@ -48,7 +48,7 @@ In this demo project, 3 models are already implemented :
     <li><b>Users</b> and <b>Users Log</b>, only available to logged in users with the property <b>Developer</b>
     </li>
 </ul>
-You can use their controller and the corresponding views as a base to create new datatables utilising your own project models.
+You can use their controllers and the corresponding views as a base to create new datatables utilising your own project models.
 
 ## Documentation
 
