@@ -1,5 +1,5 @@
 <p align="center">
-    <img src="https://www.kreaweb.be/wp-content/uploads/2023/03/laravel-10-bootstrap-datatables-04.webp" width="400">
+    <img src="https://www.kreaweb.be/wp-content/uploads/2023/03/laravel-10-bootstrap-datatables-04.webp" width="800">
 </p>
 
 ## About this project
