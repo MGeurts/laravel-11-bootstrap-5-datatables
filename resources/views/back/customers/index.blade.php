@@ -232,6 +232,9 @@
             preDrawCallback: function(settings) {
                 oTable.columns.adjust();
             },
+            drawCallback: function () {
+                $('.dataTables_paginate > .pagination').addClass('pagination-sm');
+            },
             createdRow: function(row, data, dataIndex) {
                 if (data['send_newsletter'] > 0) {
                     $(row).find('td.toggleSendNewsletter').addClass('table-warning');
