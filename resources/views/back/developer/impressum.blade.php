@@ -22,6 +22,10 @@
                             <ul>
                                 <li><a target="_blank" href="https://github.com/ARCANEDEV/LogViewer/">ARCANEDEV/LogViewer</a> - 10.0.0</li>
                             </ul>
+
+                            <ul>
+                                <li><a target="_blank" href="https://github.com/stevebauman/location/">stevebauman/location</a> - 6.6.2</li>
+                            </ul>
                         </div>
 
                         <div class="col-4">
