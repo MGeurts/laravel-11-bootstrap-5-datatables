@@ -13,6 +13,7 @@ class Userlog extends Model
 
     protected $fillable = [
         'user_id',
+        'ip',
         'created_at',
     ];
 

@@ -10,6 +10,7 @@ use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Event;
 use Illuminate\Support\Facades\Log;
 
+
 class EventServiceProvider extends ServiceProvider
 {
     /**
@@ -47,6 +48,7 @@ class EventServiceProvider extends ServiceProvider
         try {
             DB::table('userlogs')->insert([
                 'user_id' => $user->id,
+                'ip' => request()->ip(),
             ]);
         } catch (QueryException $e) {
             Log::info("User log ERROR: {$e->getMessage()}");

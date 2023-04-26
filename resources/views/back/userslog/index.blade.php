@@ -22,17 +22,18 @@
         <table class="table table-bordered table-striped table-hover table-sm mb-0 mytable">
             <thead class="table-success">
                 <tr>
-                    <th>Date</th>
-                    <th>Hour</th>
-                    <th>User</th>
-                    <th>Developer ?</th>
+                    <th class="text-center">Date</th>
+                    <th class="text-center">Hour</th>
+                    <th class="text-center">User</th>
+                    <th class="text-center">IP</th>
+                    <th class="text-center">Developer ?</th>
                 </tr>
             </thead>
 
             <tbody>
                 @forelse ($userlogs_by_date as $day => $userlogs)
                     <tr class="table-secondary">
-                        <td colspan="4">
+                        <td colspan="5">
                             <b>{{ strtoupper(Carbon\Carbon::parse($day)->translatedFormat('l j F Y')) }}</b> ({{ count($userlogs) }})
                         </td>
                     </tr>
@@ -42,16 +43,17 @@
                             <td></td>
                             <td>{{ $userlog->time }}</td>
                             <td>{{ $userlog->name }}</td>
+                            <td class="text-center">{{ $userlog->ip }}</td>
                             @if ($userlog->is_developer)
-                                <td><i class="bi bi-check-lg"></i></td>
+                                <td class="text-center"><i class="bi bi-check-lg"></i></td>
                             @else
-                                <td></td>
+                                <td class="text-center"></td>
                             @endif
                         </tr>
                     @endforeach
                 @empty
                     <tr>
-                        <td colspan="4" class="p-3">No data found.</td>
+                        <td colspan="5" class="p-3">No data found.</td>
                     </tr>
                 @endforelse
             </tbody>
