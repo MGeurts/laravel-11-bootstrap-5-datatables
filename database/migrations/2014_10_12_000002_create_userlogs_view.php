@@ -25,7 +25,6 @@ return new class extends Migration
                     `userlogs`.`created_at` AS `created_at`,
                     DATE_FORMAT(`userlogs`.`created_at`, '%Y-%m-%d') AS `date`,
                     DATE_FORMAT(`userlogs`.`created_at`, '%T') AS `time`,
-                    `userlogs`.`ip` AS `ip`,
                     `userlogs`.`country_name` AS `country_name`,
                     `userlogs`.`country_code` AS `country_code`,
                     `userlogs`.`user_id` AS `user_id`,

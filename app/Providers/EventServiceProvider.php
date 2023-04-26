@@ -47,18 +47,15 @@ class EventServiceProvider extends ServiceProvider
     {
         try {
             if ($position = Location::get()) {
-                $ip = $position->ip;
                 $country_name = $position->countryName;
                 $country_code = $position->countryCode;
             } else {
-                $ip = null;
                 $country_name = null;
                 $country_code = null;
             }
 
             DB::table('userlogs')->insert([
                 'user_id' => $user->id,
-                'ip' => $ip,
                 'country_name' => $country_name,
                 'country_code' => $country_code,
             ]);

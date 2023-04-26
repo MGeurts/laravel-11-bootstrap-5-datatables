@@ -25,7 +25,6 @@
                     <th class="text-center">Date</th>
                     <th class="text-center">Hour</th>
                     <th class="text-center">User</th>
-                    <th class="text-center">IP</th>
                     <th class="text-center">Country Name</th>
                     <th class="text-center">Country Code</th>
                     <th class="text-center">Developer ?</th>
@@ -35,7 +34,7 @@
             <tbody>
                 @forelse ($userlogs_by_date as $day => $userlogs)
                     <tr class="table-secondary">
-                        <td colspan="7">
+                        <td colspan="6">
                             <b>{{ strtoupper(Carbon\Carbon::parse($day)->translatedFormat('l j F Y')) }}</b> ({{ count($userlogs) }})
                         </td>
                     </tr>
@@ -45,7 +44,6 @@
                             <td></td>
                             <td>{{ $userlog->time }}</td>
                             <td>{{ $userlog->name }}</td>
-                            <td class="text-center">{{ $userlog->ip }}</td>
                             <td>{{ $userlog->country_name }}</td>
                             <td>{{ $userlog->country_code }}</td>
                             @if ($userlog->is_developer)
@@ -57,7 +55,7 @@
                     @endforeach
                 @empty
                     <tr>
-                        <td colspan="7" class="p-3">No data found.</td>
+                        <td colspan="6" class="p-3">No data found.</td>
                     </tr>
                 @endforelse
             </tbody>
