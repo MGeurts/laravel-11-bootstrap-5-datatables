@@ -47,7 +47,7 @@
                             <td>{{ $userlog->name }}</td>
                             <td class="text-center">{{ $userlog->ip }}</td>
                             <td>{{ $userlog->country_name }}</td>
-                            <td>{{ $userlog->country_name }}</td>
+                            <td>{{ $userlog->country_code }}</td>
                             @if ($userlog->is_developer)
                                 <td class="text-center"><i class="bi bi-check-lg"></i></td>
                             @else
