@@ -16,7 +16,7 @@ return new class extends Migration
 
             $table->string('ip', 15)->nullable();
             $table->string('country_name', 100)->nullable();
-            $table->string('country_code', 2)->nullable();
+            $table->string('country_code', 3)->nullable();
 
             $table->timestamp('created_at')->default(DB::raw('CURRENT_TIMESTAMP'))->index();
         });
