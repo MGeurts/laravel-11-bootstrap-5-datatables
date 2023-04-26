@@ -15,6 +15,8 @@ return new class extends Migration
             $table->foreignId('user_id')->constrained()->onUpdate('cascade')->onDelete('cascade');
 
             $table->string('ip', 15)->nullable();
+            $table->string('country_name', 100)->nullable();
+            $table->string('country_code', 2)->nullable();
 
             $table->timestamp('created_at')->default(DB::raw('CURRENT_TIMESTAMP'))->index();
         });

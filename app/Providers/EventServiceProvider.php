@@ -9,7 +9,7 @@ use Illuminate\Foundation\Support\Providers\EventServiceProvider as ServiceProvi
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Event;
 use Illuminate\Support\Facades\Log;
-
+use Stevebauman\Location\Facades\Location;
 
 class EventServiceProvider extends ServiceProvider
 {
@@ -46,9 +46,21 @@ class EventServiceProvider extends ServiceProvider
     private function logUser($user)
     {
         try {
+            if ($position = Location::get()) {
+                $ip = $position->ip;
+                $country_name = $position->countryName;
+                $country_code = $position->countryCode;
+            } else {
+                $ip = null;
+                $country_name = null;
+                $country_code = null;
+            }
+
             DB::table('userlogs')->insert([
                 'user_id' => $user->id,
-                'ip' => request()->ip(),
+                'ip' => $ip,
+                'country_name' => $country_name,
+                'country_code' => $country_code,
             ]);
         } catch (QueryException $e) {
             Log::info("User log ERROR: {$e->getMessage()}");
