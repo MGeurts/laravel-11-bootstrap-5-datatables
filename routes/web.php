@@ -13,6 +13,7 @@ use Illuminate\Support\Facades\Route;
 | be assigned to the "web" middleware group. Make something great!
 |
  */
+
 Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 Auth::routes();
@@ -49,7 +50,8 @@ Route::middleware('auth')->group(function () {
 
         // Users log
         Route::controller(App\Http\Controllers\Back\UserlogController::class)->group(function () {
-            Route::resource('/userslog', App\Http\Controllers\Back\UserlogController::class)->only(['index']);
+            Route::get('/userslog/index', 'index')->name('userslog.index');
+            Route::get('/userslog/stats', 'stats')->name('userslog.stats');
         });
         /* ---------------------------------------- */
         // Customers

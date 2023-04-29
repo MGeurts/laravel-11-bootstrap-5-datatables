@@ -68,6 +68,10 @@
                             </ul>
 
                             <ul>
+                                <li><a target="_blank" href="https://www.chartjs.org/">chart.js</a> - 4.3.0</li>
+                            </ul>
+
+                            <ul>
                                 <li><a target="_blank" href="https://github.com/iamkun/dayjs/">dayjs</a> - 1.11.7</li>
                             </ul>
                         </div>

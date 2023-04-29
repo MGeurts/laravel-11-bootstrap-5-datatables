@@ -22,6 +22,7 @@
             <ul class="dropdown-menu" aria-labelledby="offcanvasNavbarDropdown">
                 <li><a class="dropdown-item" href="{{ route('back.users.index') }}">Users</a></li>
                 <li><a class="dropdown-item" href="{{ route('back.userslog.index') }}">Users Log</a></li>
+                <li><a class="dropdown-item" href="{{ route('back.userslog.stats') }}">Users Statistics</a></li>
                 <hr class="narrow">
 
                 <li><a class="dropdown-item" href="{{ url('/back/developer/log-monitor') }}" target="_blank">Log Viewer</a></li>

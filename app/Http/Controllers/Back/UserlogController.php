@@ -17,4 +17,22 @@ class UserlogController extends Controller
 
         return view('back.userslog.index', compact('userlogs_by_date'));
     }
+
+    public function stats()
+    {
+        abort_if(Gate::denies('developer'), Response::HTTP_FORBIDDEN, '403 Forbidden');
+
+        $userstats = DB::table('v_userstats')->get();
+
+        $records = $data = [];
+
+        foreach ($userstats as $userstat) {
+            $records['label'][] = $userstat->country_name;
+            $records['data'][] = $userstat->users;
+        }
+
+        $data['chart_data'] = json_encode($records);
+
+        return view('back.userslog.stats', $data);
+    }
 }
