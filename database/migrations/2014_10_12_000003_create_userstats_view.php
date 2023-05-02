@@ -25,7 +25,7 @@ return new class extends Migration
                     `userlogs`.`country_name`,
                     count(`users`.`id`) as users
                 FROM `userlogs` LEFT JOIN `users` ON (`userlogs`.`user_id` = `users`.`id`)
-                WHERE `userlogs`.`country_name` IS NOT NULL
+                WHERE `userlogs`.`country_code` IS NOT NULL AND `userlogs`.`country_code` <> 'BE'
                 GROUP BY `userlogs`.`country_name`
                 ORDER BY `userlogs`.`country_name`;
         SQL;

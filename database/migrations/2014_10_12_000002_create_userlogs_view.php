@@ -31,7 +31,7 @@ return new class extends Migration
                     `users`.`name` AS `name`,
                     `users`.`is_developer` AS `is_developer`
                 FROM `userlogs` LEFT JOIN `users` ON (`userlogs`.`user_id` = `users`.`id`)
-                WHERE `userlogs`.`created_at` >= (NOW() - INTERVAL 3 MONTH);
+                WHERE `userlogs`.`created_at` >= (NOW() - INTERVAL 3 MONTH) AND `userlogs`.`country_code` IS NOT NULL AND `userlogs`.`country_code` <> 'BE';
         SQL;
     }
 
