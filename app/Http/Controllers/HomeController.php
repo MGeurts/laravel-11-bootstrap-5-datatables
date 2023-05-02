@@ -24,7 +24,7 @@ class HomeController extends Controller
     public function index()
     {
         if (Auth::check()) {
-            if (!session('APP')) {
+            if (! session('APP')) {
                 session(['APP.YEAR' => date('Y')]);
             }
 

@@ -66,7 +66,7 @@ class EventServiceProvider extends ServiceProvider
 
     private function setYear()
     {
-        if (!session('APP')) {
+        if (! session('APP')) {
             session([
                 'APP.YEAR' => date('Y'),
                 'APP.PERIOD' => 'month',

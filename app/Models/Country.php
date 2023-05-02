@@ -27,21 +27,21 @@ class Country extends Model
     protected function Name(): Attribute
     {
         return new Attribute(
-            set:fn($value) => $value ? ucwords($value) : null,
+            set: fn ($value) => $value ? ucwords($value) : null,
         );
     }
 
     protected function Iso2(): Attribute
     {
         return new Attribute(
-            set:fn($value) => $value ? strtoupper($value) : null,
+            set: fn ($value) => $value ? strtoupper($value) : null,
         );
     }
 
     protected function Iso3(): Attribute
     {
         return new Attribute(
-            set:fn($value) => $value ? strtoupper($value) : null,
+            set: fn ($value) => $value ? strtoupper($value) : null,
         );
     }
 }

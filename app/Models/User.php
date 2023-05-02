@@ -54,14 +54,14 @@ class User extends Authenticatable
     protected function Name(): Attribute
     {
         return new Attribute(
-            set:fn($value) => $value ? ucwords($value) : null,
+            set: fn ($value) => $value ? ucwords($value) : null,
         );
     }
 
     protected function Password(): Attribute
     {
         return new Attribute(
-            set:fn($value) => app('hash')->needsRehash($value) ? Hash::make($value) : $value,
+            set: fn ($value) => app('hash')->needsRehash($value) ? Hash::make($value) : $value,
         );
     }
 

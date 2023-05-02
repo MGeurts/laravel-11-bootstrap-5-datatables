@@ -51,35 +51,35 @@ class Customer extends Model
     protected function CustomerLastName(): Attribute
     {
         return new Attribute(
-            set:fn($value) => $value ? strtoupper($value) : null,
+            set: fn ($value) => $value ? strtoupper($value) : null,
         );
     }
 
     protected function CustomerFirstName(): Attribute
     {
         return new Attribute(
-            set:fn($value) => $value ? ucwords($value) : null,
+            set: fn ($value) => $value ? ucwords($value) : null,
         );
     }
 
     protected function AddressStreet(): Attribute
     {
         return new Attribute(
-            set:fn($value) => $value ? ucwords($value) : null,
+            set: fn ($value) => $value ? ucwords($value) : null,
         );
     }
 
     protected function AddressPlace(): Attribute
     {
         return new Attribute(
-            set:fn($value) => $value ? strtoupper($value) : null,
+            set: fn ($value) => $value ? strtoupper($value) : null,
         );
     }
 
     protected function Email(): Attribute
     {
         return new Attribute(
-            set:fn($value) => $value ? strtolower($value) : null,
+            set: fn ($value) => $value ? strtolower($value) : null,
         );
     }
 

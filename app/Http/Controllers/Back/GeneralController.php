@@ -15,16 +15,16 @@ class GeneralController extends Controller
             DB::table($request->table)->where('id', $request->id)->update([$request->key => $request->value]);
 
             $notification = [
-                "type" => "success",
-                "title" => 'Editing ...',
-                "message" => 'Item updated.',
+                'type' => 'success',
+                'title' => 'Editing ...',
+                'message' => 'Item updated.',
             ];
 
         } catch (QueryException $e) {
             $notification = [
-                "type" => "error",
-                "title" => 'Editing ...',
-                "message" => $e->getMessage(),
+                'type' => 'error',
+                'title' => 'Editing ...',
+                'message' => $e->getMessage(),
             ];
         }
 

@@ -2,7 +2,6 @@
 
 namespace Database\Factories;
 
-use App\Models\Customer;
 use App\Models\Userlog;
 use Illuminate\Database\Eloquent\Factories\Factory;
 

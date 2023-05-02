@@ -30,7 +30,9 @@ class UserController extends Controller
                     'is_developer',
                     'userlogs_count',
                 ])
-                ->addColumn('DT_RowId', function ($row) {return $row->id;})
+                ->addColumn('DT_RowId', function ($row) {
+                    return $row->id;
+                })
                 ->toJson();
         }
 
@@ -50,9 +52,9 @@ class UserController extends Controller
         Password::sendResetLink($request->only(['email']));
 
         $notification = [
-            "type" => "success",
-            "title" => 'Add ...',
-            "message" => 'Item added.',
+            'type' => 'success',
+            'title' => 'Add ...',
+            'message' => 'Item added.',
         ];
 
         return redirect()->route('back.users.index')->with('notification', $notification);
@@ -69,17 +71,17 @@ class UserController extends Controller
     {
         if ($user->id == 1) {
             $notification = [
-                "type" => "info",
-                "title" => 'Edit ...',
-                "message" => 'This account is read-only.',
+                'type' => 'info',
+                'title' => 'Edit ...',
+                'message' => 'This account is read-only.',
             ];
         } else {
             $user->update($request->except(['token']));
 
             $notification = [
-                "type" => "success",
-                "title" => 'Edit ...',
-                "message" => 'Item updated.',
+                'type' => 'success',
+                'title' => 'Edit ...',
+                'message' => 'Item updated.',
             ];
 
         }

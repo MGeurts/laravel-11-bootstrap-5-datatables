@@ -18,9 +18,15 @@ class CustomerController extends Controller
             $customers = Customer::select(sprintf('%s.*', (new Customer)->getTable()));
 
             return DataTables::of($customers)
-                ->addColumn('DT_RowId', function ($row) {return $row->id;})
-                ->editColumn('address_street', function ($row) {return $row->address;})
-                ->editColumn('address_place', function ($row) {return $row->place;})
+                ->addColumn('DT_RowId', function ($row) {
+                    return $row->id;
+                })
+                ->editColumn('address_street', function ($row) {
+                    return $row->address;
+                })
+                ->editColumn('address_place', function ($row) {
+                    return $row->place;
+                })
                 ->filterColumn('customer_last_name', function ($query, $keyword) {
                     $sql = "CONCAT(customers.customer_last_name, ' ', customers.customer_first_name) like ?";
                     $query->whereRaw($sql, ["%{$keyword}%"]);
@@ -51,9 +57,9 @@ class CustomerController extends Controller
         $customer = Customer::create($request->all());
 
         $notification = [
-            "type" => "success",
-            "title" => 'Add ...',
-            "message" => 'Item added.',
+            'type' => 'success',
+            'title' => 'Add ...',
+            'message' => 'Item added.',
         ];
 
         return redirect()->route('back.customers.index')->with('notification', $notification);
@@ -78,9 +84,9 @@ class CustomerController extends Controller
         $customer->update($request->all());
 
         $notification = [
-            "type" => "success",
-            "title" => 'Edit ...',
-            "message" => 'Item updated.',
+            'type' => 'success',
+            'title' => 'Edit ...',
+            'message' => 'Item updated.',
         ];
 
         return redirect()->route('back.customers.index')->with('notification', $notification);
