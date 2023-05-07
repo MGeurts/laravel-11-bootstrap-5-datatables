@@ -16,4 +16,5 @@ yarn-error.log
 /.fleet
 /.idea
 /.vscode
-deploy.antagonist.txt
+deploy-demo.sh
+deploy-demo.txt
