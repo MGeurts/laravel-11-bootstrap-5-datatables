@@ -71,7 +71,7 @@ return [
      */
 
     'download' => [
-        'prefix' => 'laravel-',
+        'prefix' => 'laravel-10-bootstrap-5-datatables-',
 
         'extension' => 'log',
     ],
