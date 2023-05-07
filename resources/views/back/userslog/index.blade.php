@@ -14,7 +14,7 @@
                     <button type="button" class="btn btn-outline-secondary btn-sm me-2" title="Print" tabindex="-1" onclick="window.print();">
                         <img src="{{ asset('img/icons/printer.png') }}" class="img-fluid" />
                     </button>
-                    <img src="{{ asset('img/icons/persons.png') }}" class="img-fluid" />
+                    <i class="bi bi-person-lines-fill nav-icon"></i>
                 </div>
             </div>
         </div>

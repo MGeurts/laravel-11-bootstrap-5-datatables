@@ -11,7 +11,7 @@
                 <div class="col">Users</div>
 
                 <div class="col fs-5 text-end">
-                    <img src="{{ asset('img/icons/persons.png') }}" />
+                    <i class="bi bi-people-fill nav-icon"></i>
                 </div>
             </div>
         </div>

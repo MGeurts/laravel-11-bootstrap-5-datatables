@@ -4,6 +4,7 @@
     margin: 1cm;
     marks: none;
 }
+
 /* -------------------------------------------- */
 @media print {
     a:link {
@@ -20,8 +21,10 @@
         opacity: 1 !important;
     }
 }
+
 /* -------------------------------------------- */
-@media screen, print {
+@media screen,
+print {
     body {
         padding-top: 4.5rem;
         //background-color: transparent;
@@ -56,10 +59,16 @@
     .offcanvas {
         width: 250px;
     }
+
+    .nav-icon {
+        margin-right: 10px;
+    }
+
     /* -------------------------------------------- */
     #toast-container>div {
         opacity: 1 !important;
     }
+
     /* -------------------------------------------- */
     table.mytable {
         box-sizing: border-box;
@@ -76,5 +85,6 @@
     table.mytable tbody td {
         padding: 0.2rem;
     }
+
     /* -------------------------------------------- */
 }

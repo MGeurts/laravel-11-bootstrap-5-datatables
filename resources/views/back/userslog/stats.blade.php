@@ -17,7 +17,7 @@
                                 <img src="{{ asset('img/icons/printer.png') }}" class="img-fluid" />
                             </button>
                             <img src="{{ asset('img/icons/statistics.png') }}" class="img-fluid" />
-                            <img src="{{ asset('img/icons/persons.png') }}" class="img-fluid" />
+                            <i class="bi bi-person-lines-fill nav-icon"></i>
                         </div>
                     </div>
                 </div>
