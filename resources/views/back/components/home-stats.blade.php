@@ -22,8 +22,11 @@
         </ul>
         <p>Use their controllers and the corresponding views as a base to create new datatables utilising your own project models.</p>
         <hr />
-        <p>This application also has a built-in <a href="{{ url('/back/developer/log-monitor') }}" target="_blank">Log Viewer</a>.</p>
-        <hr />
+        <p>
+            This application also has a built-in <a href="{{ url('/back/developer/log-monitor') }}" target="_blank">Log Viewer</a>
+            and a <a href="{{ route('back.backups.index') }}">Backup manager</a>.
+        </p>
+
         <p>Open source under MIT License.</p>
         <hr />
         <br /><br /><br />

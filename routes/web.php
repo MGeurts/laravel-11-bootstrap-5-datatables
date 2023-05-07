@@ -40,6 +40,14 @@ Route::middleware('auth')->group(function () {
             Route::get('/developer/session', 'session')->name('developer.session');
         });
         /* ---------------------------------------- */
+        // Backups
+        Route::controller(App\Http\Controllers\Back\BackupController::class)->group(function () {
+            Route::get('/backups', 'index')->name('backups.index');
+            Route::get('/backups/create', 'create')->name('backups.create');
+            Route::get('/backups/download/{file_name}', 'download')->name('backups.download');
+            Route::get('/backups/delete/{file_name}', 'delete')->name('backups.delete');
+        });
+        /* ------------------------------------------------------------------------ */
         // Users
         Route::controller(App\Http\Controllers\Back\UserController::class)->group(function () {
             Route::get('/users/getUserlogs', 'getUserlogs')->name('users.getUserlogs');

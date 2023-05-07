@@ -20,6 +20,10 @@
                             </ul>
 
                             <ul>
+                                <li><a target="_blank" href="https://github.com/spatie/laravel-backup/">spatie/laravel-backup</a> - 8.1.10</li>
+                            </ul>
+
+                            <ul>
                                 <li><a target="_blank" href="https://github.com/ARCANEDEV/LogViewer/">ARCANEDEV/LogViewer</a> - 10.0.0</li>
                             </ul>
 

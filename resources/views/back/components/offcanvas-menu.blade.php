@@ -35,6 +35,9 @@
                 <li><a class="dropdown-item" href="{{ url('/back/developer/log-monitor') }}" target="_blank"><i class="bi bi-book-half nav-icon"></i>Log Viewer</a></li>
                 <hr class="narrow">
 
+                <li><a class="dropdown-item" href="{{ route('back.backups.index') }}"><i class="bi bi-archive-fill nav-icon"></i>Backups</a></li>
+                <hr class="narrow">
+
                 <li><a class="dropdown-item" href="{{ route('back.developer.hashGenerator') }}"><i class="bi bi-key-fill nav-icon"></i>Hash Generator</a></li>
                 <hr class="narrow">
 
