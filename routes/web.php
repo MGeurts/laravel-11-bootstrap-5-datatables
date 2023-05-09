@@ -51,8 +51,8 @@ Route::middleware('auth')->group(function () {
         // Users
         Route::controller(App\Http\Controllers\Back\UserController::class)->group(function () {
             Route::get('/users/getUserlogs', 'getUserlogs')->name('users.getUserlogs');
-
             Route::delete('/users/massDestroy', 'massDestroy')->name('users.massDestroy');
+
             Route::resource('/users', App\Http\Controllers\Back\UserController::class)->except(['show', 'destroy']);
         });
 
@@ -65,6 +65,7 @@ Route::middleware('auth')->group(function () {
         // Customers
         Route::controller(App\Http\Controllers\Back\CustomerController::class)->group(function () {
             Route::delete('/customers/massDestroy', 'massDestroy')->name('customers.massDestroy');
+
             Route::resource('/customers', App\Http\Controllers\Back\CustomerController::class)->except(['destroy']);
         });
     });

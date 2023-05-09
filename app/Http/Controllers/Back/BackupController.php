@@ -44,7 +44,7 @@ class BackupController extends Controller
     public function create()
     {
         try {
-            Artisan::call('backup:run');
+            Artisan::call('backup:run --only-db');
             $output = Artisan::output();
 
             Log::info("Backup (Manually) -- Backup started \r\n" . $output);
