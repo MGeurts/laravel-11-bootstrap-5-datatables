@@ -14,7 +14,7 @@ class Kernel extends ConsoleKernel
     protected function schedule(Schedule $schedule): void
     {
         // cleanup obsolete backups
-        $schedule->command('backup:clean')->daily()->at(env('BACKUP_DAILY_CLEANUP', '22:30:00'))
+        $schedule->command('backup:clean')->daily()->at(env('BACKUP_DAILY_CLEANUP', '22:30'))
             ->onSuccess(function () {
                 Log::info('Backup (Scheduled) -- Cleanup succeeded');
             })
@@ -23,7 +23,7 @@ class Kernel extends ConsoleKernel
             });
 
         // create daily backup
-        $schedule->command('backup:run --only-db')->daily()->at(env('BACKUP_DAILY_RUN', '23:00:00'))
+        $schedule->command('backup:run --only-db')->daily()->at(env('BACKUP_DAILY_RUN', '23:00'))
             ->onSuccess(function () {
                 Log::info('Backup (Scheduled) -- Backup succeeded');
             })
