@@ -11,7 +11,7 @@ $.ajaxSetup({
         });
     }
 });
-/* ------------------------------------------- */
+/* -------------------------------------------------------------------------------------------- */
 $('select').select2({
     theme: "bootstrap-5",
     minimumResultsForSearch: 31,
@@ -53,7 +53,7 @@ window.showToast = function showToast(parameters) {
         newestOnTop: false,
         onHidden: null,
         onShown: null,
-        positionClass: "toast-top-left",
+        positionClass: "toast-bottom-left",
         preventDuplicates: true,
         progressBar: true,
         progressClass: "toast-progress",
@@ -68,20 +68,20 @@ window.showToast = function showToast(parameters) {
         toastClass: "toast",
     };
 
-    parameters.type = typeof parameters.type === "undefined" || !['success', 'info', 'warning', 'error'].includes(parameters.type) ? "info" : parameters.type;
+    parameters.type = typeof parameters.type === "undefined" || !['error', 'info', 'success', 'warning'].includes(parameters.type) ? "info" : parameters.type;
 
     switch (parameters.type.toLowerCase()) {
-        case "success":
-            toastr.options.timeOut = 3000;
+        case "error":
+            toastr.options.timeOut = 15000;
             break;
         case "info":
             toastr.options.timeOut = 5000;
             break;
+        case "success":
+            toastr.options.timeOut = 3000;
+            break;
         case "warning":
             toastr.options.timeOut = 10000;
-            break;
-        case "error":
-            toastr.options.timeOut = 15000;
             break;
         default:
             toastr.options.timeOut = 4000;

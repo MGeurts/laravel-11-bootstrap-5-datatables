@@ -35,8 +35,6 @@
 @endsection
 
 @push('scripts')
-    <script type="module" src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.3.0/chart.umd.js"></script>
-
     <script type="module">
         /* -------------------------------------------------------------------------------------------- */
         const cData = {!! $chart_data !!};

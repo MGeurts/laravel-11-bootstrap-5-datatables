@@ -1,5 +1,5 @@
-import './jquery';
-import './bootstrap';
+import './_jquery';
+import './_bootstrap';
 
 import bootbox from 'bootbox';
 window.bootbox = bootbox;
@@ -14,4 +14,5 @@ window.dayjs = dayjs;
 import toastr from 'toastr';
 window.toastr = toastr;
 
-
+import Chart from 'chart.js/auto';
+window.Chart = Chart;
