@@ -705,16 +705,16 @@
         },
         {
             "name": "guzzlehttp/guzzle",
-            "version": "7.5.1",
+            "version": "7.6.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/guzzle/guzzle.git",
-                "reference": "b964ca597e86b752cd994f27293e9fa6b6a95ed9"
+                "reference": "8444a2bacf1960bc6a2b62ed86b8e72e11eebe51"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/guzzle/guzzle/zipball/b964ca597e86b752cd994f27293e9fa6b6a95ed9",
-                "reference": "b964ca597e86b752cd994f27293e9fa6b6a95ed9",
+                "url": "https://api.github.com/repos/guzzle/guzzle/zipball/8444a2bacf1960bc6a2b62ed86b8e72e11eebe51",
+                "reference": "8444a2bacf1960bc6a2b62ed86b8e72e11eebe51",
                 "shasum": ""
             },
             "require": {
@@ -745,9 +745,6 @@
                 "bamarni-bin": {
                     "bin-links": true,
                     "forward-command": false
-                },
-                "branch-alias": {
-                    "dev-master": "7.5-dev"
                 }
             },
             "autoload": {
@@ -813,7 +810,7 @@
             ],
             "support": {
                 "issues": "https://github.com/guzzle/guzzle/issues",
-                "source": "https://github.com/guzzle/guzzle/tree/7.5.1"
+                "source": "https://github.com/guzzle/guzzle/tree/7.6.1"
             },
             "funding": [
                 {
@@ -829,7 +826,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2023-04-17T16:30:08+00:00"
+            "time": "2023-05-15T20:43:01+00:00"
         },
         {
             "name": "guzzlehttp/promises",
@@ -1117,16 +1114,16 @@
         },
         {
             "name": "laravel/framework",
-            "version": "v10.10.0",
+            "version": "v10.11.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/framework.git",
-                "reference": "0da22a8d179f79b49d4e71f4822f759651f35012"
+                "reference": "21a5b6d9b669f32c10cc8ba776511b5f62599fea"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/framework/zipball/0da22a8d179f79b49d4e71f4822f759651f35012",
-                "reference": "0da22a8d179f79b49d4e71f4822f759651f35012",
+                "url": "https://api.github.com/repos/laravel/framework/zipball/21a5b6d9b669f32c10cc8ba776511b5f62599fea",
+                "reference": "21a5b6d9b669f32c10cc8ba776511b5f62599fea",
                 "shasum": ""
             },
             "require": {
@@ -1313,7 +1310,7 @@
                 "issues": "https://github.com/laravel/framework/issues",
                 "source": "https://github.com/laravel/framework"
             },
-            "time": "2023-05-09T13:08:05+00:00"
+            "time": "2023-05-16T13:59:23+00:00"
         },
         {
             "name": "laravel/sanctum",
@@ -5689,16 +5686,16 @@
         },
         {
             "name": "tightenco/ziggy",
-            "version": "v1.5.2",
+            "version": "v1.6.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/tighten/ziggy.git",
-                "reference": "5c4399c820e66c8e46e779cfb5231ceef6ddc9c5"
+                "reference": "3beb080be60b1eadad043f3773a160df13fa215f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/tighten/ziggy/zipball/5c4399c820e66c8e46e779cfb5231ceef6ddc9c5",
-                "reference": "5c4399c820e66c8e46e779cfb5231ceef6ddc9c5",
+                "url": "https://api.github.com/repos/tighten/ziggy/zipball/3beb080be60b1eadad043f3773a160df13fa215f",
+                "reference": "3beb080be60b1eadad043f3773a160df13fa215f",
                 "shasum": ""
             },
             "require": {
@@ -5750,9 +5747,9 @@
             ],
             "support": {
                 "issues": "https://github.com/tighten/ziggy/issues",
-                "source": "https://github.com/tighten/ziggy/tree/v1.5.2"
+                "source": "https://github.com/tighten/ziggy/tree/v1.6.0"
             },
-            "time": "2023-05-05T17:52:13+00:00"
+            "time": "2023-05-12T20:08:56+00:00"
         },
         {
             "name": "tijsverkoyen/css-to-inline-styles",
@@ -6187,16 +6184,16 @@
         },
         {
             "name": "fakerphp/faker",
-            "version": "v1.21.0",
+            "version": "v1.22.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/FakerPHP/Faker.git",
-                "reference": "92efad6a967f0b79c499705c69b662f738cc9e4d"
+                "reference": "f85772abd508bd04e20bb4b1bbe260a68d0066d2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/FakerPHP/Faker/zipball/92efad6a967f0b79c499705c69b662f738cc9e4d",
-                "reference": "92efad6a967f0b79c499705c69b662f738cc9e4d",
+                "url": "https://api.github.com/repos/FakerPHP/Faker/zipball/f85772abd508bd04e20bb4b1bbe260a68d0066d2",
+                "reference": "f85772abd508bd04e20bb4b1bbe260a68d0066d2",
                 "shasum": ""
             },
             "require": {
@@ -6249,9 +6246,9 @@
             ],
             "support": {
                 "issues": "https://github.com/FakerPHP/Faker/issues",
-                "source": "https://github.com/FakerPHP/Faker/tree/v1.21.0"
+                "source": "https://github.com/FakerPHP/Faker/tree/v1.22.0"
             },
-            "time": "2022-12-13T13:54:32+00:00"
+            "time": "2023-05-14T12:31:37+00:00"
         },
         {
             "name": "filp/whoops",
@@ -6562,16 +6559,16 @@
         },
         {
             "name": "laravel/ui",
-            "version": "v4.2.1",
+            "version": "v4.2.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/ui.git",
-                "reference": "05ff7ac1eb55e2dfd10edcfb18c953684d693907"
+                "reference": "a58ec468db4a340b33f3426c778784717a2c144b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/ui/zipball/05ff7ac1eb55e2dfd10edcfb18c953684d693907",
-                "reference": "05ff7ac1eb55e2dfd10edcfb18c953684d693907",
+                "url": "https://api.github.com/repos/laravel/ui/zipball/a58ec468db4a340b33f3426c778784717a2c144b",
+                "reference": "a58ec468db4a340b33f3426c778784717a2c144b",
                 "shasum": ""
             },
             "require": {
@@ -6618,9 +6615,9 @@
                 "ui"
             ],
             "support": {
-                "source": "https://github.com/laravel/ui/tree/v4.2.1"
+                "source": "https://github.com/laravel/ui/tree/v4.2.2"
             },
-            "time": "2023-02-17T09:17:24+00:00"
+            "time": "2023-05-09T19:47:28+00:00"
         },
         {
             "name": "maxmind-db/reader",
