@@ -397,11 +397,24 @@
         });
         /* ------------------------------------------- */
         $('#btnCopy').click(function() {
-            $('#delivery_address_street').val($('#address_street').val());
-            $('#delivery_address_number').val($('#address_number').val());
-            $('#delivery_address_country').val($('#address_country').find("option:selected").val()).trigger('change');
-            $('#delivery_address_postal_code').val($('#address_postal_code').val());
-            $('#delivery_address_place').val($('#address_place').val());
+            if ($('#address_street').val() ||
+                $('#address_number').val() ||
+                $('#address_country').find("option:selected").val() ||
+                $('#address_postal_code').val() ||
+                $('#address_place').val()
+            ) {
+                $('#delivery_address_street').val($('#address_street').val());
+                $('#delivery_address_number').val($('#address_number').val());
+                $('#delivery_address_country').val($('#address_country').find("option:selected").val()).trigger('change');
+                $('#delivery_address_postal_code').val($('#address_postal_code').val());
+                $('#delivery_address_place').val($('#address_place').val());
+            } else {
+                showToast({
+                    type: 'info',
+                    title: 'Address ...',
+                    message: 'No address available.',
+                });
+            }
         });
         /* -------------------------------------------------------------------------------------------- */
     </script>
