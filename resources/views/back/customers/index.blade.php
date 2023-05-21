@@ -127,15 +127,15 @@
 
                 bootbox.confirm({
                     title: 'Delete item(s) ...',
-                    message: "Are you sure?",
+                    message: '<div class="alert alert-danger" role="alert">Are you sure?</div>',
                     buttons: {
                         confirm: {
                             label: 'Yes',
-                            className: 'btn-sm btn-primary'
+                            className: 'btn-primary'
                         },
                         cancel: {
                             label: 'No',
-                            className: 'btn-sm btn-secondary'
+                            className: 'btn-secondary'
                         }
                     },
                     callback: function(confirmed) {
