@@ -354,6 +354,7 @@
             strHTML += '</tr>';
             strHTML += '</tbody>';
             strHTML += '</table>';
+            strHTML += '<br/>';
             strHTML += '<div class="alert alert-warning" role="alert">Are you sure you want to edit the item above?</div>';
             return strHTML;
         };
