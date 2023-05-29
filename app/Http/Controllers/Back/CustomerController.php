@@ -111,7 +111,7 @@ class CustomerController extends Controller
             return $query->where('customer_first_name', 'like', '%' . $customer_first_name . '%');
         })->when($company_name, function ($query, $company_name) {
             return $query->where('company_name', 'like', '%' . $company_name . '%');
-        })->get();
+        })->orderBy('customer_last_name')->orderBy('customer_first_name')->orderBy('company_name')->get();
 
         return view('back.customers.get-alikes', compact('customers'))->render();
     }
