@@ -111,7 +111,7 @@
             enabled: false,
             url: "{{ route('back.customers.massDestroy') }}",
             action: function(e, dt, node, config) {
-                var ids = $.map(dt.rows({
+                const ids = $.map(dt.rows({
                     selected: true
                 }).data(), function(entry) {
                     return entry.id;
@@ -262,7 +262,7 @@
         oTable.buttons('BtnGroupRight', null).containers().appendTo('#ToolbarRight');
         /* ------------------------------------------------------------------------ */
         oTable.on('select deselect', function(e, dt, type, indexes) {
-            var selectedRows = oTable.rows({
+            const selectedRows = oTable.rows({
                 selected: true
             }).count();
 
@@ -276,7 +276,7 @@
             const table = 'customers';
             const id = oTable.row($(this).closest("tr")).data().DT_RowId;
             const key = 'send_newsletter';
-            var value = oTable.cell(this).data();
+            let value = oTable.cell(this).data();
 
             bootbox.confirm({
                 title: 'Edit ...',
@@ -308,7 +308,7 @@
         /* ------------------------------------------------------------------------ */
         function MyItem(id, key, value) {
             const aRow = oTable.row('#' + id).data();
-            var from, to;
+            let from, to;
 
             if (value == 1) {
                 from = '1';
@@ -318,7 +318,7 @@
                 to = '1';
             }
 
-            var strHTML = '';
+            let strHTML = '';
             strHTML += '<table class="table table-bordered table-sm mytable">';
             strHTML += '<thead class="table-success">';
             strHTML +=

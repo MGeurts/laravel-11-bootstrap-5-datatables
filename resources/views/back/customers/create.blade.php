@@ -293,11 +293,7 @@
                     <div class="card-body">
                         <ul>
                             <li>Specify the requested values.</li>
-                            <br />
-                            <li>To avoid adding a customer more than once, after entering either <b>Last name</b>, <b>First name</b> or <b>Company</b>, existing simular customers will be shown below.</li>
-                            <br />
-                            <li>
-                                Use the buttons
+                            <li> Use the buttons
                                 <button type="button" class="btn btn-outline-secondary btn-sm" disabled>
                                     <i class="bi bi-clipboard-plus"></i>
                                 </button> or
@@ -305,7 +301,6 @@
                                     <i class="bi bi-trash"></i>
                                 </button> to <b>copy</b> the Customers address to the Delivery address or <b>clear</b> the Delivery address.
                             </li>
-                            <br />
                             <li>Click the <strong>Send</strong> button to save.</li>
                         </ul>
                     </div>
@@ -327,6 +322,12 @@
                             <!-- dynamically added -->
                         </div>
                     </div>
+
+                    <div class="card-footer">
+                        <small>
+                            To avoid adding a customer more than once, after entering either <b>Last name</b>, <b>First name</b> or <b>Company</b>, existing simular customers will be shown above.<br />
+                        </small>
+                    </div>
                 </div>
             </div>
         </div>
@@ -337,9 +338,9 @@
     <script type="module">
         /* -------------------------------------------------------------------------------------------- */
         $('#btnMapFacturation').click(function() {
-            var href = "https://www.google.nl/maps/place/";
+            const href = "https://www.google.nl/maps/place/";
 
-            var place = [
+            const place = [
                 ($('#address_street').val() ?? ''),
                 ($('#address_number').val() ?? '') + ',',
                 ($('#address_postal_code').val() ?? ''),
@@ -358,9 +359,9 @@
         });
         /* ------------------------------------------- */
         $('#btnMapDelivery').click(function() {
-            var href = "https://www.google.nl/maps/place/";
+            const href = "https://www.google.nl/maps/place/";
 
-            var place = [
+            const place = [
                 ($('#delivery_address_street').val() ?? ''),
                 ($('#delivery_address_number').val() ?? '') + ',',
                 ($('#delivery_address_postal_code').val() ?? ''),

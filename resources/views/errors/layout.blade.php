@@ -36,7 +36,7 @@
                                     </div>
 
                                     <div class="col fs-5 text-end">
-                                        <a href="mailto:info@yourcompagny.be" target="_blank" title="Mail Helpdesk">
+                                        <a href="mailto:info@yourcompany.be" target="_blank" title="Mail Helpdesk">
                                             <img src="{{ asset('img/general/helpdesk-035.png') }}" class="img-fluid" alt="mailhelpdesk" />
                                         </a>
                                     </div>
@@ -49,7 +49,7 @@
                 <div class="card-footer">
                     <div class="row">
                         <div class="col-sm small d-none d-md-block">
-                            <img src="{{ asset('img/logo/laravel-030.png') }}" alt="compagny" />
+                            <img src="{{ asset('img/logo/laravel-030.png') }}" alt="company" />
                         </div>
 
                         <div class="col-sm small d-none d-md-block text-end">

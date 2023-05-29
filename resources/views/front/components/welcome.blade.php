@@ -31,11 +31,11 @@
         showDate();
 
         function showTime() {
-            var now = dayjs();
+            const now = dayjs();
 
-            var h = now.hour();
-            var m = now.minute();
-            var s = now.second();
+            let h = now.hour();
+            let m = now.minute();
+            let s = now.second();
 
             if (h == 0 && m == 0 && s == 0) {
                 showDate();
@@ -45,23 +45,23 @@
             m = (m < 10) ? "0" + m : m;
             s = (s < 10) ? "0" + s : s;
 
-            var time = h + ":" + m + ":" + s;
+            const time = h + ":" + m + ":" + s;
             document.getElementById("MyClockTime").textContent = time;
 
             setTimeout(showTime, 1000);
         }
 
         function showDate() {
-            var now = dayjs();
+            const now = dayjs();
 
-            var d = now.date();
-            var m = now.month() + 1;
-            var y = now.year();
+            let d = now.date();
+            let m = now.month() + 1;
+            let y = now.year();
 
             d = (d < 10) ? "0" + d : d;
             m = (m < 10) ? "0" + m : m;
 
-            var date = d + "-" + m + "-" + y;
+            const date = d + "-" + m + "-" + y;
             document.getElementById("MyClockDate").textContent = date;
         }
         /* -------------------------------------------------------------------------------------------- */

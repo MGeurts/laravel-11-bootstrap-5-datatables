@@ -151,11 +151,7 @@ $.extend(true, $.fn.dataTable.defaults, {
                 // orientation: 'landscape'                         //
                 // is not working on the print button               //
                 // ------------------------------------------------ //
-                var last = null;
-                var current = null;
-                var bod = [];
-
-                var css = '@page { size: landscape; }',
+                let css = '@page { size: landscape; }',
                     head = win.document.head || win.document.getElementsByTagName('head')[0],
                     style = win.document.createElement('style');
 

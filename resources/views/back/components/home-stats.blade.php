@@ -29,8 +29,8 @@
 
         <p>Open source under MIT License.</p>
         <hr />
-        <br /><br /><br />
-        <p>If you like this project, consider giving it a star on <a href="https://github.com/MGeurts/laravel-10-bootstrap-5-datatables" target="_blank">GitHub</a>. Thanks.</p>
+        <br /><br /><br /><br /><br />
+        <p class="text-danger">If you like this project, consider giving it a star on <a href="https://github.com/MGeurts/laravel-10-bootstrap-5-datatables" target="_blank">GitHub</a>. Thanks.</p>
         <p>Happy programming.</p>
         <div class="float-end">
             <table>

@@ -236,9 +236,9 @@
     <script type="module">
         /* -------------------------------------------------------------------------------------------- */
         $('#btnMapFacturation').click(function() {
-            var href = "https://www.google.nl/maps/place/";
+            const href = "https://www.google.nl/maps/place/";
 
-            var place = [
+            const place = [
                 ($('#address_street').val() ?? ''),
                 ($('#address_number').val() ?? '') + ',',
                 ($('#address_postal_code').val() ?? ''),
@@ -257,9 +257,9 @@
         });
         /* ------------------------------------------- */
         $('#btnMapDelivery').click(function() {
-            var href = "https://www.google.nl/maps/place/";
+            const href = "https://www.google.nl/maps/place/";
 
-            var place = [
+            const place = [
                 ($('#delivery_address_street').val() ?? ''),
                 ($('#delivery_address_number').val() ?? '') + ',',
                 ($('#delivery_address_postal_code').val() ?? ''),

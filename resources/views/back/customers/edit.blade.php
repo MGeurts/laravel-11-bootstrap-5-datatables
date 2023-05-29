@@ -334,6 +334,14 @@
                     <div class="card-body">
                         <ul>
                             <li>Specify the requested values.</li>
+                            <li> Use the buttons
+                                <button type="button" class="btn btn-outline-secondary btn-sm" disabled>
+                                    <i class="bi bi-clipboard-plus"></i>
+                                </button> or
+                                <button type="button" class="btn btn-outline-secondary btn-sm" disabled>
+                                    <i class="bi bi-trash"></i>
+                                </button> to <b>copy</b> the Customers address to the Delivery address or <b>clear</b> the Delivery address.
+                            </li>
                             <li>Click the <strong>Send</strong> button to save.</li>
                         </ul>
                     </div>
@@ -347,9 +355,9 @@
     <script type="module">
         /* -------------------------------------------------------------------------------------------- */
         $('#btnMapFacturation').click(function() {
-            var href = "https://www.google.nl/maps/place/";
+            const href = "https://www.google.nl/maps/place/";
 
-            var place = [
+            const place = [
                 ($('#address_street').val() ?? ''),
                 ($('#address_number').val() ?? '') + ',',
                 ($('#address_postal_code').val() ?? ''),
@@ -368,9 +376,9 @@
         });
         /* ------------------------------------------- */
         $('#btnMapDelivery').click(function() {
-            var href = "https://www.google.nl/maps/place/";
+            const href = "https://www.google.nl/maps/place/";
 
-            var place = [
+            const place = [
                 ($('#delivery_address_street').val() ?? ''),
                 ($('#delivery_address_number').val() ?? '') + ',',
                 ($('#delivery_address_postal_code').val() ?? ''),
