@@ -26,7 +26,7 @@
                             <label for="customer_last_name" class="col-md-3 col-form-label">Last name :</label>
 
                             <div class="col-md-8">
-                                <input id="customer_last_name" name="customer_last_name" type="text" class="form-control @error('customer_last_name') is-invalid @enderror"
+                                <input id="customer_last_name" name="customer_last_name" type="text" class="form-control @error('customer_last_name') is-invalid @enderror js-identification"
                                     value="{{ old('customer_last_name') }}" autofocus>
 
                                 @error('customer_last_name')
@@ -39,7 +39,7 @@
                             <label for="customer_first_name" class="col-md-3 col-form-label">First name :</label>
 
                             <div class="col-md-8">
-                                <input id="customer_first_name" name="customer_first_name" type="text" class="form-control @error('customer_first_name') is-invalid @enderror"
+                                <input id="customer_first_name" name="customer_first_name" type="text" class="form-control @error('customer_first_name') is-invalid @enderror js-identification"
                                     value="{{ old('customer_first_name') }}">
 
                                 @error('customer_first_name')
@@ -53,7 +53,8 @@
                             <label for="company_name" class="col-md-3 col-form-label">Company :</label>
 
                             <div class="col-md-8">
-                                <input id="company_name" name="company_name" type="text" class="form-control @error('company_name') is-invalid @enderror" value="{{ old('company_name') }}">
+                                <input id="company_name" name="company_name" type="text" class="form-control @error('company_name') is-invalid @enderror js-identification"
+                                    value="{{ old('company_name') }}">
 
                                 @error('company_name')
                                     <span class="invalid-feedback" role="alert">{{ $message }}</span>
@@ -266,7 +267,7 @@
                             </div>
 
                             <div class="col-md-1">
-                                <button type="button" class="btn btn-outline-secondary btn-sm" id="btnMapLevering" name="btnMapLevering" title="Show address on map" tabindex="-1">
+                                <button type="button" class="btn btn-outline-secondary btn-sm" id="btnMapDelivery" name="btnMapDelivery" title="Show address on map" tabindex="-1">
                                     <img src="{{ asset('img/icons/google-maps-location.png') }}" class="img-fluid mx-auto d-block" />
                                 </button>
                             </div>
@@ -292,8 +293,39 @@
                     <div class="card-body">
                         <ul>
                             <li>Specify the requested values.</li>
+                            <br />
+                            <li>To avoid adding a customer more than once, after entering either <b>Last name</b>, <b>First name</b> or <b>Company</b>, existing simular customers will be shown below.</li>
+                            <br />
+                            <li>
+                                Use the buttons
+                                <button type="button" class="btn btn-outline-secondary btn-sm" disabled>
+                                    <i class="bi bi-clipboard-plus"></i>
+                                </button> or
+                                <button type="button" class="btn btn-outline-secondary btn-sm" disabled>
+                                    <i class="bi bi-trash"></i>
+                                </button> to <b>copy</b> the Customers address to the Delivery address or <b>clear</b> the Delivery address.
+                            </li>
+                            <br />
                             <li>Click the <strong>Send</strong> button to save.</li>
                         </ul>
+                    </div>
+                </div>
+
+                <div class="card mb-2">
+                    <div class="card-header">
+                        <div class="row">
+                            <div class="col">Existing simular customers</div>
+
+                            <div class="col fs-5 text-end">
+                                <img src="{{ asset('img/icons/persons.png') }}" />
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card-body">
+                        <div id="MyCustomers">
+                            <!-- dynamically added -->
+                        </div>
                     </div>
                 </div>
             </div>
@@ -325,7 +357,7 @@
             }
         });
         /* ------------------------------------------- */
-        $('#btnMapLevering').click(function() {
+        $('#btnMapDelivery').click(function() {
             var href = "https://www.google.nl/maps/place/";
 
             var place = [
@@ -374,6 +406,35 @@
                 });
             }
         });
+        /* -------------------------------------------------------------------------------------------- */
+        document.addEventListener('change', function(e) {
+            if (e.target && $(e.target).attr('class').includes('js-identification')) {
+                getCustomers(
+                    document.querySelector('#customer_last_name').value,
+                    document.querySelector('#customer_first_name').value,
+                    document.querySelector('#company_name').value
+                );
+            }
+        });
+        /* -------------------------------------------------------------------------------------------- */
+        function getCustomers(customerLastName, customerFirstName, companyName) {
+            if (customerLastName || customerFirstName || companyName) {
+                $.ajax({
+                    method: 'GET',
+                    url: "{{ route('back.customers.getAlikes') }}",
+                    data: {
+                        customer_last_name: customerLastName,
+                        customer_first_name: customerFirstName,
+                        company_name: companyName,
+                    },
+                    success: function(response) {
+                        document.getElementById('MyCustomers').innerHTML = response;
+                    }
+                });
+            } else {
+                document.getElementById('MyCustomers').innerHTML = '';
+            }
+        }
         /* -------------------------------------------------------------------------------------------- */
     </script>
 @endpush

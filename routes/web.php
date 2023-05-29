@@ -65,6 +65,7 @@ Route::middleware('auth')->group(function () {
         // Customers
         Route::controller(App\Http\Controllers\Back\CustomerController::class)->group(function () {
             Route::delete('/customers/massDestroy', 'massDestroy')->name('customers.massDestroy');
+            Route::get('/customers/getAlikes', 'getAlikes')->name('customers.getAlikes');
 
             Route::resource('/customers', App\Http\Controllers\Back\CustomerController::class)->except(['destroy']);
         });

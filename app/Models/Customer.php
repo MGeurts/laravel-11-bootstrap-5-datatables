@@ -103,4 +103,23 @@ class Customer extends Model
     {
         return implode(' ', array_filter([$this->attributes['address_postal_code'], $this->attributes['address_place']]));
     }
+
+    /* ------------------------------------------------ */
+    public function getCustomerFullBoldAttribute()
+    {
+        return implode(', ', array_filter([$this->CustomerBold, $this->Company, $this->Address, $this->PlaceFull]));
+    }
+
+    public function getCustomerBoldAttribute()
+    {
+        return $this->Customer ? '<b>' . $this->Customer . '</b>' : '';
+    }
+
+    public function getPlaceFullAttribute()
+    {
+        return $this->attributes['address_country'] ?
+            implode(' ', array_filter([$this->attributes['address_postal_code'], $this->attributes['address_place']])) . ' (' . $this->attributes['address_country'] . ')' :
+            implode(' ', array_filter([$this->attributes['address_postal_code'], $this->attributes['address_place']]));
+    }
+    /* -------------------------------------------------------------------------------------------- */
 }

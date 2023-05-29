@@ -98,4 +98,21 @@ class CustomerController extends Controller
 
         return response()->noContent();
     }
+
+    public function getAlikes(Request $request)
+    {
+        $customer_last_name = $request->customer_last_name;
+        $customer_first_name = $request->customer_first_name;
+        $company_name = $request->company_name;
+
+        $customers = Customer::when($customer_last_name, function ($query, $customer_last_name) {
+            return $query->where('customer_last_name', 'like', '%' . $customer_last_name . '%');
+        })->when($customer_first_name, function ($query, $customer_first_name) {
+            return $query->where('customer_first_name', 'like', '%' . $customer_first_name . '%');
+        })->when($company_name, function ($query, $company_name) {
+            return $query->where('company_name', 'like', '%' . $company_name . '%');
+        })->get();
+
+        return view('back.customers.get-alikes', compact('customers'))->render();
+    }
 }
