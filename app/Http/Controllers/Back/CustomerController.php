@@ -47,7 +47,7 @@ class CustomerController extends Controller
 
     public function create()
     {
-        $countries = Country::where('is_eu', 1)->orderBy('name', 'asc')->get();
+        $countries = Country::orderBy('name', 'asc')->get();
 
         return view('back.customers.create')->with(compact('countries'));
     }
@@ -74,7 +74,7 @@ class CustomerController extends Controller
 
     public function edit(Customer $customer)
     {
-        $countries = Country::where('is_eu', 1)->orderBy('name', 'asc')->get();
+        $countries = Country::orderBy('name', 'asc')->get();
 
         return view('back.customers.edit', compact('customer'))->with(compact('countries'));
     }

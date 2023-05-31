@@ -28,9 +28,9 @@
 
                     <div class="card-body">
                         <div class="row mb-2">
-                            <label for="customer_last_name" class="col-md-3 col-form-label">Last name :</label>
+                            <label for="customer_last_name" class="col-md-2 col-form-label">Last name :</label>
 
-                            <div class="col-md-8">
+                            <div class="col-md-10">
                                 <input id="customer_last_name" name="customer_last_name" type="text" class="form-control @error('customer_last_name') is-invalid @enderror"
                                     value="{{ $customer->customer_last_name }}" autofocus>
 
@@ -41,9 +41,9 @@
                         </div>
 
                         <div class="row mb-2">
-                            <label for="customer_first_name" class="col-md-3 col-form-label">First name :</label>
+                            <label for="customer_first_name" class="col-md-2 col-form-label">First name :</label>
 
-                            <div class="col-md-8">
+                            <div class="col-md-10">
                                 <input id="customer_first_name" name="customer_first_name" type="text" class="form-control @error('customer_first_name') is-invalid @enderror"
                                     value="{{ $customer->customer_first_name }}">
 
@@ -55,9 +55,9 @@
                         <hr class="narrow" />
 
                         <div class="row mb-2">
-                            <label for="company_name" class="col-md-3 col-form-label">Company :</label>
+                            <label for="company_name" class="col-md-2 col-form-label">Company :</label>
 
-                            <div class="col-md-8">
+                            <div class="col-md-10">
                                 <input id="company_name" name="company_name" type="text" class="form-control @error('company_name') is-invalid @enderror" value="{{ $customer->company_name }}">
 
                                 @error('company_name')
@@ -67,9 +67,9 @@
                         </div>
 
                         <div class="row mb-2">
-                            <label for="company_vat" class="col-md-3 col-form-label">VAT N° :</label>
+                            <label for="company_vat" class="col-md-2 col-form-label">VAT N° :</label>
 
-                            <div class="col-md-8">
+                            <div class="col-md-10">
                                 <input id="company_vat" name="company_vat" type="text" class="form-control @error('company_vat') is-invalid @enderror" value="{{ $customer->company_vat }}">
 
                                 @error('company_vat')
@@ -80,9 +80,7 @@
                         <hr class="narrow" />
 
                         <div class="row mb-2">
-                            <label for="address_street" class="col-md-3 col-form-label">
-                                Street, number :
-                            </label>
+                            <label for="address_street" class="col-md-2 col-form-label">Street :</label>
 
                             <div class="col-md-6">
                                 <input id="address_street" name="address_street" type="text" class="form-control @error('address_street') is-invalid @enderror" value="{{ $customer->address_street }}">
@@ -92,6 +90,8 @@
                                 @enderror
                             </div>
 
+                            <label for="address_number" class="col-md-1 col-form-label">N° :</label>
+
                             <div class="col-md-2">
                                 <input id="address_number" name="address_number" type="text" class="form-control @error('address_number') is-invalid @enderror" value="{{ $customer->address_number }}">
 
@@ -99,14 +99,18 @@
                                     <span class="invalid-feedback" role="alert">{{ $message }}</span>
                                 @enderror
                             </div>
+
+                            <div class="col-md-1">
+                                <button type="button" class="btn btn-outline-secondary" id="btnMapFacturation" name="btnMapFacturation" title="Show address on map" tabindex="-1">
+                                    <img src="{{ asset('img/icons/google-maps-location.png') }}" class="img-fluid mx-auto d-block" />
+                                </button>
+                            </div>
                         </div>
 
                         <div class="row mb-2">
-                            <label for="address_country" class="col-md-3 col-form-label">
-                                Country, postal code, place :
-                            </label>
+                            <label for="address_country" class="col-md-2 col-form-label">Country :</label>
 
-                            <div class="col-md-2">
+                            <div class="col-md-3">
                                 <select name="address_country" id="address_country" class="form-select">
                                     <option value="">Choose ...</option>
                                     @foreach ($countries as $country)
@@ -123,6 +127,8 @@
                                 @enderror
                             </div>
 
+                            <label for="address_postal_code" class="col-md-1 col-form-label">PC :</label>
+
                             <div class="col-md-2">
                                 <input id="address_postal_code" name="address_postal_code" type="text" class="form-control @error('address_postal_code') is-invalid @enderror"
                                     value="{{ $customer->address_postal_code }}">
@@ -132,26 +138,23 @@
                                 @enderror
                             </div>
 
-                            <div class="col-md-4">
-                                <input id="address_place" name="address_place" type="text" class="form-control @error('address_place') is-invalid @enderror" value="{{ $customer->address_place }}">
+                            <label for="address_place" class="col-md-1 col-form-label">Place :</label>
+
+                            <div class="col-md-3">
+                                <input id="address_place" name="address_place" type="text" class="form-control @error('address_place') is-invalid @enderror"
+                                    value="{{ $customer->address_place }}">
 
                                 @error('address_place')
                                     <span class="invalid-feedback" role="alert">{{ $message }}</span>
                                 @enderror
                             </div>
-
-                            <div class="col-md-1">
-                                <button type="button" class="btn btn-outline-secondary btn-sm" id="btnMapFacturation" name="btnMapFacturation" title="Show address on map" tabindex="-1">
-                                    <img src="{{ asset('img/icons/google-maps-location.png') }}" class="img-fluid mx-auto d-block" />
-                                </button>
-                            </div>
                         </div>
                         <hr class="narrow" />
 
                         <div class="row mb-2">
-                            <label for="phone" class="col-md-3 col-form-label">Phone :</label>
+                            <label for="phone" class="col-md-2 col-form-label">Phone :</label>
 
-                            <div class="col-md-8">
+                            <div class="col-md-10">
                                 <div class="input-group">
                                     <input id="phone" name="phone" type="text" class="form-control @error('phone') is-invalid @enderror" value="{{ $customer->phone }}">
                                     <span class="input-group-text"><i class="bi bi-telephone"></i></span>
@@ -164,9 +167,9 @@
                         </div>
 
                         <div class="row">
-                            <label for="email" class="col-md-3 col-form-label">E-mail :</label>
+                            <label for="email" class="col-md-2 col-form-label">E-mail :</label>
 
-                            <div class="col-md-8">
+                            <div class="col-md-10">
                                 <div class="input-group">
                                     <input id="email" name="email" type="email" class="form-control @error('email') is-invalid @enderror" value="{{ $customer->email }}">
                                     <span class="input-group-text"><i class="bi bi-envelope"></i></span>
@@ -217,9 +220,7 @@
 
                     <div class="card-body">
                         <div class="row mb-2">
-                            <label for="delivery_address_street" class="col-md-3 col-form-label">
-                                Street, number :
-                            </label>
+                            <label for="delivery_address_street" class="col-md-2 col-form-label">Street :</label>
 
                             <div class="col-md-6">
                                 <input id="delivery_address_street" name="delivery_address_street" type="text" class="form-control @error('delivery_address_street') is-invalid @enderror"
@@ -230,6 +231,8 @@
                                 @enderror
                             </div>
 
+                            <label for="delivery_address_number" class="col-md-1 col-form-label">N° :</label>
+
                             <div class="col-md-2">
                                 <input id="delivery_address_number" name="delivery_address_number" type="text" class="form-control @error('delivery_address_number') is-invalid @enderror"
                                     value="{{ $customer->delivery_address_number }}">
@@ -238,14 +241,18 @@
                                     <span class="invalid-feedback" role="alert">{{ $message }}</span>
                                 @enderror
                             </div>
+
+                            <div class="col-md-1">
+                                <button type="button" class="btn btn-outline-secondary" id="btnMapDelivery" name="btnMapDelivery" title="Show address on map" tabindex="-1">
+                                    <img src="{{ asset('img/icons/google-maps-location.png') }}" class="img-fluid mx-auto d-block" />
+                                </button>
+                            </div>
                         </div>
 
                         <div class="row mb-2">
-                            <label for="delivery_address_country" class="col-md-3 col-form-label">
-                                Country, postal code, place :
-                            </label>
+                            <label for="delivery_address_country" class="col-md-2 col-form-label">Country :</label>
 
-                            <div class="col-md-2">
+                            <div class="col-md-3">
                                 <select name="delivery_address_country" id="delivery_address_country" class="form-select">
                                     <option value="">Choose ...</option>
                                     @foreach ($countries as $country)
@@ -261,6 +268,8 @@
                                 @enderror
                             </div>
 
+                            <label for="delivery_address_postal_code" class="col-md-1 col-form-label">PC :</label>
+
                             <div class="col-md-2">
                                 <input id="delivery_address_postal_code" name="delivery_address_postal_code" type="text"
                                     class="form-control @error('delivery_address_postal_code') is-invalid @enderror" value="{{ $customer->delivery_address_postal_code }}">
@@ -270,19 +279,15 @@
                                 @enderror
                             </div>
 
-                            <div class="col-md-4">
+                            <label for="delivery_address_place" class="col-md-1 col-form-label">Place :</label>
+
+                            <div class="col-md-3">
                                 <input id="delivery_address_place" name="delivery_address_place" type="text" class="form-control @error('delivery_address_place') is-invalid @enderror"
                                     value="{{ $customer->delivery_address_place }}">
 
                                 @error('delivery_address_place')
                                     <span class="invalid-feedback" role="alert">{{ $message }}</span>
                                 @enderror
-                            </div>
-
-                            <div class="col-md-1">
-                                <button type="button" class="btn btn-outline-secondary btn-sm" id="btnMapDelivery" name="btnMapDelivery" title="Show address on map" tabindex="-1">
-                                    <img src="{{ asset('img/icons/google-maps-location.png') }}" class="img-fluid mx-auto d-block" />
-                                </button>
                             </div>
                         </div>
                     </div>
