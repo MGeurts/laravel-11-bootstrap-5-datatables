@@ -11,7 +11,7 @@
     "src": "node_modules/bootstrap-icons/font/fonts/bootstrap-icons.woff2"
   },
   "resources/js/app.js": {
-    "file": "assets/app-72495c36.js",
+    "file": "assets/app-fc6af480.js",
     "imports": [
       "_jquery-1884936c.js"
     ],
@@ -32,7 +32,7 @@
     "src": "resources/js/datatables.js"
   },
   "resources/sass/app.scss": {
-    "file": "assets/app-93c91c0c.css",
+    "file": "assets/app-db5172ae.css",
     "isEntry": true,
     "src": "resources/sass/app.scss"
   },
