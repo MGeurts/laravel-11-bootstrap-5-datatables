@@ -5,7 +5,7 @@
 @endsection
 
 @section('content')
-    <div class="card">
+    <div class="card mb-2">
         <div class="card-header d-print-none">
             <div class="row">
                 <div class="col">Customers</div>
@@ -16,8 +16,8 @@
             </div>
         </div>
 
-        <div class="card-body p-1">
-            <div class="d-flex justify-content-between mb-1">
+        <div class="card-body p-0">
+            <div class="d-flex justify-content-between p-1">
                 <div id="ToolbarLeft"></div>
                 <div id="ToolbarCenter"></div>
                 <div id="ToolbarRight"></div>
