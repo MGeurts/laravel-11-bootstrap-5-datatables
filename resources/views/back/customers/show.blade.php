@@ -24,59 +24,63 @@
 
                 <div class="card-body">
                     <div class="row mb-2">
-                        <label for="customer_last_name" class="col-md-3 col-form-label">Last name :</label>
+                        <label for="customer_last_name" class="col-md-2 col-form-label">Last name :</label>
 
-                        <div class="col-md-8">
+                        <div class="col-md-10">
                             <input id="customer_last_name" name="customer_last_name" type="text" readonly class="form-control-plaintext" value="{{ $customer->customer_last_name }}">
                         </div>
                     </div>
 
                     <div class="row mb-2">
-                        <label for="customer_first_name" class="col-md-3 col-form-label">First name :</label>
+                        <label for="customer_first_name" class="col-md-2 col-form-label">First name :</label>
 
-                        <div class="col-md-8">
+                        <div class="col-md-10">
                             <input id="customer_first_name" name="customer_first_name" type="text" readonly class="form-control-plaintext" value="{{ $customer->customer_first_name }}">
                         </div>
                     </div>
                     <hr class="narrow" />
 
                     <div class="row mb-2">
-                        <label for="company_name" class="col-md-3 col-form-label">Company :</label>
+                        <label for="company_name" class="col-md-2 col-form-label">Company :</label>
 
-                        <div class="col-md-8">
+                        <div class="col-md-10">
                             <input id="company_name" name="company_name" type="text" readonly class="form-control-plaintext" value="{{ $customer->company_name }}">
                         </div>
                     </div>
 
                     <div class="row mb-2">
-                        <label for="company_vat" class="col-md-3 col-form-label">VAT N° :</label>
+                        <label for="company_vat" class="col-md-2 col-form-label">VAT N° :</label>
 
-                        <div class="col-md-8">
+                        <div class="col-md-10">
                             <input id="company_vat" name="company_vat" type="text" readonly class="form-control-plaintext" value="{{ $customer->company_vat }}">
                         </div>
                     </div>
                     <hr class="narrow" />
 
                     <div class="row mb-2">
-                        <label for="address_street" class="col-md-3 col-form-label">
-                            Street, number :
-                        </label>
+                        <label for="address_street" class="col-md-2 col-form-label">Street :</label>
 
                         <div class="col-md-6">
                             <input id="address_street" name="address_street" type="text" readonly class="form-control-plaintext" value="{{ $customer->address_street }}">
                         </div>
 
+                        <label for="address_number" class="col-md-1 col-form-label">N° :</label>
+
                         <div class="col-md-2">
                             <input id="address_number" name="address_number" type="text" readonly class="form-control-plaintext" value="{{ $customer->address_number }}">
+                        </div>
+
+                        <div class="col-md-1">
+                            <button type="button" class="btn btn-outline-secondary" id="btnMapFacturation" name="btnMapFacturation" title="Show address on map" tabindex="-1">
+                                <img src="{{ asset('img/icons/google-maps-location.png') }}" class="img-fluid mx-auto d-block" />
+                            </button>
                         </div>
                     </div>
 
                     <div class="row mb-2">
-                        <label for="address_country" class="col-md-3 col-form-label">
-                            Country, postal code, place :
-                        </label>
+                        <label for="address_country" class="col-md-2 col-form-label">Country :</label>
 
-                        <div class="col-md-2">
+                        <div class="col-md-3">
                             <select name="address_country" id="address_country" class="form-select selectpicker" disabled>
                                 <option value="">Choose ...</option>
                                 @foreach ($countries as $country)
@@ -90,34 +94,32 @@
                             </select>
                         </div>
 
+                        <label for="address_postal_code" class="col-md-1 col-form-label">PC :</label>
+
                         <div class="col-md-2">
                             <input id="address_postal_code" name="address_postal_code" type="text" readonly class="form-control-plaintext" value="{{ $customer->address_postal_code }}">
                         </div>
 
-                        <div class="col-md-4">
-                            <input id="address_place" name="address_place" type="text" readonly class="form-control-plaintext" value="{{ $customer->address_place }}">
-                        </div>
+                        <label for="address_postal_code" class="col-md-1 col-form-label">Place :</label>
 
-                        <div class="col-md-1">
-                            <button type="button" class="btn btn-outline-secondary btn-sm" id="btnMapFacturation" name="btnMapFacturation" title="Show address on map" tabindex="-1">
-                                <img src="{{ asset('img/icons/google-maps-location.png') }}" class="img-fluid mx-auto d-block" />
-                            </button>
+                        <div class="col-md-3">
+                            <input id="address_place" name="address_place" type="text" readonly class="form-control-plaintext" value="{{ $customer->address_place }}">
                         </div>
                     </div>
                     <hr class="narrow" />
 
                     <div class="row mb-2">
-                        <label for="phone" class="col-md-3 col-form-label">Phone :</label>
+                        <label for="phone" class="col-md-2 col-form-label">Phone :</label>
 
-                        <div class="col-md-8">
+                        <div class="col-md-10">
                             <input id="phone" name="phone" type="text" readonly class="form-control-plaintext" value="{{ $customer->phone }}">
                         </div>
                     </div>
 
                     <div class="row">
-                        <label for="email" class="col-md-3 col-form-label">E-mail :</label>
+                        <label for="email" class="col-md-2 col-form-label">E-mail :</label>
 
-                        <div class="col-md-8">
+                        <div class="col-md-10">
                             <input id="email" name="email" type="email" readonly class="form-control-plaintext" value="{{ $customer->email }}">
                         </div>
                     </div>
@@ -147,27 +149,31 @@
 
                 <div class="card-body">
                     <div class="row mb-2">
-                        <label for="delivery_address_street" class="col-md-3 col-form-label">
-                            Street, number:
-                        </label>
+                        <label for="delivery_address_street" class="col-md-2 col-form-label">Street :</label>
 
                         <div class="col-md-6">
                             <input id="delivery_address_street" name="delivery_address_street" type="text" readonly class="form-control-plaintext"
                                 value="{{ $customer->delivery_address_street }}">
                         </div>
 
+                        <label for="delivery_address_number" class="col-md-1 col-form-label">N° :</label>
+
                         <div class="col-md-2">
                             <input id="delivery_address_number" name="delivery_address_number" type="text" readonly class="form-control-plaintext"
                                 value="{{ $customer->delivery_address_number }}">
                         </div>
+
+                        <div class="col-md-1">
+                            <button type="button" class="btn btn-outline-secondary" id="btnMapDelivery" name="btnMapDelivery" title="Show address on map" tabindex="-1">
+                                <img src="{{ asset('img/icons/google-maps-location.png') }}" class="img-fluid mx-auto d-block" />
+                            </button>
+                        </div>
                     </div>
 
                     <div class="row mb-2">
-                        <label for="delivery_address_country" class="col-md-3 col-form-label">
-                            Country, postal code, place :
-                        </label>
+                        <label for="delivery_address_country" class="col-md-2 col-form-label">Country :</label>
 
-                        <div class="col-md-2">
+                        <div class="col-md-3">
                             <select name="delivery_address_country" id="delivery_address_country" class="form-select selectpicker" disabled>
                                 <option value="">Choose ...</option>
                                 @foreach ($countries as $country)
@@ -181,19 +187,17 @@
                             </select>
                         </div>
 
+                        <label for="delivery_address_postal_code" class="col-md-1 col-form-label">PC :</label>
+
                         <div class="col-md-2">
                             <input id="delivery_address_postal_code" name="delivery_address_postal_code" type="text" readonly class="form-control-plaintext"
                                 value="{{ $customer->delivery_address_postal_code }}">
                         </div>
 
-                        <div class="col-md-4">
-                            <input id="delivery_address_place" name="delivery_address_place" type="text" readonly class="form-control-plaintext" value="{{ $customer->delivery_address_place }}">
-                        </div>
+                        <label for="delivery_address_place" class="col-md-1 col-form-label">Place :</label>
 
-                        <div class="col-md-1">
-                            <button type="button" class="btn btn-outline-secondary btn-sm" id="btnMapDelivery" name="btnMapDelivery" title="Show address on map" tabindex="-1">
-                                <img src="{{ asset('img/icons/google-maps-location.png') }}" class="img-fluid mx-auto d-block" />
-                            </button>
+                        <div class="col-md-3">
+                            <input id="delivery_address_place" name="delivery_address_place" type="text" readonly class="form-control-plaintext" value="{{ $customer->delivery_address_place }}">
                         </div>
                     </div>
                 </div>

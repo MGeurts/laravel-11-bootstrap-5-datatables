@@ -182,7 +182,7 @@
                             </div>
 
                             <div class="col text-end">
-                                <button type="submit" class="btn btn-primary text-white btn-sm" tabindex="-1">send</button>
+                                <button type="submit" class="btn btn-primary text-white btn-sm" tabindex="-1">Send</button>
                             </div>
                         </div>
                     </div>
@@ -307,7 +307,12 @@
                                     <i class="bi bi-trash"></i>
                                 </button> to <b>copy</b> the Customers address to the Delivery address or <b>clear</b> the Delivery address.
                             </li>
-                            <li>Click the <strong>Send</strong> button to save.</li>
+                            <li> Use the buttons
+                                <button type="button" class="btn btn-outline-secondary" disabled>
+                                    <img src="{{ asset('img/icons/google-maps-location.png') }}" class="img-fluid mx-auto d-block" />
+                                </button> to <b>view</b> the addresses on Google Maps.
+                            </li>
+                            <li>Click the <strong>Send</strong> button to <b>save</b>.</li>
                         </ul>
                     </div>
                 </div>
