@@ -60,12 +60,6 @@
                 } else {
                     document.documentElement.setAttribute('data-bs-theme', theme)
                 }
-                
-                showToast({
-                    type: 'info',
-                    title: 'Change theme ...',
-                    message: 'Theme set to : ' + theme.toUpperCase() + '.',
-                })
             }
 
             setTheme(getPreferredTheme())
