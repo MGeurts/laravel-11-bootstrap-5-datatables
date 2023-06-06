@@ -12,7 +12,7 @@
         <div class="row">
             <div class="col-lg-6">
                 <div class="card mb-3">
-                    <div class="card-header">
+                    <div class="card-header text-bg-light">
                         <div class="row">
                             <div class="col">User - Edit</div>
 
@@ -25,7 +25,7 @@
                     <div class="card-body">
                         <input id="id" type="hidden" name="id" value="{{ $user->id }}">
 
-                        <div class="row mb-3">
+                        <div class="row mb-2">
                             <label for="name" class="col-md-4 col-form-label">Name :</label>
 
                             <div class="col-md-7">
@@ -37,7 +37,7 @@
                             </div>
                         </div>
 
-                        <div class="row mb-3">
+                        <div class="row mb-2">
                             <label for="email" class="col-md-4 col-form-label">E-mail :</label>
 
                             <div class="col-md-7">
@@ -50,7 +50,7 @@
                         </div>
 
                         @isset($create)
-                            <div class="row mb-3">
+                            <div class="row mb-2">
                                 <label for="password" class="col-md-4 col-form-label">Password :</label>
 
                                 <div class="col-md-7">
@@ -62,7 +62,7 @@
                                 </div>
                             </div>
 
-                            <div class="row mb-3">
+                            <div class="row mb-2">
                                 <label for="password_confirmation" class="col-md-4 col-form-label">Confirm password :</label>
 
                                 <div class="col-md-7">
@@ -76,7 +76,7 @@
                         @endisset
                         <hr class="narrow" />
 
-                        <div class="row mb-3">
+                        <div class="row">
                             <label for="is_developer" class="col-md-4 col-form-label">Developer ?</label>
 
                             <div class="col-md-2">
@@ -88,7 +88,7 @@
                         </div>
                     </div>
 
-                    <div class="card-footer">
+                    <div class="card-footer text-bg-light">
                         <div class="row">
                             <div class="col">
                                 <button type="button" class="btn btn-secondary text-white btn-sm" tabindex="-1" onclick="history.back();">
@@ -106,6 +106,34 @@
             </div>
 
             <div class="col-lg-6">
+                <div class="card mb-3">
+                    <div class="card-header text-bg-light">
+                        <div class="row">
+                            <div class="col">System</div>
+
+                            <div class="col fs-5 text-end">
+                                <img src="{{ asset('img/icons/system.png') }}" />
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card-body">
+                        <div class="row">
+                            <label for="created_at" class="col-md-5 col-form-label">Date created :</label>
+                            <div class="col-md-6">
+                                <input type="text" readonly class="form-control-plaintext" id="created_at" value="{{ $user->created_at }}" tabindex="-1">
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <label for="updated_at" class="col-md-5 col-form-label">Date updated :</label>
+                            <div class="col-md-6">
+                                <input type="text" readonly class="form-control-plaintext" id="updated_at" value="{{ $user->updated_at }}" tabindex="-1">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
                 <div class="card mb-3">
                     <div class="card-header bg-info text-white">
                         <div class="row">

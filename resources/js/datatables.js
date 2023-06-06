@@ -87,7 +87,7 @@ $.extend(true, $.fn.dataTable.defaults, {
         },
         {
             extend: 'colvis',
-            className: 'btn-outline-dark',
+            className: 'btn-outline-secondary',
             text: '<i class="bi bi-columns"></i>',
             titleAttr: 'Column visibility',
             postfixButtons: [{
@@ -99,7 +99,7 @@ $.extend(true, $.fn.dataTable.defaults, {
         },
         {
             extend: 'copyHtml5',
-            className: 'btn-outline-dark',
+            className: 'btn-outline-secondary',
             text: '<i class="bi bi-clipboard"></i>',
             titleAttr: 'Copy to clipboard',
             exportOptions: {

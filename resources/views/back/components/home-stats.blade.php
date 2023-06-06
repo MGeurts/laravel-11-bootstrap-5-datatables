@@ -1,5 +1,5 @@
 <div class="card mb-3">
-    <div class="card-header">
+    <div class="card-header text-bg-light">
         <div class="row">
             <div class="col">Status <strong>{{ Session::get('APP.YEAR') }}</strong></div>
 
@@ -49,7 +49,7 @@
         </div>
     </div>
 
-    <div class="card-footer">
+    <div class="card-footer text-bg-light">
         <div class="row ">
             <div class="col small">
                 <a href="https://www.yourcompany.com" target="_blank">www.yourcompany.com</a>

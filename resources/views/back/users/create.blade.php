@@ -11,7 +11,7 @@
                 @csrf
 
                 <div class="card mb-3">
-                    <div class="card-header">
+                    <div class="card-header text-bg-light">
                         <div class="row">
                             <div class="col">User - Add</div>
 
@@ -22,7 +22,7 @@
                     </div>
 
                     <div class="card-body">
-                        <div class="row mb-3">
+                        <div class="row mb-2">
                             <label for="name" class="col-md-4 col-form-label">Name :</label>
 
                             <div class="col-md-7">
@@ -34,7 +34,7 @@
                             </div>
                         </div>
 
-                        <div class="row mb-3">
+                        <div class="row mb-2">
                             <label for="email" class="col-md-4 col-form-label">E-mail :</label>
 
                             <div class="col-md-7">
@@ -46,7 +46,7 @@
                             </div>
                         </div>
 
-                        <div class="row mb-3">
+                        <div class="row mb-2">
                             <label for="password" class="col-md-4 col-form-label">Password :</label>
 
                             <div class="col-md-7">
@@ -58,7 +58,7 @@
                             </div>
                         </div>
 
-                        <div class="row mb-3">
+                        <div class="row">
                             <label for="password_confirmation" class="col-md-4 col-form-label">Confirm password :</label>
 
                             <div class="col-md-7">
@@ -71,7 +71,7 @@
                         </div>
                         <hr class="narrow" />
 
-                        <div class="row mb-3">
+                        <div class="row">
                             <label for="is_developer" class="col-md-4 col-form-label">Developer ?</label>
 
                             <div class="col-md-2">
@@ -83,7 +83,7 @@
                         </div>
                     </div>
 
-                    <div class="card-footer">
+                    <div class="card-footer text-bg-light">
                         <div class="row">
                             <div class="col">
                                 <a class="btn btn-secondary text-white btn-sm" href="{{ route('back.users.index') }}"" role=" button" tabindex="-1">
@@ -102,6 +102,7 @@
         </div>
 
         <div class="col-lg-6">
+
             <div class="card mb-3">
                 <div class="card-header bg-info text-white">
                     <div class="row">

@@ -8,7 +8,7 @@
     <div class="row">
         <div class="col-lg-7">
             <div class="card mb-3">
-                <div class="card-header">
+                <div class="card-header text-bg-light">
                     <div class="row">
                         <div class="col">Customer</div>
 
@@ -125,7 +125,7 @@
                     </div>
                 </div>
 
-                <div class="card-footer">
+                <div class="card-footer text-bg-light">
                     <div class="row">
                         <div class="col">
                             <a class="btn btn-secondary text-white btn-sm" href="{{ route('back.customers.index') }}"" role=" button" tabindex="-1">
@@ -137,7 +137,7 @@
             </div>
 
             <div class="card mb-3">
-                <div class="card-header">
+                <div class="card-header text-bg-light">
                     <div class="row">
                         <div class="col">Delivery address</div>
 
@@ -206,7 +206,7 @@
 
         <div class="col-lg-5">
             <div class="card mb-3">
-                <div class="card-header">
+                <div class="card-header text-bg-light">
                     <div class="row">
                         <div class="col">System</div>
 

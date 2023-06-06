@@ -11,7 +11,7 @@
         <div class="row">
             <div class="col-lg-7">
                 <div class="card mb-3">
-                    <div class="card-header">
+                    <div class="card-header text-bg-light">
                         <div class="row">
                             <div class="col">Customer - Add</div>
 
@@ -35,7 +35,7 @@
                             </div>
                         </div>
 
-                        <div class="row mb-2">
+                        <div class="row mb-1">
                             <label for="customer_first_name" class="col-md-2 col-form-label">First name :</label>
 
                             <div class="col-md-10">
@@ -62,7 +62,7 @@
                             </div>
                         </div>
 
-                        <div class="row mb-2">
+                        <div class="row mb-1">
                             <label for="company_vat" class="col-md-2 col-form-label">VAT N° :</label>
 
                             <div class="col-md-10">
@@ -103,7 +103,7 @@
                             </div>
                         </div>
 
-                        <div class="row mb-2">
+                        <div class="row mb-1">
                             <label for="address_country" class="col-md-2 col-form-label">Country :</label>
 
                             <div class="col-md-3">
@@ -173,7 +173,7 @@
                         </div>
                     </div>
 
-                    <div class="card-footer">
+                    <div class="card-footer text-bg-light">
                         <div class="row">
                             <div class="col">
                                 <a class="btn btn-secondary text-white btn-sm" href="{{ route('back.customers.index') }}"" role=" button" tabindex="-1">
@@ -189,7 +189,7 @@
                 </div>
 
                 <div class="card mb-3">
-                    <div class="card-header">
+                    <div class="card-header text-bg-light">
                         <div class="row">
                             <div class="col">Delivery address</div>
 
@@ -240,7 +240,7 @@
                             </div>
                         </div>
 
-                        <div class="row mb-2">
+                        <div class="row">
                             <label for="delivery_address_country" class="col-md-2 col-form-label">Country :</label>
 
                             <div class="col-md-3">
@@ -280,7 +280,7 @@
                         </div>
                     </div>
 
-                    <div class="card-footer">
+                    <div class="card-footer text-bg-light">
                         <small>Delivery address should only be used if different from facturation address above.</small>
                     </div>
                 </div>
@@ -317,8 +317,8 @@
                     </div>
                 </div>
 
-                <div class="card mb-2">
-                    <div class="card-header">
+                <div class="card mb-3">
+                    <div class="card-header text-bg-light">
                         <div class="row">
                             <div class="col">Existing simular customers</div>
 
@@ -334,7 +334,7 @@
                         </div>
                     </div>
 
-                    <div class="card-footer">
+                    <div class="card-footer text-bg-light">
                         <small>
                             To avoid adding a customer more than once, after entering either <b>Last name</b>, <b>First name</b> or <b>Company</b>, existing simular customers will be shown above.<br />
                         </small>

@@ -13,7 +13,7 @@
         <div class="row">
             <div class="col-md-6 offset-md-3">
                 <div class="card mb-2">
-                    <div class="card-header">
+                    <div class="card-header text-bg-light">
                         <div class="row">
                             <div class="col">Hash Generator</div>
 
@@ -40,7 +40,7 @@
                         </div>
                     </div>
 
-                    <div class="card-footer">
+                    <div class="card-footer text-bg-light">
                         <div class="row">
                             <div class="col"></div>
 

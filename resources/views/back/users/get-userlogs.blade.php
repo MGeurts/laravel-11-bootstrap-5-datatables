@@ -1,5 +1,5 @@
 <div class="card mb-2">
-    <div class="card-header">
+    <div class="card-header text-bg-light">
         <div class="row">
             <div class="col">Log</div>
 
@@ -37,5 +37,5 @@
         </tbody>
     </table>
 
-    <div class="card-footer small">Only the 20 most recent items during the last 3 months are shown.</div>
+    <div class="card-footer text-bg-light small">Only the 20 most recent items during the last 3 months are shown.</div>
 </div>

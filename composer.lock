@@ -1114,16 +1114,16 @@
         },
         {
             "name": "laravel/framework",
-            "version": "v10.13.0",
+            "version": "v10.13.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/framework.git",
-                "reference": "7322723585103082758d74917db62980684845cb"
+                "reference": "fd4619b56b56308e2c2c1840fedd0b8ebb73dfc5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/framework/zipball/7322723585103082758d74917db62980684845cb",
-                "reference": "7322723585103082758d74917db62980684845cb",
+                "url": "https://api.github.com/repos/laravel/framework/zipball/fd4619b56b56308e2c2c1840fedd0b8ebb73dfc5",
+                "reference": "fd4619b56b56308e2c2c1840fedd0b8ebb73dfc5",
                 "shasum": ""
             },
             "require": {
@@ -1310,7 +1310,7 @@
                 "issues": "https://github.com/laravel/framework/issues",
                 "source": "https://github.com/laravel/framework"
             },
-            "time": "2023-05-30T14:46:25+00:00"
+            "time": "2023-06-05T15:48:15+00:00"
         },
         {
             "name": "laravel/sanctum",
@@ -3197,16 +3197,16 @@
         },
         {
             "name": "spatie/laravel-backup",
-            "version": "8.1.10",
+            "version": "8.1.11",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spatie/laravel-backup.git",
-                "reference": "a743a8bc21e388e5cc1bceff676859180f018771"
+                "reference": "e4f5c3f6783d40a219a02bc99dc4171ecdd6d20c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spatie/laravel-backup/zipball/a743a8bc21e388e5cc1bceff676859180f018771",
-                "reference": "a743a8bc21e388e5cc1bceff676859180f018771",
+                "url": "https://api.github.com/repos/spatie/laravel-backup/zipball/e4f5c3f6783d40a219a02bc99dc4171ecdd6d20c",
+                "reference": "e4f5c3f6783d40a219a02bc99dc4171ecdd6d20c",
                 "shasum": ""
             },
             "require": {
@@ -3280,7 +3280,7 @@
             ],
             "support": {
                 "issues": "https://github.com/spatie/laravel-backup/issues",
-                "source": "https://github.com/spatie/laravel-backup/tree/8.1.10"
+                "source": "https://github.com/spatie/laravel-backup/tree/8.1.11"
             },
             "funding": [
                 {
@@ -3292,7 +3292,7 @@
                     "type": "other"
                 }
             ],
-            "time": "2023-05-02T07:30:18+00:00"
+            "time": "2023-06-02T08:56:10+00:00"
         },
         {
             "name": "spatie/laravel-package-tools",
@@ -6785,28 +6785,30 @@
         },
         {
             "name": "mockery/mockery",
-            "version": "1.5.1",
+            "version": "1.6.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/mockery/mockery.git",
-                "reference": "e92dcc83d5a51851baf5f5591d32cb2b16e3684e"
+                "reference": "a8dd186f07ea667c1e3abd2176bfab0ab161ea94"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mockery/mockery/zipball/e92dcc83d5a51851baf5f5591d32cb2b16e3684e",
-                "reference": "e92dcc83d5a51851baf5f5591d32cb2b16e3684e",
+                "url": "https://api.github.com/repos/mockery/mockery/zipball/a8dd186f07ea667c1e3abd2176bfab0ab161ea94",
+                "reference": "a8dd186f07ea667c1e3abd2176bfab0ab161ea94",
                 "shasum": ""
             },
             "require": {
                 "hamcrest/hamcrest-php": "^2.0.1",
                 "lib-pcre": ">=7.0",
-                "php": "^7.3 || ^8.0"
+                "php": "^7.4 || ^8.0"
             },
             "conflict": {
                 "phpunit/phpunit": "<8.0"
             },
             "require-dev": {
-                "phpunit/phpunit": "^8.5 || ^9.3"
+                "phpunit/phpunit": "^8.5 || ^9.3",
+                "psalm/plugin-phpunit": "^0.18",
+                "vimeo/psalm": "^5.9"
             },
             "type": "library",
             "extra": {
@@ -6815,8 +6817,12 @@
                 }
             },
             "autoload": {
-                "psr-0": {
-                    "Mockery": "library/"
+                "files": [
+                    "library/helpers.php",
+                    "library/Mockery.php"
+                ],
+                "psr-4": {
+                    "Mockery\\": "library/Mockery"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -6851,9 +6857,9 @@
             ],
             "support": {
                 "issues": "https://github.com/mockery/mockery/issues",
-                "source": "https://github.com/mockery/mockery/tree/1.5.1"
+                "source": "https://github.com/mockery/mockery/tree/1.6.1"
             },
-            "time": "2022-09-07T15:32:08+00:00"
+            "time": "2023-06-05T13:59:03+00:00"
         },
         {
             "name": "myclabs/deep-copy",
@@ -7443,16 +7449,16 @@
         },
         {
             "name": "phpunit/phpunit",
-            "version": "10.1.3",
+            "version": "10.2.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/phpunit.git",
-                "reference": "2379ebafc1737e71cdc84f402acb6b7f04198b9d"
+                "reference": "599b33294350e8f51163119d5670512f98b0490d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/2379ebafc1737e71cdc84f402acb6b7f04198b9d",
-                "reference": "2379ebafc1737e71cdc84f402acb6b7f04198b9d",
+                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/599b33294350e8f51163119d5670512f98b0490d",
+                "reference": "599b33294350e8f51163119d5670512f98b0490d",
                 "shasum": ""
             },
             "require": {
@@ -7492,7 +7498,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-main": "10.1-dev"
+                    "dev-main": "10.2-dev"
                 }
             },
             "autoload": {
@@ -7524,7 +7530,7 @@
             "support": {
                 "issues": "https://github.com/sebastianbergmann/phpunit/issues",
                 "security": "https://github.com/sebastianbergmann/phpunit/security/policy",
-                "source": "https://github.com/sebastianbergmann/phpunit/tree/10.1.3"
+                "source": "https://github.com/sebastianbergmann/phpunit/tree/10.2.1"
             },
             "funding": [
                 {
@@ -7540,7 +7546,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2023-05-11T05:16:22+00:00"
+            "time": "2023-06-05T05:15:51+00:00"
         },
         {
             "name": "sebastian/cli-parser",

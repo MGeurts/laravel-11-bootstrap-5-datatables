@@ -4,7 +4,7 @@
     <div class="row">
         <div class="col-md-8 offset-md-2">
             <div class="card mb-2">
-                <div class="card-header">
+                <div class="card-header text-bg-light">
                     <div class="row">
                         <div class="col">Error</div>
                         <div class=" col fs-5 text-end">
@@ -46,7 +46,7 @@
                     </div>
                 </div>
 
-                <div class="card-footer">
+                <div class="card-footer text-bg-light">
                     <div class="row">
                         <div class="col-sm small d-none d-md-block">
                             <img src="{{ asset('img/logo/laravel-030.png') }}" alt="company" />

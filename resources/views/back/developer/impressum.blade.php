@@ -20,7 +20,7 @@
                             </ul>
 
                             <ul>
-                                <li><a target="_blank" href="https://github.com/spatie/laravel-backup/">spatie/laravel-backup</a> - 8.1.10</li>
+                                <li><a target="_blank" href="https://github.com/spatie/laravel-backup/">spatie/laravel-backup</a> - 8.1.11</li>
                             </ul>
 
                             <ul>
@@ -40,8 +40,8 @@
                             </ul>
 
                             <ul>
-                                <li><a target="_blank" href="https://getbootstrap.com/">Bootstrap</a> - 5.2.3</li>
-                                <li><a target="_blank" href="https://icons.getbootstrap.com//">Bootstrap Icons</a> - 1.10.4</li>
+                                <li><a target="_blank" href="https://getbootstrap.com/">Bootstrap</a> - 5.3.0</li>
+                                <li><a target="_blank" href="https://icons.getbootstrap.com//">Bootstrap Icons</a> - 1.10.5</li>
                                 <li><a target="_blank" href="https://github.com/coliff/bootstrap-print-css/">Bootstrap Print CSS</a> - 1.0.1</li>
                             </ul>
 
@@ -76,7 +76,7 @@
                             </ul>
 
                             <ul>
-                                <li><a target="_blank" href="https://github.com/iamkun/dayjs/">dayjs</a> - 1.11.7</li>
+                                <li><a target="_blank" href="https://github.com/iamkun/dayjs/">dayjs</a> - 1.11.8</li>
                             </ul>
                         </div>
                     </div>
@@ -147,7 +147,7 @@
                                         @endif
                                     </td>
                                     <td class="text-center">@php echo phpversion(); @endphp</td>
-                                    <td class="text-center">8.0.32</td>
+                                    <td class="text-center">8.0.33</td>
                                     <td class="text-center">5.2.1</td>
                                 </tr>
 

@@ -6,7 +6,7 @@
 
 @section('content')
     <div class="card mb-2">
-        <div class="card-header d-print-none">
+        <div class="card-header text-bg-light d-print-none">
             <div class="row">
                 <div class="col">Users</div>
 
@@ -219,7 +219,7 @@
             },
             createdRow: function(row, data, dataIndex) {
                 if (data['is_developer'] > 0) {
-                    $(row).find('td.toggleIsDeveloper').addClass('table-danger');
+                    $(row).find('td.toggleIsDeveloper').addClass('table-warning');
                 }
             }
         };

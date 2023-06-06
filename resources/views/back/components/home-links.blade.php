@@ -1,5 +1,5 @@
 <div class="card mb-3">
-    <div class="card-header">
+    <div class="card-header text-bg-light">
         <div class="row">
             <div class="col">Hyperlinks</div>
 
@@ -17,13 +17,14 @@
         This application requires at least <a href="https://www.php.net/" target="_blank">PHP 8.1</a> and is built using :
         <ul>
             <li><a href="https://laravel.com/" target="_blank">Laravel 10</a> (featuring <a href="https://vitejs.dev/" target="_blank">Vite</a>)</li>
-            <li><a href="https://getbootstrap.com/" target="_blank">Bootstrap 5</a></li>
+            <li><a href="https://getbootstrap.com/" target="_blank">Bootstrap 5.3</a></li>
             <li><a href="https://datatables.net/" target="_blank">DataTables</a></li>
         </ul>
         <hr />
         <b>Features</b> :
         <ul>
             <li><b>Top button bar</b> to quickly navigate to the main parts of your application</li>
+            <li><b>Theme toggle</b> : Light / Dark / System default</li>
             <li><b>Offcanvas menu</b> to access less frequently used parts</li>
             <li><b>Datatables</b>, fully integrated with built-in :</li>
             <ul>
@@ -52,7 +53,7 @@
         </p>
     </div>
 
-    <div class="card-footer">
+    <div class="card-footer text-bg-light">
         <div class="row">
             <div class="col text-danger">
                 <h5 id="MyClockTime" onload="showDate();"></h5>

@@ -3,11 +3,11 @@
     <li class="nav-item text-light">Application</li>
     <hr class="narrow text-light">
 
-    <li class="nav-item"><a class="nav-link disabled" href="#"><img class="nav-icon" src="{{ asset('img/icons/products-white.png') }}" />Products</a></li>
-    <li class="nav-item"><a class="nav-link disabled" href="#"><img class="nav-icon" src="{{ asset('img/icons/delivery-white.png') }}" />Deliveries</a></li>
-    <li class="nav-item"><a class="nav-link disabled" href="#"><img class="nav-icon" src="{{ asset('img/icons/reorder-white.png') }}" />Orders</a></li>
-    <li class="nav-item"><a class="nav-link" href="{{ route('back.customers.index') }}"><img class="nav-icon" src="{{ asset('img/icons/persons-white.png') }}" />Customers</a></li>
-    <li class="nav-item"><a class="nav-link disabled" href="#"><img class="nav-icon" src="{{ asset('img/icons/supplier-white.png') }}" />Suppliers</a></li>
+    <li class="nav-item"><a class="nav-link text-light disabled" href="#"><img class="nav-icon" src="{{ asset('img/icons/products-white.png') }}" />Products</a></li>
+    <li class="nav-item"><a class="nav-link text-light disabled" href="#"><img class="nav-icon" src="{{ asset('img/icons/delivery-white.png') }}" />Deliveries</a></li>
+    <li class="nav-item"><a class="nav-link text-light disabled" href="#"><img class="nav-icon" src="{{ asset('img/icons/reorder-white.png') }}" />Orders</a></li>
+    <li class="nav-item"><a class="nav-link text-light" href="{{ route('back.customers.index') }}"><img class="nav-icon" src="{{ asset('img/icons/persons-white.png') }}" />Customers</a></li>
+    <li class="nav-item"><a class="nav-link text-light disabled" href="#"><img class="nav-icon" src="{{ asset('img/icons/supplier-white.png') }}" />Suppliers</a></li>
 
     <!-- developer -->
     @can('developer')
@@ -15,9 +15,10 @@
         <li class="nav-item text-light">Administration</li>
 
         <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="offcanvasNavbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <a class="nav-link dropdown-toggle text-light" href="#" id="offcanvasNavbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="true">
                 <i class="bi bi-person-bounding-box nav-icon"></i>{{ Auth::user()->name }}
             </a>
+
             <ul class="dropdown-menu" aria-labelledby="offcanvasNavbarDropdown">
                 <li><a class="dropdown-item" href="{{ route('back.users.index') }}"><i class="bi bi-people-fill nav-icon"></i>Users</a></li>
                 <li><a class="dropdown-item" href="{{ route('back.userslog.index') }}"><i class="bi bi-person-lines-fill nav-icon"></i>Users Log</a></li>

@@ -38,9 +38,7 @@
 
 <body class="d-flex flex-column h-100">
     <div id="app">
-        <header>
-            @include('front.components.header')
-        </header>
+        @include('front.components.header')
 
         <main role="main" class="flex-shrink-0">
             <div class="container-fluid mb-2">

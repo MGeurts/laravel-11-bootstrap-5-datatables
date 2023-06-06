@@ -8,7 +8,7 @@
     <div class="row">
         <div class="col-xxl-8 offset-xxl-2">
             <div class="card mb-2">
-                <div class="card-header">
+                <div class="card-header text-bg-light">
                     <div class="row">
                         <div class="col">Backups</div>
 
@@ -66,7 +66,7 @@
                     </tbody>
                 </table>
 
-                <div class="card-footer">
+                <div class="card-footer text-bg-light">
                     Backups can be automated (run daily) by issuing the following cron job on your production server :
                     <code>
                         <pre>* * * * * cd /path_to_your_application && php artisan schedule:run >> /dev/null 2>&1</pre>
