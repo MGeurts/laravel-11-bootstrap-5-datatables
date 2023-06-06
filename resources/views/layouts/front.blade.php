@@ -17,7 +17,7 @@
 
     @routes
 
-    @vite(['resources/js/app.js', 'resources/sass/app.scss'])
+    @vite(['resources/js/app.js', 'resources/js/custom.js', 'resources/sass/app.scss', 'resources/sass/deferred.scss'])
 
     <style>
         body {
