@@ -30,6 +30,7 @@ class UserlogController extends Controller
 
         $userstats = Userlog::select('country_name', DB::raw('count(*) as users'))
             ->whereNotNull('country_name')
+            ->where('country_code', '!=', 'BE')
             ->groupBy('country_name')
             ->get();
 
