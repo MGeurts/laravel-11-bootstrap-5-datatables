@@ -16,6 +16,7 @@ class UserlogController extends Controller
         abort_if(Gate::denies('developer'), Response::HTTP_FORBIDDEN, '403 Forbidden');
 
         $userlogs_by_date = Userlog::with('user')
+            ->where('country_code', '!=', 'BE')
             ->where('created_at', '>=', carbon::now()->subMonths(3))
             ->orderBy('created_at', 'desc')
             ->get()
@@ -29,8 +30,8 @@ class UserlogController extends Controller
         abort_if(Gate::denies('developer'), Response::HTTP_FORBIDDEN, '403 Forbidden');
 
         $userstats = Userlog::select('country_name', DB::raw('count(*) as users'))
-            ->whereNotNull('country_name')
             ->where('country_code', '!=', 'BE')
+            ->whereNotNull('country_name')
             ->groupBy('country_name')
             ->get();
 
