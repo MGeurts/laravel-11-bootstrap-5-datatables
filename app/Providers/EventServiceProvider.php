@@ -2,11 +2,11 @@
 
 namespace App\Providers;
 
+use App\Models\Userlog;
 use Illuminate\Auth\Events\Registered;
 use Illuminate\Auth\Listeners\SendEmailVerificationNotification;
 use Illuminate\Database\QueryException;
 use Illuminate\Foundation\Support\Providers\EventServiceProvider as ServiceProvider;
-use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Event;
 use Illuminate\Support\Facades\Log;
 use Stevebauman\Location\Facades\Location;
@@ -30,8 +30,9 @@ class EventServiceProvider extends ServiceProvider
     public function boot(): void
     {
         Event::listen(\Illuminate\Auth\Events\Login::class, function ($event) {
-            $this->logUser($event->user);
             $this->setYear();
+
+            $this->logUser($event->user);
         });
     }
 
@@ -41,6 +42,16 @@ class EventServiceProvider extends ServiceProvider
     public function shouldDiscoverEvents(): bool
     {
         return false;
+    }
+
+    private function setYear()
+    {
+        if (! session('APP')) {
+            session([
+                'APP.YEAR' => date('Y'),
+                'APP.PERIOD' => 'month',
+            ]);
+        }
     }
 
     private function logUser($user)
@@ -54,23 +65,13 @@ class EventServiceProvider extends ServiceProvider
                 $country_code = null;
             }
 
-            DB::table('userlogs')->insert([
+            Userlog::create([
                 'user_id' => $user->id,
                 'country_name' => $country_name,
                 'country_code' => $country_code,
             ]);
         } catch (QueryException $e) {
             Log::info("User log ERROR: {$e->getMessage()}");
-        }
-    }
-
-    private function setYear()
-    {
-        if (! session('APP')) {
-            session([
-                'APP.YEAR' => date('Y'),
-                'APP.PERIOD' => 'month',
-            ]);
         }
     }
 }

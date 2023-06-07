@@ -16,8 +16,9 @@ return new class extends Migration
     {
         Schema::create('countries', function (Blueprint $table) {
             $table->id();
+
             $table->string('name', 64)->index();
-            $table->char('iso2', 2)->index();
+            $table->char('iso2', 2)->unique();
             $table->string('isd', 8)->nullable();
         });
 
@@ -75,7 +76,6 @@ return new class extends Migration
             (49, 'Congo', 'CD', '242'),
             (50, 'Cook Islands', 'CK', '682'),
             (51, 'Costa Rica', 'CR', '506'),
-            (52, 'Côte d’Ivoire', 'CI', '225'),
             (53, 'Croatia', 'HR', '385'),
             (54, 'Cuba', 'CU', '53'),
             (55, 'Cyprus', 'CY', '357'),
@@ -270,7 +270,7 @@ return new class extends Migration
             (247, 'Curaçao', 'CW', '599'),
             (248, 'Ivory Coast', 'CI', '225'),
             (249, 'Kosovo', 'XK', '383');
-            ");
+        ");
     }
 
     /**

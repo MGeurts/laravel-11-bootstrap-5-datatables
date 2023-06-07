@@ -43,10 +43,10 @@
                         <tr>
                             <td></td>
                             <td>{{ $userlog->time }}</td>
-                            <td>{{ $userlog->name }}</td>
+                            <td>{{ $userlog->user->name }}</td>
                             <td>{{ $userlog->country_name }}</td>
                             <td>{{ $userlog->country_code }}</td>
-                            @if ($userlog->is_developer)
+                            @if ($userlog->user->is_developer)
                                 <td class="text-center"><i class="bi bi-check-lg"></i></td>
                             @else
                                 <td class="text-center"></td>
