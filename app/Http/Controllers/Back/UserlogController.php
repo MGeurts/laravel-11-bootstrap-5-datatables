@@ -46,4 +46,24 @@ class UserlogController extends Controller
 
         return view('back.userslog.stats', $data);
     }
+
+    public function statsPeriodic()
+    {
+        if (session('APP.PERIOD') == 'year') {
+            $statistics = DB::table('v_userlogs_stats_' . strtolower(session('APP.PERIOD')))->orderBy('period')->get();
+        } else {
+            $statistics = DB::table('v_userlogs_stats_' . strtolower(session('APP.PERIOD')))->where('year', session('APP.YEAR'))->orderBy('period')->get();
+        }
+
+        $records = $data = [];
+
+        foreach ($statistics as $statistic) {
+            $records['label'][] = $statistic->period;
+            $records['data'][] = $statistic->visitors;
+        }
+
+        $data['chart_data'] = json_encode($records);
+
+        return view('back.userslog.stats-periodic', $data);
+    }
 }

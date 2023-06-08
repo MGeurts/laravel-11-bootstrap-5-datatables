@@ -23,6 +23,7 @@
                 <li><a class="dropdown-item" href="{{ route('back.users.index') }}"><i class="bi bi-people-fill nav-icon"></i>Users</a></li>
                 <li><a class="dropdown-item" href="{{ route('back.userslog.index') }}"><i class="bi bi-person-lines-fill nav-icon"></i>Users Log</a></li>
                 <li><a class="dropdown-item" href="{{ route('back.userslog.stats') }}"><i class="bi bi-person-lines-fill nav-icon"></i>Users Statistics</a></li>
+                <li><a class="dropdown-item" href="{{ route('back.userslog.statsPeriodic') }}"><i class="bi bi-person-lines-fill nav-icon"></i>Users Statistics (Periodic)</a></li>
                 <hr class="narrow">
 
                 <li><a class="dropdown-item" href="{{ url('/back/developer/log-monitor') }}" target="_blank"><i class="bi bi-book-half nav-icon"></i>Log Viewer</a></li>

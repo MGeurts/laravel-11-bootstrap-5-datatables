@@ -60,6 +60,7 @@ Route::middleware('auth')->group(function () {
         Route::controller(App\Http\Controllers\Back\UserlogController::class)->group(function () {
             Route::get('/userslog/index', 'index')->name('userslog.index');
             Route::get('/userslog/stats', 'stats')->name('userslog.stats');
+            Route::get('/userslog/statsPeriodic', 'statsPeriodic')->name('userslog.statsPeriodic');
         });
         /* ---------------------------------------- */
         // Customers

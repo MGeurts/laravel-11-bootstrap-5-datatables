@@ -42,7 +42,7 @@ return new class extends Migration
             $table->softDeletes();
         });
 
-        // composiet indexen
+        // composit indexes
         Schema::table('customers', function (Blueprint $table) {
             $table->index(['customer_last_name', 'customer_first_name']);
         });
