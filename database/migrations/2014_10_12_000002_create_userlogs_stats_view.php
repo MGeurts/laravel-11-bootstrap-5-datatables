@@ -32,6 +32,7 @@ return new class extends Migration
                     DATE_FORMAT(`userlogs`.`created_at`, '%Y-%m-%d') AS `period`,
                     COUNT(`userlogs`.`id`) AS `visitors`
                 FROM `userlogs`
+                WHERE `userlogs`.`country_code` != 'BE'
                 GROUP BY `year`, `period`;
         SQL;
     }
@@ -45,6 +46,7 @@ return new class extends Migration
                     LPAD(MONTH(`userlogs`.`created_at`), 2, '0') AS `period`,
                     COUNT(`userlogs`.`id`) AS `visitors`
                 FROM `userlogs`
+                WHERE `userlogs`.`country_code` != 'BE' 
                 GROUP BY `year`, `period`;
         SQL;
     }
@@ -58,6 +60,7 @@ return new class extends Migration
                     LPAD(WEEK(`userlogs`.`created_at`, 0), 2, '0') AS `period`,
                     COUNT(`userlogs`.`id`) AS `visitors`
                 FROM `userlogs`
+                WHERE `userlogs`.`country_code` != 'BE' 
                 GROUP BY `year`, `period`;
         SQL;
     }
@@ -71,6 +74,7 @@ return new class extends Migration
                     YEAR(`userlogs`.`created_at`) AS `period`,
                     COUNT(`userlogs`.`id`) AS `visitors`
                 FROM `userlogs`
+                WHERE `userlogs`.`country_code` != 'BE' 
                 GROUP BY `year`, `period`;
         SQL;
     }
