@@ -49,10 +49,46 @@ class UserlogController extends Controller
 
     public function statsPeriodic()
     {
-        if (session('APP.PERIOD') == 'year') {
-            $statistics = DB::table('v_userlogs_stats_' . strtolower(session('APP.PERIOD')))->orderBy('period')->get();
-        } else {
-            $statistics = DB::table('v_userlogs_stats_' . strtolower(session('APP.PERIOD')))->where('year', session('APP.YEAR'))->orderBy('period')->get();
+        switch (session('APP.PERIOD')) {
+            case 'year':
+                $statistics = Userlog::select(DB::raw('YEAR(created_at) as `period`'), DB::raw('count(*) as `visitors`'))
+                    ->where('country_code', '!=', 'BE')
+                    ->whereNotNull('country_name')
+                    ->groupBy('period')
+                    ->orderBy('period')
+                    ->get();
+
+                break;
+            case 'month':
+                $statistics = Userlog::select(DB::raw('LPAD(MONTH(`created_at`), 2, 0) AS `period`'), DB::raw('count(*) as `visitors`'))
+                    ->where('country_code', '!=', 'BE')
+                    ->whereNotNull('country_name')
+                    ->whereYear('created_at', session('APP.YEAR'))
+                    ->groupBy('period')
+                    ->orderBy('period')
+                    ->get();
+
+                break;
+            case 'week':
+                $statistics = Userlog::select(DB::raw('LPAD(WEEK(`created_at`, 0), 2, 0) AS `period`'), DB::raw('count(*) as `visitors`'))
+                    ->where('country_code', '!=', 'BE')
+                    ->whereNotNull('country_name')
+                    ->whereYear('created_at', session('APP.YEAR'))
+                    ->groupBy('period')
+                    ->orderBy('period')
+                    ->get();
+
+                break;
+            case 'day':
+                $statistics = Userlog::select(DB::raw('DATE_FORMAT(`created_at`, "%Y-%m-%d") AS `period`'), DB::raw('count(*) as `visitors`'))
+                    ->where('country_code', '!=', 'BE')
+                    ->whereNotNull('country_name')
+                    ->whereYear('created_at', session('APP.YEAR'))
+                    ->groupBy('period')
+                    ->orderBy('period')
+                    ->get();
+
+                break;
         }
 
         $records = $data = [];

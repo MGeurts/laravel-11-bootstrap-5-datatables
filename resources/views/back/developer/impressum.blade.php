@@ -30,6 +30,10 @@
                             <ul>
                                 <li><a target="_blank" href="https://github.com/stevebauman/location/">stevebauman/location</a> - 6.6.2</li>
                             </ul>
+
+                            <ul>
+                                <li><a target="_blank" href="https://github.com/barryvdh/laravel-debugbar/">barryvdh/laravel-debugbar</a> - 3.8.1</li>
+                            </ul>
                         </div>
 
                         <div class="col-4">
