@@ -8,18 +8,24 @@
     <div class="card mb-2">
         <div class="card-header text-bg-light d-print-none">
             <div class="row">
-                <div class="col">Users Statitics - Periodic</div>
+                <div class="col-5">Users Statitics - Periodic</div>
 
-                <div class="col-md-1">
-                    <select id="app_period" class="form-select">
-                        <option value="year" {{ Session::get('APP.PERIOD') == 'year' ? 'selected' : '' }}>Year</option>
-                        <option value="month" {{ Session::get('APP.PERIOD') == 'month' ? 'selected' : '' }}>Month</option>
-                        <option value="week" {{ Session::get('APP.PERIOD') == 'week' ? 'selected' : '' }}>Week</option>
-                        <option value="day" {{ Session::get('APP.PERIOD') == 'day' ? 'selected' : '' }}>Day</option>
-                    </select>
+                <div class="col-2">
+                    <div class="row">
+                        <label for="app_period" class="col-6 col-form-label text-end">Period :</label>
+
+                        <div class="col-6">
+                            <select id="app_period" class="form-select">
+                                <option value="year" {{ Session::get('APP.PERIOD') == 'year' ? 'selected' : '' }}>Year</option>
+                                <option value="month" {{ Session::get('APP.PERIOD') == 'month' ? 'selected' : '' }}>Month</option>
+                                <option value="week" {{ Session::get('APP.PERIOD') == 'week' ? 'selected' : '' }}>Week</option>
+                                <option value="day" {{ Session::get('APP.PERIOD') == 'day' ? 'selected' : '' }}>Day</option>
+                            </select>
+                        </div>
+                    </div>
                 </div>
 
-                <div class="col fs-5 text-end">
+                <div class="col-5 fs-5 text-end">
                     <button type="button" class="btn btn-outline-secondary btn-sm me-2" title="Print" tabindex="-1" onclick="window.print();">
                         <img src="{{ asset('img/icons/printer.png') }}" class="img-fluid" />
                     </button>
@@ -59,9 +65,13 @@
             data: data,
             options: {
                 responsive: true,
+                scaleIntegersOnly: true,
                 scales: {
                     y: {
                         beginAtZero: true,
+                        ticks: {
+                            precision: 0,
+                        }
                     }
                 }
             }
