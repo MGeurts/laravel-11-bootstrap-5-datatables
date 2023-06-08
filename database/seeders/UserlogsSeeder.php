@@ -15,6 +15,6 @@ class UserlogsSeeder extends Seeder
     public function run()
     {
         // Create dummy userlogs
-        Userlog::factory()->count(250)->create();
+        Userlog::factory()->count(500)->create();
     }
 }
