@@ -40,7 +40,7 @@
                 <li>Search with result highlighting</li>
                 <li>Server-side pagination and filtering</li>
                 <li>Multiple row selection (for mass deletes)</li>
-                <li>Inline boolean field toggable</li>
+                <li>Inline boolean field toggleable</li>
                 <li>Help</li>
             </ul>
         </ul>

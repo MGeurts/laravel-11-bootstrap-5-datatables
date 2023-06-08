@@ -31,7 +31,7 @@ This application requires at least PHP 8.1 and is built using :
         <li>Search with result highlighting</li>
         <li>Server-side pagination and filtering</li>
         <li>Multiple row selection (for mass deletes)</li>
-        <li>Inline boolean toggable</li>
+        <li>Inline boolean toggleable</li>
         <li>Help</li>
         <li>Datatables are fully responsive on smaller screens</li>
     </ul>
