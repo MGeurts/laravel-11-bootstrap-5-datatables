@@ -97,18 +97,12 @@
                     return entry.id;
                 });
 
-                if (ids.length === 0) {
-                    bootbox.alert({
-                        title: 'Error ...',
-                        message: 'Nothing selected'
-                    });
-                    return;
-                }
-
-                // protect system users
+                // remove protected users from selection
                 for (let i = 1; i <= 2; i++) {
                     if (ids.includes(i)) {
                         ids = ids.filter(item => item !== i);
+
+                        dt.row('#' + i).deselect();
 
                         showToast({
                             type: 'warning',
@@ -120,7 +114,7 @@
 
                 if (ids.length > 0) {
                     bootbox.confirm({
-                        title: 'Delete item(s) ...',
+                        title: 'Delete ' + ids.length + ' item(s) ...',
                         message: '<div class="alert alert-danger" role="alert">Are you sure?</div>',
                         buttons: {
                             confirm: {
@@ -142,7 +136,7 @@
                                         _method: 'DELETE'
                                     },
                                     success: function(response) {
-                                        oTable.draw();
+                                        dt.draw();
 
                                         showToast({
                                             type: 'success',
@@ -154,12 +148,6 @@
                             }
                         }
                     });
-                } else {
-                    showToast({
-                        type: 'info',
-                        title: 'Delete ...',
-                        message: 'Nothing left to delete.',
-                    });                    
                 }
             }
         }

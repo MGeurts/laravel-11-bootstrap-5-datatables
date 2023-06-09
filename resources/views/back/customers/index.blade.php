@@ -117,14 +117,6 @@
                     return entry.id;
                 });
 
-                if (ids.length === 0) {
-                    bootbox.alert({
-                        title: 'Error ...',
-                        message: 'Nothing slected'
-                    });
-                    return
-                }
-
                 bootbox.confirm({
                     title: 'Delete item(s) ...',
                     message: '<div class="alert alert-danger" role="alert">Are you sure?</div>',
@@ -148,7 +140,7 @@
                                     _method: 'DELETE'
                                 },
                                 success: function(response) {
-                                    oTable.draw();
+                                    dt.draw();
 
                                     showToast({
                                         type: 'success',
