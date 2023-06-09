@@ -6,8 +6,9 @@ use App\Http\Controllers\Controller;
 use App\Http\Requests\UserStoreRequest;
 use App\Http\Requests\UserUpdateRequest;
 use App\Models\User;
+use App\Models\Userlog;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Carbon;
 use Illuminate\Support\Facades\Gate;
 use Illuminate\Support\Facades\Password;
 use Symfony\Component\HttpFoundation\Response;
@@ -99,7 +100,10 @@ class UserController extends Controller
     {
         abort_if(Gate::denies('developer'), Response::HTTP_FORBIDDEN, '403 Forbidden');
 
-        $userlogs_by_date = DB::table('v_userlogs')->orderBy('created_at', 'desc')->where('user_id', $request->id)->limit(20)->get()->groupBy('date');
+        $userlogs_by_date = Userlog::where('created_at', '>=', carbon::now()->subMonths(3))
+            ->orderBy('created_at', 'desc')
+            ->get()
+            ->groupBy('date');
 
         return view('back.users.get-userlogs', compact('userlogs_by_date'))->render();
     }

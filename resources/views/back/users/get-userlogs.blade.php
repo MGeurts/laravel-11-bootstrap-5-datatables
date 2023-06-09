@@ -1,7 +1,7 @@
 <div class="card mb-2">
     <div class="card-header text-bg-light">
         <div class="row">
-            <div class="col">Log</div>
+            <div class="col">Log (Last 3 months)</div>
 
             <div class="col text-end"><img src="{{ asset('img/icons/history.png') }}" /></div>
         </div>
@@ -36,6 +36,4 @@
             @endforelse
         </tbody>
     </table>
-
-    <div class="card-footer text-bg-light small">Only the 20 most recent items during the last 3 months are shown.</div>
 </div>
