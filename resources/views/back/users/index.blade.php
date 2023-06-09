@@ -269,10 +269,10 @@
             const key = 'is_developer';
             let value = oTable.cell(this).data();
 
-            if (id == 1) {
+            if (id <= 2) {
                 bootbox.dialog({
                     title: "Edit ...",
-                    message: "This record is read-only.",
+                    message: '<div class="alert alert-warning" role="alert">This record is read-only.</div>',
                     onEscape: true,
                     backdrop: true,
                 });
