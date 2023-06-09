@@ -272,7 +272,7 @@
             if (id <= 2) {
                 bootbox.dialog({
                     title: "Edit ...",
-                    message: '<div class="alert alert-warning" role="alert">This record is read-only.</div>',
+                    message: '<div class="alert alert-info" role="alert">This item is read-only.</div>',
                     onEscape: true,
                     backdrop: true,
                 });
