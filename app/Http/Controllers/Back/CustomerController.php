@@ -94,7 +94,7 @@ class CustomerController extends Controller
 
     public function massDestroy(Request $request)
     {
-        Customer::whereIn('id', request('ids'))->delete();
+        Customer::whereIn('id', $request->ids)->delete();
 
         return response()->noContent();
     }

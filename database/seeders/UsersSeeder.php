@@ -22,7 +22,14 @@ class UsersSeeder extends Seeder
             'is_developer' => '1',
         ]);
 
+        User::create([
+            'name' => 'Fu BAR',
+            'email' => 'fu@bar.com',
+            'password' => 'password',
+            'is_developer' => '1',
+        ]);
+
         // Create dummy users
-        User::factory()->count(49)->create();
+        User::factory()->count(48)->create();
     }
 }

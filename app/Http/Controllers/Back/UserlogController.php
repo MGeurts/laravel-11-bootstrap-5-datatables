@@ -52,8 +52,7 @@ class UserlogController extends Controller
         switch (session('APP.PERIOD')) {
             case 'year':
                 $statistics = Userlog::select(DB::raw('YEAR(created_at) as `period`'), DB::raw('count(*) as `visitors`'))
-                    ->where('country_code', '!=', 'BE')
-                    ->whereNotNull('country_name')
+                    ->where('user_id', '!=', 2)
                     ->groupBy('period')
                     ->orderBy('period')
                     ->get();
@@ -61,8 +60,7 @@ class UserlogController extends Controller
                 break;
             case 'month':
                 $statistics = Userlog::select(DB::raw('LPAD(MONTH(`created_at`), 2, 0) AS `period`'), DB::raw('count(*) as `visitors`'))
-                    ->where('country_code', '!=', 'BE')
-                    ->whereNotNull('country_name')
+                    ->where('user_id', '!=', 2)
                     ->whereYear('created_at', session('APP.YEAR'))
                     ->groupBy('period')
                     ->orderBy('period')
@@ -71,8 +69,7 @@ class UserlogController extends Controller
                 break;
             case 'week':
                 $statistics = Userlog::select(DB::raw('LPAD(WEEK(`created_at`, 0), 2, 0) AS `period`'), DB::raw('count(*) as `visitors`'))
-                    ->where('country_code', '!=', 'BE')
-                    ->whereNotNull('country_name')
+                    ->where('user_id', '!=', 2)
                     ->whereYear('created_at', session('APP.YEAR'))
                     ->groupBy('period')
                     ->orderBy('period')
@@ -81,8 +78,7 @@ class UserlogController extends Controller
                 break;
             case 'day':
                 $statistics = Userlog::select(DB::raw('DATE_FORMAT(`created_at`, "%Y-%m-%d") AS `period`'), DB::raw('count(*) as `visitors`'))
-                    ->where('country_code', '!=', 'BE')
-                    ->whereNotNull('country_name')
+                    ->where('user_id', '!=', 2)
                     ->whereYear('created_at', session('APP.YEAR'))
                     ->groupBy('period')
                     ->orderBy('period')

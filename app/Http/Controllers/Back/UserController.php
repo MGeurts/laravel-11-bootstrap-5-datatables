@@ -69,13 +69,7 @@ class UserController extends Controller
 
     public function update(UserUpdateRequest $request, User $user)
     {
-        if ($user->id == 1) {
-            $notification = [
-                'type' => 'info',
-                'title' => 'Edit ...',
-                'message' => 'This account is read-only.',
-            ];
-        } else {
+        if ($user->id > 2) {
             $user->update($request->except(['token']));
 
             $notification = [
@@ -83,7 +77,12 @@ class UserController extends Controller
                 'title' => 'Edit ...',
                 'message' => 'Item updated.',
             ];
-
+        } else {
+            $notification = [
+                'type' => 'info',
+                'title' => 'Edit ...',
+                'message' => 'This account is read-only.',
+            ];
         }
 
         return redirect()->route('back.users.index')->with('notification', $notification);
@@ -91,7 +90,7 @@ class UserController extends Controller
 
     public function massDestroy(Request $request)
     {
-        User::where('id', '>', 1)->whereIn('id', request('ids'))->delete();
+        User::where('id', '>', 2)->whereIn('id', $request->ids)->delete();
 
         return response()->noContent();
     }

@@ -91,7 +91,7 @@
             enabled: false,
             url: "{{ route('back.users.massDestroy') }}",
             action: function(e, dt, node, config) {
-                const ids = $.map(dt.rows({
+                let ids = $.map(dt.rows({
                     selected: true
                 }).data(), function(entry) {
                     return entry.id;
@@ -102,44 +102,65 @@
                         title: 'Error ...',
                         message: 'Nothing selected'
                     });
-                    return
+                    return;
                 }
 
-                bootbox.confirm({
-                    title: 'Delete item(s) ...',
-                    message: '<div class="alert alert-danger" role="alert">Are you sure?</div>',
-                    buttons: {
-                        confirm: {
-                            label: 'Yes',
-                            className: 'btn-primary'
-                        },
-                        cancel: {
-                            label: 'No',
-                            className: 'btn-secondary'
-                        }
-                    },
-                    callback: function(confirmed) {
-                        if (confirmed) {
-                            $.ajax({
-                                method: 'POST',
-                                url: config.url,
-                                data: {
-                                    ids: ids,
-                                    _method: 'DELETE'
-                                },
-                                success: function(response) {
-                                    oTable.draw();
+                // protect system users
+                for (let i = 1; i <= 2; i++) {
+                    if (ids.includes(i)) {
+                        ids = ids.filter(item => item !== i);
 
-                                    showToast({
-                                        type: 'success',
-                                        title: 'Delete ...',
-                                        message: 'The selection has been deleted.',
-                                    });
-                                }
-                            });
-                        }
+                        showToast({
+                            type: 'warning',
+                            title: 'Delete ...',
+                            message: 'One item (ID = ' + i + ') removed from selection due to protection.',
+                        });
                     }
-                });
+                }
+
+                if (ids.length > 0) {
+                    bootbox.confirm({
+                        title: 'Delete item(s) ...',
+                        message: '<div class="alert alert-danger" role="alert">Are you sure?</div>',
+                        buttons: {
+                            confirm: {
+                                label: 'Yes',
+                                className: 'btn-primary'
+                            },
+                            cancel: {
+                                label: 'No',
+                                className: 'btn-secondary'
+                            }
+                        },
+                        callback: function(confirmed) {
+                            if (confirmed) {
+                                $.ajax({
+                                    method: 'POST',
+                                    url: config.url,
+                                    data: {
+                                        ids: ids,
+                                        _method: 'DELETE'
+                                    },
+                                    success: function(response) {
+                                        oTable.draw();
+
+                                        showToast({
+                                            type: 'success',
+                                            title: 'Delete ...',
+                                            message: 'The selection (' + ids.length + ' items) has been deleted.',
+                                        });
+                                    }
+                                });
+                            }
+                        }
+                    });
+                } else {
+                    showToast({
+                        type: 'info',
+                        title: 'Delete ...',
+                        message: 'Nothing left to delete.',
+                    });                    
+                }
             }
         }
         dtButtonsRight.push(deleteButton)

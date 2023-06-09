@@ -153,7 +153,7 @@
                                     showToast({
                                         type: 'success',
                                         title: 'Delete ...',
-                                        message: 'The item is deleted.',
+                                        message: 'The selection has been deleted.',
                                     });
                                 }
                             });
