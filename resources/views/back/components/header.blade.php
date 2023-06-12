@@ -21,7 +21,7 @@
 
             {{-- center left --}}
             <div>
-                @include('back.components.switch')
+                @include('components.switch')
             </div>
 
             {{-- center right --}}

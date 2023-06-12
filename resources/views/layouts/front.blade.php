@@ -42,7 +42,7 @@
 
         <main role="main" class="flex-shrink-0">
             <div class="container-fluid mb-2">
-                @include('front.components.alerts')
+                @include('components.alerts')
 
                 @yield('content')
             </div>
