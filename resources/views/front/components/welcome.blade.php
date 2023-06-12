@@ -17,6 +17,7 @@
             <div class="col text-danger">
                 <h5 id="MyClockTime" onload="showDate();"></h5>
             </div>
+
             <div class="col text-end">
                 <h5 id="MyClockDate" onload="showDate();"></h5>
             </div>
