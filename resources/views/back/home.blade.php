@@ -3,11 +3,11 @@
 @section('content')
     <div class="row mb-2">
         <div class="col-xxl-6">
-            @include('back.components.home-links')
+            @include('back.home-links')
         </div>
 
         <div class="col-xxl-6">
-            @include('back.components.home-stats')
+            @include('back.home-stats')
         </div>
     </div>
 @endsection
