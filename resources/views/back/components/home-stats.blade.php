@@ -16,8 +16,8 @@
             application.
         </p>
 
-        <div class="alert alert-danger" role="alert">
-            In this demo project, 3 models are already implemented :<br /><br />
+        <div class="alert alert-danger p-2" role="alert">
+            <p>In this demo project, 3 models are already implemented :</p>
             <ul>
                 <li><a href="{{ route('back.customers.index') }}">Customers</a>, available to all logged in users</li><br />
                 <li><a href="{{ route('back.users.index') }}">Users</a> and <a href="{{ route('back.userslog.index') }}">Users Log</a>, only available to logged in users with the property
@@ -27,15 +27,18 @@
             <p>Use their controllers and the corresponding views as a base to create new datatables utilising your own project models.</p>
         </div>
 
-        <div class="alert alert-info" role="alert">
-            This application also has a built-in <a href="{{ url('/back/developer/log-monitor') }}" target="_blank">Log Viewer</a>
-            and a <a href="{{ route('back.backups.index') }}">Backup manager</a>.
+        <div class="alert alert-info p-2" role="alert">
+            <p>This application also has a built-in :</p>
+            <ul>
+                <li><a href="{{ url('/back/developer/log-monitor') }}" target="_blank">Log Viewer</a></li>
+                <li><a href="{{ route('back.backups.index') }}">Backup manager</a></li>
+            </ul>
         </div>
 
-        <p>Open source under MIT License.</p>
         <br /><br /><br />
+        <p>Open source under MIT License.</p>
 
-        <div class="alert alert-danger" role="alert">
+        <div class="alert alert-danger p-2" role="alert">
             If you like this project, consider giving it a star on <a href="https://github.com/MGeurts/laravel-10-bootstrap-5-datatables" target="_blank">GitHub</a>. Thanks.
         </div>
 

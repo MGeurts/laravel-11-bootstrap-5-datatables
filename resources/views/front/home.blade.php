@@ -3,11 +3,11 @@
 @section('content')
     <div class="row">
         <div class="col-xl-6">
-            @include('front.components.welcome')
+            @include('front.components.home-welcome')
         </div>
 
         <div class="col-xl-6">
-            @include('front.components.carousel')
+            @include('front.components.home-carousel')
         </div>
     </div>
 @endsection
