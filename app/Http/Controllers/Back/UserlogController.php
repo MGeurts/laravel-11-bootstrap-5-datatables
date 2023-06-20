@@ -5,7 +5,6 @@ namespace App\Http\Controllers\Back;
 use App\Http\Controllers\Controller;
 use App\Models\Userlog;
 use Illuminate\Support\Carbon;
-use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Gate;
 use Symfony\Component\HttpFoundation\Response;
 
@@ -29,7 +28,8 @@ class UserlogController extends Controller
     {
         abort_if(Gate::denies('developer'), Response::HTTP_FORBIDDEN, '403 Forbidden');
 
-        $userstats = Userlog::select('country_name', DB::raw('count(*) as users'))
+        $userstats = Userlog::select('country_name')
+            ->selectRaw('count(*) as users')
             ->where('country_code', '!=', 'BE')
             ->whereNotNull('country_name')
             ->groupBy('country_name')
@@ -51,7 +51,8 @@ class UserlogController extends Controller
     {
         switch (session('APP.PERIOD')) {
             case 'year':
-                $statistics = Userlog::select(DB::raw('YEAR(created_at) as `period`'), DB::raw('count(*) as `visitors`'))
+                $statistics = Userlog::selectRaw('YEAR(created_at) as period')
+                    ->selectRaw('count(*) as `visitors`')
                     ->where('user_id', '!=', 2)
                     ->groupBy('period')
                     ->orderBy('period')
@@ -59,7 +60,8 @@ class UserlogController extends Controller
 
                 break;
             case 'month':
-                $statistics = Userlog::select(DB::raw('LPAD(MONTH(`created_at`), 2, 0) AS `period`'), DB::raw('count(*) as `visitors`'))
+                $statistics = Userlog::selectRaw('LPAD(MONTH(created_at), 2, 0) AS period')
+                    ->selectRaw('count(*) as visitors')
                     ->where('user_id', '!=', 2)
                     ->whereYear('created_at', session('APP.YEAR'))
                     ->groupBy('period')
@@ -68,7 +70,8 @@ class UserlogController extends Controller
 
                 break;
             case 'week':
-                $statistics = Userlog::select(DB::raw('LPAD(WEEK(`created_at`, 0), 2, 0) AS `period`'), DB::raw('count(*) as `visitors`'))
+                $statistics = Userlog::selectRaw('LPAD(WEEK(created_at, 0), 2, 0) AS period')
+                    ->selectRaw('count(*) as visitors')
                     ->where('user_id', '!=', 2)
                     ->whereYear('created_at', session('APP.YEAR'))
                     ->groupBy('period')
@@ -77,7 +80,8 @@ class UserlogController extends Controller
 
                 break;
             case 'day':
-                $statistics = Userlog::select(DB::raw('DATE_FORMAT(`created_at`, "%Y-%m-%d") AS `period`'), DB::raw('count(*) as `visitors`'))
+                $statistics = Userlog::selectRaw('DATE_FORMAT(created_at, "%Y-%m-%d") AS period')
+                    ->selectRaw('count(*) as visitors')
                     ->where('user_id', '!=', 2)
                     ->whereYear('created_at', session('APP.YEAR'))
                     ->groupBy('period')
