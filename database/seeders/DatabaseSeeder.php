@@ -13,6 +13,7 @@ class DatabaseSeeder extends Seeder
     public function run(): void
     {
         $this->call(UsersSeeder::class);
+
         if (app()->environment('local')) {
             $this->call(UserlogsSeeder::class);
         }

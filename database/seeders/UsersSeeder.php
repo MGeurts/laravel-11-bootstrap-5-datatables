@@ -14,7 +14,7 @@ class UsersSeeder extends Seeder
      */
     public function run()
     {
-        // Create main user (Developer)
+        // Create main users (Developer)
         User::create([
             'name' => 'John DOE',
             'email' => 'admin@admin.com',
