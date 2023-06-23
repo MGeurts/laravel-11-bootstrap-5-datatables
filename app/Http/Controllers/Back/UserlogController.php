@@ -49,47 +49,35 @@ class UserlogController extends Controller
 
     public function statsPeriodic()
     {
-        switch (session('APP.PERIOD')) {
-            case 'year':
-                $statistics = Userlog::selectRaw('YEAR(created_at) as period')
-                    ->selectRaw('count(*) as `visitors`')
-                    ->where('user_id', '!=', 2)
-                    ->groupBy('period')
-                    ->orderBy('period')
-                    ->get();
-
-                break;
-            case 'month':
-                $statistics = Userlog::selectRaw('LPAD(MONTH(created_at), 2, 0) AS period')
-                    ->selectRaw('count(*) as visitors')
-                    ->where('user_id', '!=', 2)
-                    ->whereYear('created_at', session('APP.YEAR'))
-                    ->groupBy('period')
-                    ->orderBy('period')
-                    ->get();
-
-                break;
-            case 'week':
-                $statistics = Userlog::selectRaw('LPAD(WEEK(created_at, 0), 2, 0) AS period')
-                    ->selectRaw('count(*) as visitors')
-                    ->where('user_id', '!=', 2)
-                    ->whereYear('created_at', session('APP.YEAR'))
-                    ->groupBy('period')
-                    ->orderBy('period')
-                    ->get();
-
-                break;
-            case 'day':
-                $statistics = Userlog::selectRaw('DATE_FORMAT(created_at, "%Y-%m-%d") AS period')
-                    ->selectRaw('count(*) as visitors')
-                    ->where('user_id', '!=', 2)
-                    ->whereYear('created_at', session('APP.YEAR'))
-                    ->groupBy('period')
-                    ->orderBy('period')
-                    ->get();
-
-                break;
-        }
+        $statistics = match (session('APP.PERIOD')) {
+            'year' => Userlog::selectRaw('YEAR(created_at) as period')
+                ->selectRaw('count(*) as `visitors`')
+                ->where('user_id', '!=', 2)
+                ->groupBy('period')
+                ->orderBy('period')
+                ->get(),
+            'month' => Userlog::selectRaw('LPAD(MONTH(created_at), 2, 0) AS period')
+                ->selectRaw('count(*) as visitors')
+                ->where('user_id', '!=', 2)
+                ->whereYear('created_at', session('APP.YEAR'))
+                ->groupBy('period')
+                ->orderBy('period')
+                ->get(),
+            'week' => Userlog::selectRaw('LPAD(WEEK(created_at, 0), 2, 0) AS period')
+                ->selectRaw('count(*) as visitors')
+                ->where('user_id', '!=', 2)
+                ->whereYear('created_at', session('APP.YEAR'))
+                ->groupBy('period')
+                ->orderBy('period')
+                ->get(),
+            'day' => Userlog::selectRaw('DATE_FORMAT(created_at, "%Y-%m-%d") AS period')
+                ->selectRaw('count(*) as visitors')
+                ->where('user_id', '!=', 2)
+                ->whereYear('created_at', session('APP.YEAR'))
+                ->groupBy('period')
+                ->orderBy('period')
+                ->get()
+        };
 
         $records = $data = [];
 
