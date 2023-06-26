@@ -17,7 +17,7 @@ class UserlogController extends Controller
         $userlogs_by_date = Userlog::query()
             ->select('userlogs.country_name', 'userlogs.country_code', 'userlogs.created_at', 'users.name', 'users.is_developer')
             ->leftjoin('users', 'userlogs.user_id', '=', 'users.id')
-            ->where('userlogs.country_code', '!=', 'BE')
+            ->where('userlogs.user_id', '!=', 2)
             ->where('userlogs.created_at', '>=', carbon::now()->subMonths(3))
             ->orderBy('userlogs.created_at', 'desc')
             ->get()
@@ -32,7 +32,7 @@ class UserlogController extends Controller
 
         $userstats = Userlog::select('country_name')
             ->selectRaw('count(*) as users')
-            ->where('country_code', '!=', 'BE')
+            ->where('user_id', '!=', 2)
             ->whereNotNull('country_name')
             ->groupBy('country_name')
             ->get();
