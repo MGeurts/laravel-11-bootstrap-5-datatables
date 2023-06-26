@@ -19,6 +19,9 @@ return new class extends Migration
 
             $table->timestamp('created_at')->default(DB::raw('CURRENT_TIMESTAMP'))->index();
         });
+
+        // Add index on country_name
+        DB::statement('ALTER TABLE `userlogs` ADD INDEX `userlogs_country_name_index` (`country_name`)');
     }
 
     public function down()
