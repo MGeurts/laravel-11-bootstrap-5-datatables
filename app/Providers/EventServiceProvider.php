@@ -49,7 +49,7 @@ class EventServiceProvider extends ServiceProvider
         if (! session('APP')) {
             session([
                 'APP.YEAR' => date('Y'),
-                'APP.PERIOD' => 'day',
+                'APP.PERIOD' => 'week',
             ]);
         }
     }
