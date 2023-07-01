@@ -15,7 +15,7 @@
             You could use this card to display all kind of <b>hyperlinks</b> or buttons to navigate quickly to certain parts of your applcation.
         </p>
 
-        <div class="alert alert-info p-2" role="alert">
+        <div class="alert alert-secondary p-2" role="alert">
             This application requires at least <a href="https://www.php.net/" target="_blank">PHP 8.1</a> and is built using :
             <ul>
                 <li><a href="https://laravel.com/" target="_blank">Laravel 10</a> (featuring <a href="https://vitejs.dev/" target="_blank">Vite</a>)</li>
@@ -24,7 +24,7 @@
             </ul>
         </div>
 
-        <div class="alert alert-info p-2" role="alert">
+        <div class="alert alert-secondary p-2" role="alert">
             <b>Features</b> :
             <ul>
                 <li><b>Top button bar</b> to quickly navigate to the main parts of your application</li>
