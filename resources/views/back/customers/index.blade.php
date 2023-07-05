@@ -24,7 +24,7 @@
             </div>
 
             <table id="sqltable">
-                <thead class="table-success">
+                <thead class="table-primary">
                     <tr>
                         <th scope="col" width="4%">ID</th>
                         <th scope="col">Last name</th>
@@ -229,7 +229,7 @@
             },
             createdRow: function(row, data, dataIndex) {
                 if (data['send_newsletter'] > 0) {
-                    $(row).find('td.toggleSendNewsletter').addClass('table-warning');
+                    $(row).find('td.toggleSendNewsletter').addClass('table-success');
                 }
             }
         };
@@ -312,7 +312,7 @@
 
             let strHTML = '';
             strHTML += '<table class="table table-bordered table-sm mytable">';
-            strHTML += '<thead class="table-success">';
+            strHTML += '<thead class="table-primary">';
             strHTML +=
                 '<tr><th class="text-center">ID</th><th>Customer</th><th>Company</th><th>Place</th><th class="text-center">Send newsletter ?</th></tr>';
             strHTML += '</thead>';

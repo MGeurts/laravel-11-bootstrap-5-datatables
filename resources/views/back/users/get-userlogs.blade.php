@@ -8,7 +8,7 @@
     </div>
 
     <table class="table table-bordered table-sm mytable">
-        <thead class="table-success">
+        <thead class="table-primary">
             <tr>
                 <th class="text-center">Date</th>
                 <th class="text-center">Hour</th>

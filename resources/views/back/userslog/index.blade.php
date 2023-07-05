@@ -20,7 +20,7 @@
         </div>
 
         <table class="table table-bordered table-striped table-hover table-sm mb-0 mytable">
-            <thead class="table-success">
+            <thead class="table-primary">
                 <tr>
                     <th class="text-center">Date</th>
                     <th class="text-center">Hour</th>

@@ -24,7 +24,7 @@
             </div>
 
             <table id="sqltable">
-                <thead class="table-success">
+                <thead class="table-primary">
                     <tr>
                         <th scope="col" class="text-primary">Log</th>
                         <th scope="col" width="4%">ID</th>
@@ -228,7 +228,7 @@
             },
             createdRow: function(row, data, dataIndex) {
                 if (data['is_developer'] > 0) {
-                    $(row).find('td.toggleIsDeveloper').addClass('table-warning');
+                    $(row).find('td.toggleIsDeveloper').addClass('table-success');
                 }
             }
         };
@@ -342,7 +342,7 @@
 
             let strHTML = '';
             strHTML += '<table class="table table-bordered table-sm mytable">';
-            strHTML += '<thead class="table-success">';
+            strHTML += '<thead class="table-primary">';
             strHTML += '<tr><th class="text-center">ID</th><th>Name</th><th>E-mail</th><th>Developer ?</th></tr>';
             strHTML += '</thead>';
             strHTML += '<tbody>';

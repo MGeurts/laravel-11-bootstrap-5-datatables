@@ -25,7 +25,7 @@
                 </div>
 
                 <table id="sqltable" class="table table-bordered table-striped table-sm mytable">
-                    <thead class="table-success">
+                    <thead class="table-primary">
                         <tr>
                             <th class="text-center">#</th>
                             <th class="text-center">File</th>
