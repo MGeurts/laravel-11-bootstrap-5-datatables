@@ -1,5 +1,5 @@
 <div class="card mb-3">
-    <div class="card-header text-bg-light">
+    <div class="card-header">
         <div class="row">
             <div class="col">Your Company Name</div>
             <div class=" col fs-5 text-end">
@@ -69,7 +69,7 @@
         </div>
     </div>
 
-    <div class="card-footer text-bg-light">
+    <div class="card-footer">
         <div class="row ">
             <div class="col small">
                 <a href="https://www.yourcompany.com" target="_blank">www.yourcompany.com</a>

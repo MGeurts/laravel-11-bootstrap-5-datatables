@@ -12,7 +12,7 @@
         <div class="row">
             <div class="col-lg-6">
                 <div class="card mb-3">
-                    <div class="card-header text-bg-light">
+                    <div class="card-header">
                         <div class="row">
                             <div class="col">User - Edit</div>
 
@@ -88,7 +88,7 @@
                         </div>
                     </div>
 
-                    <div class="card-footer text-bg-light">
+                    <div class="card-footer">
                         <div class="row">
                             <div class="col">
                                 <button type="button" class="btn btn-secondary text-white btn-sm" tabindex="-1" onclick="history.back();">
@@ -107,7 +107,7 @@
 
             <div class="col-lg-6">
                 <div class="card mb-3">
-                    <div class="card-header text-bg-light">
+                    <div class="card-header">
                         <div class="row">
                             <div class="col">System</div>
 

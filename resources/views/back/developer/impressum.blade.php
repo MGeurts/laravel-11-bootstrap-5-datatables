@@ -16,7 +16,7 @@
                             <p>Laravel :</p>
 
                             <ul>
-                                <li><a target="_blank" href="https://github.com/yajra/laravel-datatables/">yajra/laravel-datatables</a> - 10.6.0</li>
+                                <li><a target="_blank" href="https://github.com/yajra/laravel-datatables/">yajra/laravel-datatables</a> - 10.6.1</li>
                             </ul>
 
                             <ul>
@@ -59,7 +59,7 @@
                             </ul>
 
                             <ul>
-                                <li><a target="_blank" href="https://datatables.net/download/packages">DataTables</a> - 1.13.4</li>
+                                <li><a target="_blank" href="https://datatables.net/download/packages">DataTables</a> - 1.13.5</li>
                             </ul>
                         </div>
 

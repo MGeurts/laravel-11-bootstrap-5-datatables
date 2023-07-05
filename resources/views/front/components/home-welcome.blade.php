@@ -1,5 +1,5 @@
 <div class="card mb-3">
-    <div class="card-header text-bg-light">
+    <div class="card-header">
         <div class="row">
             <div class="col">Welcome ...</div>
             <div class="col fs-5 text-end">
@@ -12,7 +12,7 @@
         <img src="{{ asset('img/administration.jpg') }}" alt="administration" class="d-block w-100" />
     </div>
 
-    <div class="card-footer text-bg-light">
+    <div class="card-footer">
         <div class="row">
             <div class="col text-danger">
                 <h5 id="MyClockTime" onload="showDate();"></h5>

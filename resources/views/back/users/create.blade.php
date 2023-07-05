@@ -11,7 +11,7 @@
                 @csrf
 
                 <div class="card mb-3">
-                    <div class="card-header text-bg-light">
+                    <div class="card-header">
                         <div class="row">
                             <div class="col">User - Add</div>
 
@@ -83,7 +83,7 @@
                         </div>
                     </div>
 
-                    <div class="card-footer text-bg-light">
+                    <div class="card-footer">
                         <div class="row">
                             <div class="col">
                                 <a class="btn btn-secondary text-white btn-sm" href="{{ route('back.users.index') }}"" role=" button" tabindex="-1">

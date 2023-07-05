@@ -12,7 +12,7 @@
         <div class="row">
             <div class="col-lg-7">
                 <div class="card mb-3">
-                    <div class="card-header text-bg-light">
+                    <div class="card-header">
                         <div class="row">
                             <div class="col">Customer - Edit</div>
 
@@ -182,7 +182,7 @@
                         </div>
                     </div>
 
-                    <div class="card-footer text-bg-light">
+                    <div class="card-footer">
                         <div class="row">
                             <div class="col">
                                 <button type="button" class="btn btn-secondary text-white btn-sm" tabindex="-1" onclick="history.back();">
@@ -198,7 +198,7 @@
                 </div>
 
                 <div class="card mb-3">
-                    <div class="card-header text-bg-light">
+                    <div class="card-header">
                         <div class="row">
                             <div class="col">Delivery address</div>
 
@@ -292,7 +292,7 @@
                         </div>
                     </div>
 
-                    <div class="card-footer text-bg-light">
+                    <div class="card-footer">
                         <small>Delivery address should only be used if different from facturation address above.</small>
                     </div>
                 </div>
@@ -300,7 +300,7 @@
 
             <div class="col-lg-5">
                 <div class="card mb-3">
-                    <div class="card-header text-bg-light">
+                    <div class="card-header">
                         <div class="row">
                             <div class="col">System</div>
 
