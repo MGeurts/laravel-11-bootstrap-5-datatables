@@ -26,30 +26,26 @@ class UserlogController extends Controller
         return view('back.userslog.index', compact('userlogs_by_date'));
     }
 
-    public function stats()
+    public function statsCountry()
     {
         abort_if(Gate::denies('developer'), Response::HTTP_FORBIDDEN, '403 Forbidden');
 
-        $userstats = Userlog::select('country_name')
-            ->selectRaw('count(*) as users')
+        $statistics = Userlog::select('country_name')
+            ->selectRaw('count(*) as visitors')
             ->where('user_id', '!=', 2)
             ->whereNotNull('country_name')
             ->groupBy('country_name')
             ->get();
 
-        $records = $data = [];
+        $data['chart_data'] = json_encode([
+            'label' => $statistics->pluck('country_name'),
+            'data' => $statistics->pluck('visitors')
+        ]);
 
-        foreach ($userstats as $userstat) {
-            $records['label'][] = $userstat->country_name;
-            $records['data'][] = $userstat->users;
-        }
-
-        $data['chart_data'] = json_encode($records);
-
-        return view('back.userslog.stats', $data);
+        return view('back.userslog.stats-country', $data);
     }
 
-    public function statsPeriodic()
+    public function statsPeriode()
     {
         $statistics = match (session('APP.PERIOD')) {
             'year' => Userlog::selectRaw('YEAR(created_at) as period')
@@ -81,15 +77,11 @@ class UserlogController extends Controller
                 ->get()
         };
 
-        $records = $data = [];
+        $data['chart_data'] = json_encode([
+            'label' => $statistics->pluck('period'),
+            'data' => $statistics->pluck('visitors')
+        ]);
 
-        foreach ($statistics as $statistic) {
-            $records['label'][] = $statistic->period;
-            $records['data'][] = $statistic->visitors;
-        }
-
-        $data['chart_data'] = json_encode($records);
-
-        return view('back.userslog.stats-periodic', $data);
+        return view('back.userslog.stats-periode', $data);
     }
 }
