@@ -34,6 +34,10 @@
                             <ul>
                                 <li><a target="_blank" href="https://github.com/barryvdh/laravel-debugbar/">barryvdh/laravel-debugbar</a> - 3.8.1</li>
                             </ul>
+
+                            <ul>
+                                <li><a target="_blank" href="https://github.com/kevinkhill/lavacharts/">kevinkhill/lavacharts</a> - 3.1.14</li>
+                            </ul>
                         </div>
 
                         <div class="col-4">
