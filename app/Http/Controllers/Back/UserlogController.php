@@ -2,9 +2,10 @@
 
 namespace App\Http\Controllers\Back;
 
-use App\Http\Controllers\Controller;
 use App\Models\Userlog;
 use Illuminate\Support\Carbon;
+use Khill\Lavacharts\Lavacharts;
+use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Gate;
 use Symfony\Component\HttpFoundation\Response;
 
@@ -26,7 +27,7 @@ class UserlogController extends Controller
         return view('back.userslog.index', compact('userlogs_by_date'));
     }
 
-    public function statsCountry()
+    public function statsCountryPie()
     {
         abort_if(Gate::denies('developer'), Response::HTTP_FORBIDDEN, '403 Forbidden');
 
@@ -42,7 +43,47 @@ class UserlogController extends Controller
             'data' => $statistics->pluck('visitors')
         ]);
 
-        return view('back.userslog.stats-country', $data);
+        return view('back.userslog.stats-country-pie', $data);
+    }
+
+    public function statsCountryMap()
+    {
+        abort_if(Gate::denies('developer'), Response::HTTP_FORBIDDEN, '403 Forbidden');
+
+        $lava = new Lavacharts([
+            'maps_api_key' => '23ay5t987354inr28m9crg893crgt9arc98tr2a896tarc2896ta28'
+        ]);
+
+        $popularity = $lava->DataTable();
+
+        $data = Userlog::select('country_name AS 0')
+            ->selectRaw('count(*) AS `1`')
+            ->where('user_id', '!=', 2)
+            ->whereNotNull('country_name')
+            ->groupBy('country_name')
+            ->get()
+            ->toArray();
+
+        $popularity->addStringColumn('Country')
+            ->addNumberColumn('Popularity')
+            ->addRows($data);
+
+        $lava->GeoChart('Popularity', $popularity,  [
+            'colorAxis'                 =>  ['minValue' => 0,  'colors' => ['#FF0000', '#00FF00']],   //ColorAxis Options
+            'datalessRegionColor'       => '#81d4fa',
+            'displayMode'               => 'auto',
+            'enableRegionInteractivity' => true,
+            'keepAspectRatio'           => true,
+            'region'                    => 'world',
+            'magnifyingGlass'           => ['enable' => true, 'zoomFactor' => 7.5],    //MagnifyingGlass Options
+            'markerOpacity'             => 1.0,
+            'resolution'                => 'countries',
+            'sizeAxis'                  => null,
+            'backgroundColor' => '#81d4fa',
+
+        ]);
+
+        return view('back.userslog.stats-country-map', compact('lava'));
     }
 
     public function statsPeriode()
