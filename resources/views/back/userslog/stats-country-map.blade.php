@@ -23,7 +23,7 @@
                 </div>
 
                 <div class="card-body p-0" id="pop-div">
-                    <?= $lava->render('GeoChart', 'Popularity', 'pop-div') ?>
+                    <?= $lava->render('GeoChart', 'Visitors', 'pop-div') ?>
                 </div>
             </div>
         </div>
