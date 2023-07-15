@@ -16,7 +16,7 @@ class UserlogsSeeder extends Seeder
 
         $this->command->warn(PHP_EOL . 'Creating userlogs ...');
 
-        $customers = $this->withProgressBar(500, fn () => Userlog::factory()->count(1)->create());
+        $this->withProgressBar(500, fn () => Userlog::factory()->count(1)->create());
 
         $this->command->info('Userlogs created.');
     }

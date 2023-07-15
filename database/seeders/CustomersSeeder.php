@@ -16,7 +16,7 @@ class CustomersSeeder extends Seeder
 
         $this->command->warn(PHP_EOL . 'Creating customers ...');
 
-        $customers = $this->withProgressBar(2000, fn () => Customer::factory()->count(1)->create());
+        $this->withProgressBar(2000, fn () => Customer::factory()->count(1)->create());
 
         $this->command->info('Customers created.');
     }
