@@ -35,10 +35,7 @@ class UsersSeeder extends Seeder
         // Create 48 dummy users
         $this->command->warn(PHP_EOL . 'Creating users ...');
 
-        $customers = $this->withProgressBar(
-            48,
-            fn () => User::factory()->count(1)->create()
-        );
+        $customers = $this->withProgressBar(48, fn () => User::factory()->count(1)->create());
 
         $this->command->info('Users created.');
     }
