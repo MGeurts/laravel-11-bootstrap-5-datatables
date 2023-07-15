@@ -6144,16 +6144,16 @@
         },
         {
             "name": "yajra/laravel-datatables-oracle",
-            "version": "v10.6.1",
+            "version": "v10.6.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/yajra/laravel-datatables.git",
-                "reference": "cd684c1827c6540a911226e77779477cbb86fc25"
+                "reference": "6662926a7ac52cdf3d52508b0d4f6c41cc8618bf"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/yajra/laravel-datatables/zipball/cd684c1827c6540a911226e77779477cbb86fc25",
-                "reference": "cd684c1827c6540a911226e77779477cbb86fc25",
+                "url": "https://api.github.com/repos/yajra/laravel-datatables/zipball/6662926a7ac52cdf3d52508b0d4f6c41cc8618bf",
+                "reference": "6662926a7ac52cdf3d52508b0d4f6c41cc8618bf",
                 "shasum": ""
             },
             "require": {
@@ -6216,7 +6216,7 @@
             ],
             "support": {
                 "issues": "https://github.com/yajra/laravel-datatables/issues",
-                "source": "https://github.com/yajra/laravel-datatables/tree/v10.6.1"
+                "source": "https://github.com/yajra/laravel-datatables/tree/v10.6.2"
             },
             "funding": [
                 {
@@ -6224,7 +6224,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2023-07-05T01:30:07+00:00"
+            "time": "2023-07-15T04:00:38+00:00"
         }
     ],
     "packages-dev": [

@@ -3,7 +3,10 @@
 namespace Database\Seeders;
 
 use App\Models\User;
+use Closure;
+use Illuminate\Database\Eloquent\Collection;
 use Illuminate\Database\Seeder;
+use Symfony\Component\Console\Helper\ProgressBar;
 
 class UsersSeeder extends Seeder
 {
@@ -29,7 +32,36 @@ class UsersSeeder extends Seeder
             'is_developer' => '1',
         ]);
 
-        // Create dummy users
-        User::factory()->count(48)->create();
+        // Create 48 dummy users
+        $this->command->warn(PHP_EOL . 'Creating users ...');
+
+        $customers = $this->withProgressBar(
+            48,
+            fn () => User::factory()->count(1)->create()
+        );
+
+        $this->command->info('Users created.');
+    }
+
+    protected function withProgressBar(int $amount, Closure $createCollectionOfOne): Collection
+    {
+        $progressBar = new ProgressBar($this->command->getOutput(), $amount);
+
+        $progressBar->start();
+
+        $items = new Collection();
+
+        foreach (range(1, $amount) as $i) {
+            $items = $items->merge(
+                $createCollectionOfOne()
+            );
+            $progressBar->advance();
+        }
+
+        $progressBar->finish();
+
+        $this->command->getOutput()->writeln('');
+
+        return $items;
     }
 }

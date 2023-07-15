@@ -1,14 +1,14 @@
 @extends('layouts.back')
 
 @section('title')
-    &vert; Users Statitics - Periodic
+    &vert; User Statitics - Periodic
 @endsection
 
 @section('content')
     <div class="card mb-2">
         <div class="card-header d-print-none">
             <div class="row">
-                <div class="col-5">Users Statitics - Periodic</div>
+                <div class="col-5">User Statitics - Periodic</div>
 
                 <div class="col-2">
                     <div class="row">
