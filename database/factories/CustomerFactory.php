@@ -22,7 +22,7 @@ class CustomerFactory extends Factory
     public function definition()
     {
         return [
-            'customer_last_name' => $this->faker->lastName(),
+            'customer_last_name' => strtoupper($this->faker->lastName()),
             'customer_first_name' => $this->faker->firstName(),
             'company_name' => $this->faker->company(),
 
@@ -30,7 +30,7 @@ class CustomerFactory extends Factory
             'address_number' => $this->faker->buildingNumber(),
             'address_country' => $this->faker->countryCode('alpha-2'),
             'address_postal_code' => $this->faker->postcode(),
-            'address_place' => $this->faker->city(),
+            'address_place' => strtoupper($this->faker->city()),
 
             'phone' => $this->faker->e164PhoneNumber(),
             'email' => $this->faker->unique()->safeEmail(),
