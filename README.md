@@ -52,8 +52,8 @@ This application requires at least PHP 8.1 and is built using :
     <ul>
         <li>All errors (ERROR)</li>
         <li>All executed N+1 database queries (WARNING)</li>
-        <li>All scheduled backups (INFO)</li>
         <li>All executed database queries, but only in development mode (DEBUG)</li>
+        <li>All scheduled backups (INFO)</li>
    </ul>
 </p>
 
