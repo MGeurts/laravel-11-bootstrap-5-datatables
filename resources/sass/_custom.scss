@@ -26,9 +26,12 @@
 @media screen,
 print {
     body {
-        padding-top: 4.5rem;
-        //background-color: transparent;
         color: $text;
+        padding-top: 7.5rem;
+
+        @media (min-width: 768px) {
+            padding-top: 4.5rem;
+        }
     }
 
     .navbar {

@@ -2,25 +2,33 @@
     <nav class="navbar bg-secondary fixed-top d-print-none">
         <div class=" container-fluid">
             {{-- left --}}
-            <div>
-                <a class="btn btn-lg btn-light me-1" href="https://www.facebook.com/yourcompany/" target="_blank" title="Your Company Name on Facebook" role="button" tabindex="-1">
-                    <i class="bi bi-facebook"></i>
-                </a>
+            <div class="d-flex align-items-center justify-content-start">
+                <div class="d-none d-lg-block me-1">
+                    <a class="btn btn-lg btn-light me-1" href="https://www.facebook.com/yourcompany/" target="_blank" title="Your Company Name on Facebook" role="button" tabindex="-1">
+                        <i class="bi bi-facebook"></i>
+                    </a>
+                </div>
 
-                <a class="btn btn-lg btn-light me-1" href="https://www.yourcompany.com" target="_blank" title="yourcompany.com" role="button" tabindex="-1">
-                    <img src="{{ asset('img/logo/laravel-025.png') }}" alt="yourcompany.com">
-                </a>
+                <div class="d-none d-lg-block me-1">
+                    <a class="btn btn-lg btn-light me-1" href="https://www.yourcompany.com" target="_blank" title="yourcompany.com" role="button" tabindex="-1">
+                        <img src="{{ asset('img/logo/laravel-025.png') }}" alt="yourcompany.com">
+                    </a>
+                </div>
 
-                <button class="btn btn-lg btn-outline-dark me-1" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" tabindex="-1"
-                    title="Menu">
-                    <i class="bi bi-list"></i>
-                </button>
+                <div>
+                    <button class="btn btn-lg btn-outline-dark me-1" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" tabindex="-1"
+                        title="Menu">
+                        <i class="bi bi-list"></i>
+                    </button>
+                </div>
 
-                <span class="text-white">{{ Auth::user()->name }}</span>
+                <div class="d-none d-lg-block">
+                    <span class="text-white">{{ Auth::user()->name }}</span>
+                </div>
             </div>
 
             {{-- center left --}}
-            <div>
+            <div class="d-none d-lg-block">
                 @include('components.switch')
             </div>
 
