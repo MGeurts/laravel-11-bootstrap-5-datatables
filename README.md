@@ -41,18 +41,19 @@ This application requires at least PHP 8.1 and is built using :
 
 <p>The top menu contains in its center a dropdown selector for the year. This is implemented as a global session variable <b>[APP].[YEAR]</b> and allows you to easely filter datatable datasets (when needed) to reflect the data concerning the selected year. This is extreem helpfull if you manage models that depend on the year, like for instance deliveries, orders, productions, and so on ...</p>
 
-<p>This application has a built-on <b>Backup manager</b> :
+<p>This application has a built-in <b>Backup manager</b> :
     <ul>
         <li>Backups can be initiated and managed manually</li>
         <li>Backups can be scheludeld by issuing a cron job on your development server</li>
    </ul>
 </p>
 
-<p>This application has a built-on <b>Log Viewer</b> showing :
+<p>This application has a built-in <b>Log Viewer</b> showing :
     <ul>
         <li>All errors (ERROR)</li>
+        <li>All executed N+1 database queries (WARNING)</li>
         <li>All scheduled backups (INFO)</li>
-         <li>All executed database queries, but only in development mode (DEBUG)</li>
+        <li>All executed database queries, but only in development mode (DEBUG)</li>
    </ul>
 </p>
 
