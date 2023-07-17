@@ -110,7 +110,7 @@
                                 <select name="address_country" id="address_country" class="form-select">
                                     <option value="">Choose ...</option>
                                     @foreach ($countries as $country)
-                                        <option value="{{ $country->iso2 }}">{{ $country->name }}</option>
+                                        <option value="{{ $country->iso2 }}">{{ $country->name_en }}</option>
                                     @endforeach
                                 </select>
                                 @error('address_country')
@@ -247,7 +247,7 @@
                                 <select name="delivery_address_country" id="delivery_address_country" class="form-select">
                                     <option value="">Choose ...</option>
                                     @foreach ($countries as $country)
-                                        <option value="{{ $country->iso2 }}">{{ $country->name }}</option>
+                                        <option value="{{ $country->iso2 }}">{{ $country->name_en }}</option>
                                     @endforeach
                                 </select>
                                 @error('delivery_address_country')

@@ -85,10 +85,10 @@
                                 <option value="">Choose ...</option>
                                 @foreach ($countries as $country)
                                     @if ($country->iso2 == $customer->address_country)
-                                        <option value="{{ $country->iso2 }}" selected>{{ $country->name }}
+                                        <option value="{{ $country->iso2 }}" selected>{{ $country->name_en }}
                                         </option>
                                     @else
-                                        <option value="{{ $country->iso2 }}">{{ $country->name }}</option>
+                                        <option value="{{ $country->iso2 }}">{{ $country->name_en }}</option>
                                     @endif
                                 @endforeach
                             </select>
@@ -178,10 +178,10 @@
                                 <option value="">Choose ...</option>
                                 @foreach ($countries as $country)
                                     @if ($country->iso2 == $customer->delivery_address_country)
-                                        <option value="{{ $country->iso2 }}" selected>{{ $country->name }}
+                                        <option value="{{ $country->iso2 }}" selected>{{ $country->name_en }}
                                         </option>
                                     @else
-                                        <option value="{{ $country->iso2 }}">{{ $country->name }}</option>
+                                        <option value="{{ $country->iso2 }}">{{ $country->name_en }}</option>
                                     @endif
                                 @endforeach
                             </select>
