@@ -26,7 +26,7 @@
         "nunomaduro/collision": "^7.0",
         "phpunit/phpunit": "^10.0",
         "spatie/laravel-ignition": "^2.0",
-        "stevebauman/location": "^6.6"
+        "stevebauman/location": "^7.0"
     },
     "autoload": {
         "psr-4": {
