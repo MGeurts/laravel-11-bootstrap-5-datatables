@@ -22,20 +22,20 @@ class CustomerFactory extends Factory
     public function definition()
     {
         return [
-            'customer_last_name' => strtoupper($this->faker->lastName()),
-            'customer_first_name' => $this->faker->firstName(),
-            'company_name' => $this->faker->company(),
+            'customer_last_name' => strtoupper(fake()->lastName()),
+            'customer_first_name' => fake()->firstName(),
+            'company_name' => fake()->boolean(30) ? fake()->company() : null,
 
-            'address_street' => $this->faker->streetName(),
-            'address_number' => $this->faker->buildingNumber(),
-            'address_country' => $this->faker->countryCode('alpha-2'),
-            'address_postal_code' => $this->faker->postcode(),
-            'address_place' => strtoupper($this->faker->city()),
+            'address_street' => fake()->streetName(),
+            'address_number' => fake()->buildingNumber(),
+            'address_country' => fake()->countryCode('alpha-2'),
+            'address_postal_code' => fake()->postcode(),
+            'address_place' => strtoupper(fake()->city()),
 
-            'phone' => $this->faker->e164PhoneNumber(),
-            'email' => $this->faker->unique()->safeEmail(),
+            'phone' => fake()->e164PhoneNumber(),
+            'email' => fake()->unique()->safeEmail(),
 
-            'send_newsletter' => $this->faker->boolean(),
+            'send_newsletter' => fake()->boolean(),
         ];
     }
 }
