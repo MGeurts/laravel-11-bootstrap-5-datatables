@@ -4,6 +4,13 @@
     <hr class="narrow text-light">
 
     <li class="nav-item"><a class="nav-link text-light disabled" href="#"><img class="nav-icon" src="{{ asset('img/icons/products-white.png') }}" />Products</a></li>
+    <ul>
+        <li class="list-group-item">
+            <a class="nav-link text-light disabled" href="#">
+                <img class="nav-icon" src="{{ asset('img/icons/categorisation-white.png') }}" />Categorisation
+            </a>
+        </li>
+    </ul>
     <li class="nav-item"><a class="nav-link text-light disabled" href="#"><img class="nav-icon" src="{{ asset('img/icons/delivery-white.png') }}" />Deliveries</a></li>
     <li class="nav-item"><a class="nav-link text-light disabled" href="#"><img class="nav-icon" src="{{ asset('img/icons/reorder-white.png') }}" />Orders</a></li>
     <li class="nav-item"><a class="nav-link text-light" href="{{ route('back.customers.index') }}"><img class="nav-icon" src="{{ asset('img/icons/persons-white.png') }}" />Customers</a></li>

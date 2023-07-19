@@ -47,6 +47,12 @@
                     <a class="btn btn-lg btn-outline-dark" href="" title="Products (not implemented yet)" role="button" tabindex="-1">
                         <img src="{{ asset('img/buttons/stock-025-wit.png') }}" class="img-fluid" />
                     </a>
+                    <a class="btn btn-lg btn-outline-dark" href="" data-btn-header="productcategories" title="Categorisation (not implemented yet)" role="button" tabindex="-1">
+                        <img src="{{ asset('img/buttons/categorisatie-025-wit.png') }}" class="img-fluid" />
+                    </a>
+                </div>
+
+                <div class="btn-group me-1" role="group">
                     <a class="btn btn-lg btn-outline-dark" href="" title="Deliveries (not implemented yet)" role="button" tabindex="-1">
                         <img src="{{ asset('img/buttons/delivery-025-wit.png') }}" class="img-fluid" />
                     </a>
