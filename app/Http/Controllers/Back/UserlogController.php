@@ -50,13 +50,6 @@ class UserlogController extends Controller
     {
         abort_if(Gate::denies('developer'), Response::HTTP_FORBIDDEN, '403 Forbidden');
 
-        $lava = new Lavacharts([
-            // This is a fake Google API key, replace it with your own legal Google API key !!
-            'maps_api_key' => '23ay5t987354inr28m9crg893crgt9arc98tr2a896tarc2896ta28',
-        ]);
-
-        $visitors = $lava->DataTable();
-
         $data = Userlog::select('country_name AS 0')
             ->selectRaw('count(*) AS `1`')
             ->where('user_id', '!=', 2)
@@ -65,18 +58,24 @@ class UserlogController extends Controller
             ->get()
             ->toArray();
 
-        $visitors->addStringColumn('Country')
+        $lava = new Lavacharts([
+            // This is a fake Google API key, replace it with your own legal Google API key !!
+            'maps_api_key' => '23ay5t987354inr28m9crg893crgt9arc98tr2a896tarc2896ta28',
+        ]);
+
+        $visitors = $lava->DataTable()
+            ->addStringColumn('Country')
             ->addNumberColumn('visitors')
             ->addRows($data);
 
         $lava->GeoChart('Visitors', $visitors, [
-            'colorAxis' => ['minValue' => 0,  'colors' => ['#FF0000', '#00FF00']],   //ColorAxis Options
+            'colorAxis' => ['minValue' => 0,  'colors' => ['#BCD2E8', '#1E3F66']],   //ColorAxis Options
             'datalessRegionColor' => '#d0d0d0',
             'displayMode' => 'auto',
             'enableRegionInteractivity' => true,
             'keepAspectRatio' => true,
             'region' => 'world',
-            'magnifyingGlass' => ['enable' => true, 'zoomFactor' => 7.5],    //MagnifyingGlass Options
+            'magnifyingGlass' => ['enable' => true, 'zoomFactor' => 7.5],           //MagnifyingGlass Options
             'markerOpacity' => 1.0,
             'resolution' => 'countries',
             'sizeAxis' => null,
