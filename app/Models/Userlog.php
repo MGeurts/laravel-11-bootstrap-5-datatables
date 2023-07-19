@@ -19,10 +19,10 @@ class Userlog extends Model
         'created_at',
     ];
 
-    // protected $appends = [
-    //     'date',
-    //     'time',
-    // ];
+    protected $appends = [
+        'date',
+        'time',
+    ];
 
     /* -------------------------------------------------------------------------------------------- */
     // Accessors (GET) Attribute (APPENDED)

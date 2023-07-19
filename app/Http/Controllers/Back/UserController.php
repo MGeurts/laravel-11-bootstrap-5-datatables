@@ -101,7 +101,8 @@ class UserController extends Controller
         abort_if(Gate::denies('developer'), Response::HTTP_FORBIDDEN, '403 Forbidden');
 
         $userlogs_by_date = Userlog::where('user_id', $request->id)
-            ->where('created_at', '>=', carbon::now()->subMonths(3))
+            ->select('userlogs.created_at')
+            ->where('created_at', '>=', carbon::now()->startOfMonth()->subMonths(3))
             ->orderBy('created_at', 'desc')
             ->get()
             ->groupBy('date');

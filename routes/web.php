@@ -59,8 +59,8 @@ Route::middleware('auth')->group(function () {
         // Users log
         Route::controller(App\Http\Controllers\Back\UserlogController::class)->group(function () {
             Route::get('/userslog/index', 'index')->name('userslog.index');
-            Route::get('/userslog/statsCountryPie', 'statsCountryPie')->name('userslog.statsCountryPie');
             Route::get('/userslog/statsCountryMap', 'statsCountryMap')->name('userslog.statsCountryMap');
+            Route::get('/userslog/statsCountryPie', 'statsCountryPie')->name('userslog.statsCountryPie');
             Route::get('/userslog/statsPeriode', 'statsPeriode')->name('userslog.statsPeriode');
         });
         /* ---------------------------------------- */

@@ -19,31 +19,12 @@ class UserlogController extends Controller
             ->select('userlogs.country_name', 'userlogs.country_code', 'userlogs.created_at', 'users.name', 'users.is_developer')
             ->leftjoin('users', 'userlogs.user_id', '=', 'users.id')
             ->where('userlogs.user_id', '!=', 2)
-            ->where('userlogs.created_at', '>=', carbon::now()->subMonths(3))
+            ->where('userlogs.created_at', '>=', carbon::now()->startOfMonth()->subMonths(3))
             ->orderBy('userlogs.created_at', 'desc')
             ->get()
             ->groupBy('date');
 
         return view('back.userslog.index', compact('userlogs_by_date'));
-    }
-
-    public function statsCountryPie()
-    {
-        abort_if(Gate::denies('developer'), Response::HTTP_FORBIDDEN, '403 Forbidden');
-
-        $statistics = Userlog::select('country_name')
-            ->selectRaw('count(*) as visitors')
-            ->where('user_id', '!=', 2)
-            ->whereNotNull('country_name')
-            ->groupBy('country_name')
-            ->get();
-
-        $data['chart_data'] = json_encode([
-            'label' => $statistics->pluck('country_name'),
-            'data' => $statistics->pluck('visitors'),
-        ]);
-
-        return view('back.userslog.stats-country-pie', $data);
     }
 
     public function statsCountryMap()
@@ -83,6 +64,25 @@ class UserlogController extends Controller
         ]);
 
         return view('back.userslog.stats-country-map', compact('lava'));
+    }
+
+    public function statsCountryPie()
+    {
+        abort_if(Gate::denies('developer'), Response::HTTP_FORBIDDEN, '403 Forbidden');
+
+        $statistics = Userlog::select('country_name')
+            ->selectRaw('count(*) as visitors')
+            ->where('user_id', '!=', 2)
+            ->whereNotNull('country_name')
+            ->groupBy('country_name')
+            ->get();
+
+        $data['chart_data'] = json_encode([
+            'label' => $statistics->pluck('country_name'),
+            'data' => $statistics->pluck('visitors'),
+        ]);
+
+        return view('back.userslog.stats-country-pie', $data);
     }
 
     public function statsPeriode()
