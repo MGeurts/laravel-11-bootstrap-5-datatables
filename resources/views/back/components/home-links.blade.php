@@ -59,7 +59,7 @@
     </div>
 
     <div class="card-footer">
-        <div class="row">
+        <div class="row d-flex align-items-center">
             <div class="col text-danger">
                 <h5 id="MyClockTime" onload="showDate();"></h5>
             </div>
