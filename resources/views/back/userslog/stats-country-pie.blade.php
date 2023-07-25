@@ -6,7 +6,7 @@
 
 @section('content')
     <div class="row">
-        <div class="col-xxl-10 offset-xxl-1">
+        <div class="col-xxl-8 offset-xxl-2">
             <div class="card mb-2">
                 <div class="card-header d-print-none">
                     <div class="row">
