@@ -10,7 +10,6 @@ use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
-use Illuminate\Support\Facades\Hash;
 use Laravel\Sanctum\HasApiTokens;
 
 class User extends Authenticatable
@@ -47,6 +46,7 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
         'is_developer' => 'boolean',
+        'password' => 'hashed',
     ];
 
     /* -------------------------------------------------------------------------------------------- */
@@ -56,13 +56,6 @@ class User extends Authenticatable
     {
         return new Attribute(
             set: fn ($value) => $value ? ucwords($value) : null,
-        );
-    }
-
-    protected function Password(): Attribute
-    {
-        return new Attribute(
-            set: fn ($value) => app('hash')->needsRehash($value) ? Hash::make($value) : $value,
         );
     }
 
