@@ -91,13 +91,33 @@ This demo Larevel project is open-sourced software licensed under the [MIT licen
 ## Screenshots
 
 <p align="center">
-    <img src="https://www.kreaweb.be/wp-content/uploads/2023/07/laravel-10-bootstrap-datatables-02.webp"/>
+    <img src="https://www.kreaweb.be/wp-content/uploads/2023/07/laravel-10-bootstrap-datatables-002.webp"/>
 </p>
 
 <p align="center">
-    <img src="https://www.kreaweb.be/wp-content/uploads/2023/07/laravel-10-bootstrap-datatables-03.webp"/>
+    <img src="https://www.kreaweb.be/wp-content/uploads/2023/07/laravel-10-bootstrap-datatables-003.webp"/>
 </p>
 
 <p align="center">
-    <img src="https://www.kreaweb.be/wp-content/uploads/2023/07/laravel-10-bootstrap-datatables-04.webp"/>
+    <img src="https://www.kreaweb.be/wp-content/uploads/2023/07/laravel-10-bootstrap-datatables-004.webp"/>
+</p>
+
+<p align="center">
+    <img src="https://www.kreaweb.be/wp-content/uploads/2023/07/laravel-10-bootstrap-datatables-005.webp"/>
+</p>
+
+<p align="center">
+    <img src="https://www.kreaweb.be/wp-content/uploads/2023/07/laravel-10-bootstrap-datatables-006.webp"/>
+</p>
+
+<p align="center">
+    <img src="https://www.kreaweb.be/wp-content/uploads/2023/07/laravel-10-bootstrap-datatables-007.webp"/>
+</p>
+
+<p align="center">
+    <img src="https://www.kreaweb.be/wp-content/uploads/2023/07/laravel-10-bootstrap-datatables-008.webp"/>
+</p>
+
+<p align="center">
+    <img src="https://www.kreaweb.be/wp-content/uploads/2023/07/laravel-10-bootstrap-datatables-009.webp"/>
 </p>
