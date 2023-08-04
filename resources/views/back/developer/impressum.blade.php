@@ -32,7 +32,7 @@
                             </ul>
 
                             <ul>
-                                <li><a target="_blank" href="https://github.com/barryvdh/laravel-debugbar/">barryvdh/laravel-debugbar</a> - 3.8.1</li>
+                                <li><a target="_blank" href="https://github.com/barryvdh/laravel-debugbar/">barryvdh/laravel-debugbar</a> - 3.8.2</li>
                             </ul>
 
                             <ul>
@@ -80,7 +80,7 @@
                             </ul>
 
                             <ul>
-                                <li><a target="_blank" href="https://www.chartjs.org/">chart.js</a> - 4.3.1</li>
+                                <li><a target="_blank" href="https://www.chartjs.org/">chart.js</a> - 4.3.3</li>
                             </ul>
 
                             <ul>

@@ -15,7 +15,4 @@ export default defineConfig({
             refresh: true,
         }),
     ],
-    // esbuild: {
-    //     minifyIdentifiers: false
-    // },
 });
