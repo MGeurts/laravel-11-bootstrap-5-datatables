@@ -29,7 +29,7 @@
             <ul class="dropdown-menu" aria-labelledby="offcanvasNavbarDropdown">
                 <li><a class="dropdown-item" href="{{ route('back.users.index') }}"><i class="bi bi-people-fill nav-icon"></i>Users</a></li>
                 <li><a class="dropdown-item" href="{{ route('back.userslog.index') }}"><i class="bi bi-person-lines-fill nav-icon"></i>User Log</a></li>
-                <li><a class="dropdown-item" href="{{ route('back.userslog.statsCountryPie') }}"><i class="bi bi-person-lines-fill nav-icon"></i>User Statistics (Country Pie)</a></li>
+                <li><a class="dropdown-item" href="{{ route('back.userslog.statsCountry') }}"><i class="bi bi-person-lines-fill nav-icon"></i>User Statistics (Country)</a></li>
                 <li><a class="dropdown-item" href="{{ route('back.userslog.statsCountryMap') }}"><i class="bi bi-person-lines-fill nav-icon"></i>User Statistics (Country Map)</a></li>
                 <li><a class="dropdown-item" href="{{ route('back.userslog.statsPeriode') }}"><i class="bi bi-person-lines-fill nav-icon"></i>User Statistics (Periode)</a></li>
                 <hr class="narrow">
