@@ -45,6 +45,9 @@
 
                 <li><a class="dropdown-item" href="{{ route('back.developer.impressum') }}"><i class="bi bi-file-text-fill nav-icon"></i>Impressum</a></li>
                 <li><a class="dropdown-item" href="{{ route('back.developer.session') }}"><i class="bi bi-braces-asterisk nav-icon"></i>Session</a></li>
+
+                <hr class="narrow">
+                <li><a class="dropdown-item" href="{{ route('back.developer.test') }}"><i class="bi bi-code-slash nav-icon"></i>Test</a></li>
             </ul>
         </li>
     @endcan

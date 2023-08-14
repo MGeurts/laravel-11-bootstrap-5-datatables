@@ -364,6 +364,30 @@
 @push('scripts')
     <script type="module">
         /* -------------------------------------------------------------------------------------------- */
+        $('#address_country').select2({
+            theme: "bootstrap-5",
+            minimumResultsForSearch: 31,
+            placeholder: "Choose ...",
+            language: "en",
+            allowClear: true,
+        }).on('change', function() {
+            document.getElementById('address_postal_code').focus();
+        }).on('select2:close', function() {
+            document.getElementById('address_postal_code').focus();
+        });
+
+        $('#delivery_address_country').select2({
+            theme: "bootstrap-5",
+            minimumResultsForSearch: 31,
+            placeholder: "Choose ...",
+            language: "en",
+            allowClear: true,
+        }).on('change', function() {
+            document.getElementById('delivery_address_postal_code').focus();
+        }).on('select2:close', function() {
+            document.getElementById('delivery_address_postal_code').focus();
+        });
+        /* -------------------------------------------------------------------------------------------- */
         $('#btnMapFacturation').click(function() {
             const href = "https://www.google.nl/maps/place/";
 

@@ -38,6 +38,7 @@ Route::middleware('auth')->group(function () {
             Route::get('/developer/hashGenerator', 'hashGenerator')->name('developer.hashGenerator');
             Route::get('/developer/impressum', 'impressum')->name('developer.impressum');
             Route::get('/developer/session', 'session')->name('developer.session');
+            Route::get('/developer/test', 'test')->name('developer.test');
         });
         /* ---------------------------------------- */
         // Backups

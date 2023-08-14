@@ -28,4 +28,9 @@ class DeveloperController extends Controller
     {
         return view('back.developer.session');
     }
+
+    public function test(Request $request)
+    {
+        return view('back.developer.test');
+    }
 }
