@@ -23,7 +23,7 @@
         "jszip": "^3.10.1",
         "laravel-vite-plugin": "^0.7.4",
         "pdfmake": "^0.2.7",
-        "sass": "^1.56.1",
+        "sass": "^1.65.1",
         "select2": "^4.1.0-rc.0",
         "select2-bootstrap-5-theme": "^1.3.0",
         "toastr": "^2.1.4",
