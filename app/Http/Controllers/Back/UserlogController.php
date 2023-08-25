@@ -55,7 +55,6 @@ class UserlogController extends Controller
 
         $data = Userlog::select('country_code AS 0')
             ->selectRaw('count(*) AS `1`')
-            //->select('country_name AS 3')
             ->where('user_id', '!=', 2)
             ->whereNotNull('country_code')
             ->groupBy('country_code')
@@ -84,6 +83,7 @@ class UserlogController extends Controller
             'resolution' => 'countries',
             'sizeAxis' => null,
             'backgroundColor' => '#f0f0f0',
+            'geochartVersion' => 11,
         ]);
 
         return view('back.userslog.stats-country-map', compact('lava'));
