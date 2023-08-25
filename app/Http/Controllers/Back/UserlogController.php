@@ -52,11 +52,11 @@ class UserlogController extends Controller
     {
         abort_if(Gate::denies('developer'), Response::HTTP_FORBIDDEN, '403 Forbidden');
 
-        $data = Userlog::select('country_code AS 0')
+        $data = Userlog::select('country_name AS 0')
             ->selectRaw('count(*) AS `1`')
             ->where('user_id', '!=', 2)
-            ->whereNotNull('country_code')
-            ->groupBy('country_code')
+            ->whereNotNull('country_name')
+            ->groupBy('country_name')
             ->get()
             ->toArray();
 
