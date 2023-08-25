@@ -84,6 +84,7 @@ class UserlogController extends Controller
             'sizeAxis' => null,
             'backgroundColor' => '#f0f0f0',
             'geochartVersion' => 11,
+            'regioncoderVersion' => 1,
         ]);
 
         return view('back.userslog.stats-country-map', compact('lava'));
