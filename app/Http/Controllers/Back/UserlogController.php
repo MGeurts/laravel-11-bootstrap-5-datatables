@@ -53,11 +53,12 @@ class UserlogController extends Controller
     {
         abort_if(Gate::denies('developer'), Response::HTTP_FORBIDDEN, '403 Forbidden');
 
-        $data = Userlog::select('country_name AS 0')
+        $data = Userlog::select('country_code AS 0')
             ->selectRaw('count(*) AS `1`')
+            //->select('country_name AS 3')
             ->where('user_id', '!=', 2)
-            ->whereNotNull('country_name')
-            ->groupBy('country_name')
+            ->whereNotNull('country_code')
+            ->groupBy('country_code')
             ->get()
             ->toArray();
 
@@ -68,7 +69,7 @@ class UserlogController extends Controller
 
         $visitors = $lava->DataTable()
             ->addStringColumn('Country')
-            ->addNumberColumn('visitors')
+            ->addNumberColumn('Visitors')
             ->addRows($data);
 
         $lava->GeoChart('Visitors', $visitors, [
@@ -78,7 +79,7 @@ class UserlogController extends Controller
             'enableRegionInteractivity' => true,
             'keepAspectRatio' => true,
             'region' => 'world',
-            'magnifyingGlass' => ['enable' => true, 'zoomFactor' => 7.5],           //MagnifyingGlass Options
+            'magnifyingGlass' => ['enable' => true, 'zoomFactor' => 7.5],            //MagnifyingGlass Options
             'markerOpacity' => 1.0,
             'resolution' => 'countries',
             'sizeAxis' => null,
