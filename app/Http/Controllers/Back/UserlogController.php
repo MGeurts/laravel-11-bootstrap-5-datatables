@@ -66,8 +66,8 @@ class UserlogController extends Controller
         foreach ($countries as $country) {
             array_push($data, [
                 [
-                    $country['country_code'],
-                    $country['country_name'],
+                    $country['country_code'], // v:
+                    $country['country_name'], // f:
                 ],
                 $country['visitors'],
             ]);
@@ -85,13 +85,13 @@ class UserlogController extends Controller
             ->addRows($data);
 
         $lava->GeoChart('Visitors', $visitors, [
-            'colorAxis' => ['minValue' => 0,  'colors' => ['#BCD2E8', '#1E3F66']],   //ColorAxis Options
+            'colorAxis' => ['minValue' => 0,  'colors' => ['#BCD2E8', '#1E3F66']],   // ColorAxis Options
             'datalessRegionColor' => '#d0d0d0',
             'displayMode' => 'auto',
             'enableRegionInteractivity' => true,
             'keepAspectRatio' => true,
             'region' => 'world',
-            'magnifyingGlass' => ['enable' => true, 'zoomFactor' => 7.5],            //MagnifyingGlass Options
+            'magnifyingGlass' => ['enable' => true, 'zoomFactor' => 7.5],            // MagnifyingGlass Options
             'markerOpacity' => 1.0,
             'resolution' => 'countries',
             'sizeAxis' => null,

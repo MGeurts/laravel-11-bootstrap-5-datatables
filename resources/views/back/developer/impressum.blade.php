@@ -80,7 +80,7 @@
                             </ul>
 
                             <ul>
-                                <li><a target="_blank" href="https://www.chartjs.org/">chart.js</a> - 4.3.3</li>
+                                <li><a target="_blank" href="https://www.chartjs.org/">chart.js</a> - 4.4.0</li>
                             </ul>
 
                             <ul>
@@ -155,7 +155,7 @@
                                         @endif
                                     </td>
                                     <td class="text-center">@php echo phpversion(); @endphp</td>
-                                    <td class="text-center">8.0.33</td>
+                                    <td class="text-center">8.0.34</td>
                                     <td class="text-center">5.2.1</td>
                                 </tr>
 
