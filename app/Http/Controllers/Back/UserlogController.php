@@ -32,7 +32,7 @@ class UserlogController extends Controller
         abort_if(Gate::denies('developer'), Response::HTTP_FORBIDDEN, '403 Forbidden');
 
         $statistics = Userlog::select('country_name')
-            ->selectRaw('count(*) as visitors')
+            ->selectRaw('COUNT(*) AS visitors')
             ->where('user_id', '!=', 2)
             ->whereNotNull('country_name')
             ->groupBy('country_name')
@@ -52,26 +52,23 @@ class UserlogController extends Controller
     {
         abort_if(Gate::denies('developer'), Response::HTTP_FORBIDDEN, '403 Forbidden');
 
-        $countries = Userlog::select('country_code AS country_code')
-            ->selectRaw('MIN(country_name) AS `country_name`')
-            ->selectRaw('COUNT(*) AS `visitors`')
+        $countries = Userlog::select('country_code')
+            ->selectRaw('MIN(country_name) AS country_name')
+            ->selectRaw('COUNT(*) AS visitors')
             ->where('user_id', '!=', 2)
             ->whereNotNull('country_code')
             ->groupBy('country_code')
-            ->get()
-            ->toArray();
+            ->get();
 
-        $data = [];
-
-        foreach ($countries as $country) {
-            array_push($data, [
+        $data = $countries->map(function ($country) {
+            return [
                 [
-                    $country['country_code'], // v:
-                    $country['country_name'], // f:
+                    $country->country_code, // v:
+                    $country->country_name, // f:
                 ],
-                $country['visitors'],
-            ]);
-        }
+                $country->visitors,
+            ];
+        })->toArray();
 
         $lava = new Lavacharts([
             // This is a fake Google API key, replace it with your own legal Google API key !!
@@ -106,28 +103,28 @@ class UserlogController extends Controller
     public function statsPeriode()
     {
         $statistics = match (session('APP.PERIOD')) {
-            'year' => Userlog::selectRaw('YEAR(created_at) as period')
-                ->selectRaw('count(*) as `visitors`')
+            'year' => Userlog::selectRaw('YEAR(created_at) AS period')
+                ->selectRaw('COUNT(*) AS visitors')
                 ->where('user_id', '!=', 2)
                 ->groupBy('period')
                 ->orderBy('period')
                 ->get(),
             'month' => Userlog::selectRaw('LPAD(MONTH(created_at), 2, 0) AS period')
-                ->selectRaw('count(*) as visitors')
+                ->selectRaw('COUNT(*) AS visitors')
                 ->where('user_id', '!=', 2)
                 ->whereYear('created_at', session('APP.YEAR'))
                 ->groupBy('period')
                 ->orderBy('period')
                 ->get(),
             'week' => Userlog::selectRaw('LPAD(WEEK(created_at, 0), 2, 0) AS period')
-                ->selectRaw('count(*) as visitors')
+                ->selectRaw('COUNT(*) AS visitors')
                 ->where('user_id', '!=', 2)
                 ->whereYear('created_at', session('APP.YEAR'))
                 ->groupBy('period')
                 ->orderBy('period')
                 ->get(),
             'day' => Userlog::selectRaw('DATE_FORMAT(created_at, "%Y-%m-%d") AS period')
-                ->selectRaw('count(*) as visitors')
+                ->selectRaw('COUNT(*) AS visitors')
                 ->where('user_id', '!=', 2)
                 ->whereYear('created_at', session('APP.YEAR'))
                 ->groupBy('period')
