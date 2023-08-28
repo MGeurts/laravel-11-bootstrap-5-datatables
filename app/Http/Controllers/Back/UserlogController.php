@@ -52,17 +52,31 @@ class UserlogController extends Controller
     {
         abort_if(Gate::denies('developer'), Response::HTTP_FORBIDDEN, '403 Forbidden');
 
-        $data = Userlog::select('country_code AS 0')
-            ->selectRaw('count(*) AS `1`')
+        $countries = Userlog::select('country_code AS country_code')
+            ->selectRaw('ANY_VALUE(country_name) AS `country_name`')
+            ->selectRaw('COUNT(*) AS `visitors`')
             ->where('user_id', '!=', 2)
             ->whereNotNull('country_code')
             ->groupBy('country_code')
             ->get()
             ->toArray();
 
+        $data = [];
+
+        foreach ($countries as $country) {
+            array_push($data, [
+                [
+                    $country['country_code'],
+                    $country['country_name'],
+                ],
+                $country['visitors'],
+            ]);
+        }
+
         $lava = new Lavacharts([
             // This is a fake Google API key, replace it with your own legal Google API key !!
             'maps_api_key' => '23ay5t987354inr28m9crg893crgt9arc98tr2a896tarc2896ta28',
+            // The key is only needed for markers, not used in this example !!
         ]);
 
         $visitors = $lava->DataTable()
