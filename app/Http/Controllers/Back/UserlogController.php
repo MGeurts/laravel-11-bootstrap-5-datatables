@@ -53,7 +53,7 @@ class UserlogController extends Controller
         abort_if(Gate::denies('developer'), Response::HTTP_FORBIDDEN, '403 Forbidden');
 
         $countries = Userlog::select('country_code AS country_code')
-            ->selectRaw('ANY_VALUE(country_name) AS `country_name`')
+            ->selectRaw('MIN(country_name) AS `country_name`')
             ->selectRaw('COUNT(*) AS `visitors`')
             ->where('user_id', '!=', 2)
             ->whereNotNull('country_code')
