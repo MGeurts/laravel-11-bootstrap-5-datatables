@@ -19,12 +19,12 @@
     "src": "resources/js/app.js"
   },
   "resources/js/custom.js": {
-    "file": "assets/custom-47f474ec.js",
+    "file": "assets/custom-edb36f20.js",
     "isEntry": true,
     "src": "resources/js/custom.js"
   },
   "resources/js/datatables.js": {
-    "file": "assets/datatables-05106680.js",
+    "file": "assets/datatables-f9f98dbf.js",
     "imports": [
       "_jquery-11e88dd7.js"
     ],
@@ -32,7 +32,7 @@
     "src": "resources/js/datatables.js"
   },
   "resources/sass/app.scss": {
-    "file": "assets/app-72d36ebe.css",
+    "file": "assets/app-f476defb.css",
     "isEntry": true,
     "src": "resources/sass/app.scss"
   },

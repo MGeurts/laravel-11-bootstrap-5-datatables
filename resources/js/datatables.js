@@ -11,9 +11,9 @@ import 'dataTables.net-buttons/js/buttons.print.min.mjs';
 import 'dataTables.mark.js';
 
 import JSZip from 'jszip';
+
 import pdfMake from 'pdfmake';
 import * as pdfFonts from "pdfmake/build/vfs_fonts.js";
-//pdfMake.vfs = pdfFonts.pdfMake.vfs;
 pdfMake.vfs = window.pdfMake.vfs;
 /* -------------------------------------------------------------------------------------- */
 DataTable.Buttons.jszip(JSZip);
@@ -27,11 +27,11 @@ $.extend(true, DataTable.Buttons.defaults, {
     },
 });
 
-$.extend(true, $.fn.dataTable.Buttons.defaults.dom.button, {
-    className: 'btn btn-sm'
-})
 $.extend(true, $.fn.dataTable.Buttons.defaults.dom.container, {
     className: 'dt-buttons'
+})
+$.extend(true, $.fn.dataTable.Buttons.defaults.dom.button, {
+    className: 'btn btn-sm'
 })
 
 $.extend(DataTable.ext.classes, {

@@ -68,11 +68,14 @@ window.showToast = function showToast(parameters) {
         toastClass: "toast",
     };
 
-    parameters.type = typeof parameters.type === "undefined" || !['error', 'info', 'success', 'warning'].includes(parameters.type) ? "info" : parameters.type;
+    parameters.type = typeof parameters.type === "undefined" || !['error', 'warning', 'info', 'success'].includes(parameters.type) ? "info" : parameters.type;
 
     switch (parameters.type.toLowerCase()) {
         case "error":
             toastr.options.timeOut = 15000;
+            break;
+        case "warning":
+            toastr.options.timeOut = 10000;
             break;
         case "info":
             toastr.options.timeOut = 5000;
@@ -80,11 +83,8 @@ window.showToast = function showToast(parameters) {
         case "success":
             toastr.options.timeOut = 3000;
             break;
-        case "warning":
-            toastr.options.timeOut = 10000;
-            break;
         default:
-            toastr.options.timeOut = 4000;
+            toastr.options.timeOut = 5000;
     }
 
     toastr[parameters.type](parameters.message, parameters.title + "<hr />");
