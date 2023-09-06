@@ -36,8 +36,7 @@ class UserlogController extends Controller
             ->where('user_id', '!=', 2)
             ->whereNotNull('country_name')
             ->groupBy('country_name')
-            ->orderBy('visitors', 'desc')
-            ->orderBy('country_name')
+            ->orderBy('visitors', 'desc')->orderBy('country_name')
             ->get();
 
         $data['chart_data'] = json_encode([
