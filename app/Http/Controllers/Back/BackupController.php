@@ -13,8 +13,7 @@ class BackupController extends Controller
 {
     public function index()
     {
-        $disk = Storage::disk('local');
-
+        $disk = Storage::disk(env('BACKUP_DISK', 'backups'));
         $files = $disk->files(config('backup.backup.name'));
 
         $backups = [];
@@ -69,11 +68,11 @@ class BackupController extends Controller
 
     public function download($file_name)
     {
-        $disk = Storage::disk('local');
+        $disk = Storage::disk(env('BACKUP_DISK', 'backups'));
         $file = config('backup.backup.name') . '/' . $file_name;
 
         if ($disk->exists($file)) {
-            return Storage::download($file);
+            return Storage::download(env('BACKUP_DISK', 'backups') . '/' . $file);
         } else {
             $notification = [
                 'type' => 'warning',
@@ -87,7 +86,7 @@ class BackupController extends Controller
 
     public function delete($file_name)
     {
-        $disk = Storage::disk('local');
+        $disk = Storage::disk(env('BACKUP_DISK', 'backups'));
         $file = config('backup.backup.name') . '/' . $file_name;
 
         if ($disk->exists($file)) {
