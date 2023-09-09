@@ -11,6 +11,46 @@ use Illuminate\Support\Facades\Storage;
 
 class BackupController extends Controller
 {
+    // ------------------------------------------------------------------------------
+    // To make this BACKUP controller work, you need to :
+    // ------------------------------------------------------------------------------
+    //      1. add and configure this to your .env :
+    //
+    //          BACKUP_DISK="backups"
+    //          BACKUP_DAILY_CLEANUP="22:30"
+    //          BACKUP_DAILY_RUN="23:00"
+    //          BACKUP_MAIL_ADDRESS="webmaster@yourdomain.com"
+    //
+    //      2. configure this to a working mail system in your .env :
+    //          MAIL_MAILER=smtp
+    //          MAIL_HOST=mailpit
+    //          MAIL_PORT=1025
+    //          MAIL_USERNAME=null
+    //          MAIL_PASSWORD=null
+    //          MAIL_ENCRYPTION=null
+    //          MAIL_FROM_ADDRESS="no-reply@yourdomain.com"
+    //          MAIL_FROM_NAME="${APP_NAME}"
+    // ------------------------------------------------------------------------------
+    //      2. add this to your config/filesystem.php :
+    //
+    //          env('BACKUP_DISK', 'backups') => [
+    //              'driver' => 'local',
+    //              'root' => storage_path('app/' . env('BACKUP_DISK', 'backups')),
+    //              'throw' => false,
+    //          ],
+    // ------------------------------------------------------------------------------
+    //      3. configure this in your config/backup.php :
+    //
+    //          // backup --> destination --> disks :
+    //          'disks' => [
+    //              env('BACKUP_DISK', 'backups'),
+    //          ]
+    //
+    //          // backup --> monitor-backups --> disks :
+    //          'disks' => [
+    //              env('BACKUP_DISK', 'backups'),
+    //          ]
+    // ------------------------------------------------------------------------------
     public function index()
     {
         $disk = Storage::disk(env('BACKUP_DISK', 'backups'));
