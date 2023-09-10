@@ -9,7 +9,7 @@
 @endphp
 
 @section('content')
-    <p>Use this page to test features...</p>
+    <p>Use this page to test (new) features ...</p>
 @endsection
 
 @push('scripts')

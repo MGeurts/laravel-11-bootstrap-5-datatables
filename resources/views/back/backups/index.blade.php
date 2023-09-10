@@ -10,7 +10,12 @@
             <div class="card mb-2">
                 <div class="card-header">
                     <div class="row">
-                        <div class="col">Backups</div>
+                        <div class="col">
+                            Backups
+                            @if (count($backups))
+                                ({{ count($backups) }})
+                            @endif
+                        </div>
 
                         <div class="col text-center">
                             <a href="{{ route('back.backups.create') }}" class="btn btn-sm btn-success" title="Nieuwe backup aanmaken">
@@ -71,7 +76,7 @@
                     <code>
                         <pre>* * * * * cd /path_to_your_application && php artisan schedule:run >> /dev/null 2>&1</pre>
                     </code>
-                    An email will be send to your applications email address after each backup.
+                    An e-mail will be send to your applications e-mail address after each backup.
                 </div>
             </div>
         </div>

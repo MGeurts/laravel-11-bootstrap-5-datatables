@@ -34,6 +34,8 @@
                         <hr />
 
                         <div class="row mb-2">
+                            <label for="value" class="col-3 col-form-label">Hash :</label>
+
                             <div class="col">
                                 <h5>{{ $hash }}</h5>
                             </div>
