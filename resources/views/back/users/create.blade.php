@@ -10,7 +10,7 @@
             <form method="POST" action="{{ route('back.users.store') }}">
                 @csrf
 
-                <div class="card mb-3">
+                <div class="card mb-2">
                     <div class="card-header">
                         <div class="row">
                             <div class="col">User - Add</div>
@@ -103,7 +103,7 @@
 
         <div class="col-lg-6">
 
-            <div class="card mb-3">
+            <div class="card mb-2">
                 <div class="card-header bg-info text-white">
                     <div class="row">
                         <div class="col">Help</div>

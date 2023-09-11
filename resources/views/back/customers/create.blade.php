@@ -10,7 +10,7 @@
 
         <div class="row">
             <div class="col-lg-7">
-                <div class="card mb-3">
+                <div class="card mb-2">
                     <div class="card-header">
                         <div class="row">
                             <div class="col">Customer - Add</div>
@@ -188,7 +188,7 @@
                     </div>
                 </div>
 
-                <div class="card mb-3">
+                <div class="card mb-2">
                     <div class="card-header">
                         <div class="row">
                             <div class="col">Delivery address</div>
@@ -287,7 +287,7 @@
             </div>
 
             <div class="col-lg-5">
-                <div class="card mb-3">
+                <div class="card mb-2">
                     <div class="card-header bg-info text-white">
                         <div class="row">
                             <div class="col">Help</div>
@@ -317,7 +317,7 @@
                     </div>
                 </div>
 
-                <div class="card mb-3">
+                <div class="card mb-2">
                     <div class="card-header">
                         <div class="row">
                             <div class="col">Existing simular customers</div>

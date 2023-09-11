@@ -1,4 +1,4 @@
-<div class="card mb-3">
+<div class="card mb-2">
     <div class="card-header">
         <div class="row">
             <div class="col">Hyperlinks</div>
@@ -10,7 +10,7 @@
         </div>
     </div>
 
-    <div class="card-body">
+    <div class="card-body p-2">
         <p>
             You could use this card to display all kind of <b>hyperlinks</b> or buttons to navigate quickly to certain parts of your applcation.
         </p>

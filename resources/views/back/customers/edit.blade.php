@@ -11,7 +11,7 @@
 
         <div class="row">
             <div class="col-lg-7">
-                <div class="card mb-3">
+                <div class="card mb-2">
                     <div class="card-header">
                         <div class="row">
                             <div class="col">Customer - Edit</div>
@@ -197,7 +197,7 @@
                     </div>
                 </div>
 
-                <div class="card mb-3">
+                <div class="card mb-2">
                     <div class="card-header">
                         <div class="row">
                             <div class="col">Delivery address</div>
@@ -299,7 +299,7 @@
             </div>
 
             <div class="col-lg-5">
-                <div class="card mb-3">
+                <div class="card mb-2">
                     <div class="card-header">
                         <div class="row">
                             <div class="col">System</div>
@@ -327,7 +327,7 @@
                     </div>
                 </div>
 
-                <div class="card mb-3">
+                <div class="card mb-2">
                     <div class="card-header bg-info text-white">
                         <div class="row">
                             <div class="col">Help</div>

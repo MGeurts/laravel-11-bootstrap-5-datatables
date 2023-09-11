@@ -1,7 +1,7 @@
 @extends('layouts.back')
 
 @section('content')
-    <div class="card mb-3">
+    <div class="card mb-2">
         <div class="card-header">
             <div class="row">
                 <div class="col">Session object</div>
