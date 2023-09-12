@@ -199,7 +199,7 @@
                                 </button>
 
                                 <button type="button" class="btn btn-outline-secondary btn-sm" id="btnCopy" name="btnCopy" title="Copy customer address" tabindex="-1">
-                                    <i class="bi bi-clipboard-plus"></i>
+                                    <i class="bi bi-copy"></i>
                                 </button>
                             </div>
 
@@ -301,7 +301,7 @@
                             <li>Specify the requested values.</li>
                             <li> Use the buttons
                                 <button type="button" class="btn btn-outline-secondary btn-sm" disabled>
-                                    <i class="bi bi-clipboard-plus"></i>
+                                    <i class="bi bi-copy"></i>
                                 </button> or
                                 <button type="button" class="btn btn-outline-secondary btn-sm" disabled>
                                     <i class="bi bi-trash"></i>

@@ -3,11 +3,11 @@
     "file": "assets/jquery-11e88dd7.js"
   },
   "node_modules/bootstrap-icons/font/fonts/bootstrap-icons.woff": {
-    "file": "assets/bootstrap-icons-999550fa.woff",
+    "file": "assets/bootstrap-icons-40f14c01.woff",
     "src": "node_modules/bootstrap-icons/font/fonts/bootstrap-icons.woff"
   },
   "node_modules/bootstrap-icons/font/fonts/bootstrap-icons.woff2": {
-    "file": "assets/bootstrap-icons-cfe45b98.woff2",
+    "file": "assets/bootstrap-icons-ae167342.woff2",
     "src": "node_modules/bootstrap-icons/font/fonts/bootstrap-icons.woff2"
   },
   "resources/js/app.js": {
@@ -32,7 +32,7 @@
     "src": "resources/js/datatables.js"
   },
   "resources/sass/app.scss": {
-    "file": "assets/app-f476defb.css",
+    "file": "assets/app-ebdab63d.css",
     "isEntry": true,
     "src": "resources/sass/app.scss"
   },
