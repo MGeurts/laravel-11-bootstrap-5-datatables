@@ -5,16 +5,12 @@ namespace App\Http\Controllers\Back;
 use App\Http\Controllers\Controller;
 use App\Models\Userlog;
 use Illuminate\Support\Carbon;
-use Illuminate\Support\Facades\Gate;
 use Khill\Lavacharts\Lavacharts;
-use Symfony\Component\HttpFoundation\Response;
 
 class UserlogController extends Controller
 {
     public function index()
     {
-        abort_if(Gate::denies('developer'), Response::HTTP_FORBIDDEN, '403 Forbidden');
-
         $userlogs_by_date = Userlog::query()
             ->select('userlogs.country_name', 'userlogs.country_code', 'userlogs.created_at', 'users.name', 'users.is_developer')
             ->leftjoin('users', 'userlogs.user_id', '=', 'users.id')
@@ -29,8 +25,6 @@ class UserlogController extends Controller
 
     public function statsCountry()
     {
-        abort_if(Gate::denies('developer'), Response::HTTP_FORBIDDEN, '403 Forbidden');
-
         $statistics = Userlog::select('country_name')
             ->selectRaw('COUNT(*) AS visitors')
             ->where('user_id', '!=', 2)
@@ -49,8 +43,6 @@ class UserlogController extends Controller
 
     public function statsCountryMap()
     {
-        abort_if(Gate::denies('developer'), Response::HTTP_FORBIDDEN, '403 Forbidden');
-
         $countries = Userlog::select('country_code')
             ->selectRaw('MIN(country_name) AS country_name')
             ->selectRaw('COUNT(*) AS visitors')

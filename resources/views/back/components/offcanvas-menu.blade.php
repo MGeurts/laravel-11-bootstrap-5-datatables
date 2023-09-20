@@ -1,5 +1,5 @@
 <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
-    <!-- application -->
+    <!-- Application (all authenticated users) -->
     <li class="nav-item text-light">Application</li>
     <hr class="narrow text-light">
 
@@ -16,7 +16,7 @@
     <li class="nav-item"><a class="nav-link text-light" href="{{ route('back.customers.index') }}"><img class="nav-icon" src="{{ asset('img/icons/persons-white.png') }}" />Customers</a></li>
     <li class="nav-item"><a class="nav-link text-light disabled" href="#"><img class="nav-icon" src="{{ asset('img/icons/supplier-white.png') }}" />Suppliers</a></li>
 
-    <!-- developer -->
+    <!-- Administration (only )developer) -->
     @can('developer')
         <hr class="narrow text-light">
         <li class="nav-item text-light">Administration</li>

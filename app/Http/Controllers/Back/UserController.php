@@ -9,17 +9,13 @@ use App\Models\User;
 use App\Models\Userlog;
 use Illuminate\Http\Request;
 use Illuminate\Support\Carbon;
-use Illuminate\Support\Facades\Gate;
 use Illuminate\Support\Facades\Password;
-use Symfony\Component\HttpFoundation\Response;
 use Yajra\DataTables\Facades\DataTables;
 
 class UserController extends Controller
 {
     public function index(Request $request)
     {
-        abort_if(Gate::denies('developer'), Response::HTTP_FORBIDDEN, '403 Forbidden');
-
         if ($request->ajax()) {
             $users = User::select(sprintf('%s.*', (new User)->getTable()))->withCount('userlogs');
 
@@ -42,14 +38,13 @@ class UserController extends Controller
 
     public function create()
     {
-        abort_if(Gate::denies('developer'), Response::HTTP_FORBIDDEN, '403 Forbidden');
-
         return view('back.users.create');
     }
 
     public function store(UserStoreRequest $request)
     {
-        $user = User::create($request->all());
+        User::create($request->all());
+
         Password::sendResetLink($request->only(['email']));
 
         $notification = [
@@ -63,8 +58,6 @@ class UserController extends Controller
 
     public function edit(User $user)
     {
-        abort_if(Gate::denies('developer'), Response::HTTP_FORBIDDEN, '403 Forbidden');
-
         return view('back.users.edit', compact('user'));
     }
 
@@ -98,8 +91,6 @@ class UserController extends Controller
 
     public function getUserlogs(Request $request)
     {
-        abort_if(Gate::denies('developer'), Response::HTTP_FORBIDDEN, '403 Forbidden');
-
         $userlogs_by_date = Userlog::where('user_id', $request->id)
             ->select('userlogs.created_at')
             ->where('created_at', '>=', carbon::now()->startOfMonth()->subMonths(3))

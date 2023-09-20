@@ -28,7 +28,7 @@
         </div>
 
         <div class="alert alert-secondary p-2" role="alert">
-            <p>This application also has a built-in :</p>
+            <p>This application also has a built-in (only available when the user is <b>Developer</b>) :</p>
             <ul>
                 <li><a href="{{ url('/back/developer/log-monitor') }}" target="_blank">Log Viewer</a></li>
                 <li><a href="{{ route('back.backups.index') }}">Backup manager</a></li>
