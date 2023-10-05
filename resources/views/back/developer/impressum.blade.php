@@ -16,7 +16,7 @@
                             <p>Laravel :</p>
 
                             <ul>
-                                <li><a target="_blank" href="https://github.com/yajra/laravel-datatables/">yajra/laravel-datatables</a> - 10.8.0</li>
+                                <li><a target="_blank" href="https://github.com/yajra/laravel-datatables/">yajra/laravel-datatables</a> - 10.10.0</li>
                             </ul>
 
                             <ul>
@@ -28,7 +28,7 @@
                             </ul>
 
                             <ul>
-                                <li><a target="_blank" href="https://github.com/stevebauman/location/">stevebauman/location</a> - 7.0.0</li>
+                                <li><a target="_blank" href="https://github.com/stevebauman/location/">stevebauman/location</a> - 7.0.1</li>
                             </ul>
 
                             <ul>
