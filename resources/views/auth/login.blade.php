@@ -78,6 +78,15 @@
                         </form>
                     </div>
                 </div>
+                <br />
+
+                <div class="alert alert-info p-2">
+                    Default values :
+                    <ul>
+                        <li>Email Address : admin@admin.com</li>
+                        <li>Password : password</li>
+                    </ul>
+                </div>
             </div>
         </div>
     </div>

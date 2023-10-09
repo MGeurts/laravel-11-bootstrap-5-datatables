@@ -86,3 +86,11 @@
         </div>
     </div>
 </div>
+
+<div class="alert alert-info p-2">
+    Welcome <b>guest</b>. Click the
+    <button type="button" class="btn btn-sm btn-success text-white" disabled>
+        <i class="bi bi-box-arrow-in-right"></i>
+    </button>
+    button in the upper right corner to log in.
+</div>
