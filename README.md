@@ -77,7 +77,7 @@ You can use their controllers and the corresponding views as a base to create ne
 
 ## Credentials
 
-<p>Name : <b>admin@admin.com</b></p>
+<p>Email Address : <b>admin@admin.com</b></p>
 <p>Password : <b>password</b></p>
 
 ## PHP
