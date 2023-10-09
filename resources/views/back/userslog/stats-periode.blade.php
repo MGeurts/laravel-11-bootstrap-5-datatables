@@ -61,7 +61,6 @@
 
         const ctx = document.getElementById("myChart").getContext("2d");
         const myChart = new Chart(ctx, {
-            isoWeekday: true,
             type: 'bar',
             data: data,
             options: {

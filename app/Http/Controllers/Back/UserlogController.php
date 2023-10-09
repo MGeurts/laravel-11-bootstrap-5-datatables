@@ -107,7 +107,7 @@ class UserlogController extends Controller
                 ->groupBy('period')
                 ->orderBy('period')
                 ->get(),
-            'week' => Userlog::selectRaw('LPAD(WEEK(created_at, 0), 2, 0) AS period')
+            'week' => Userlog::selectRaw('LPAD(WEEK(created_at, 1), 2, 0) AS period')
                 ->selectRaw('COUNT(*) AS visitors')
                 ->where('user_id', '!=', 2)
                 ->whereYear('created_at', session('APP.YEAR'))
