@@ -83,8 +83,8 @@
                 <div class="alert alert-info p-2">
                     Default values :
                     <ul>
-                        <li>Email Address : admin@admin.com</li>
-                        <li>Password : password</li>
+                        <li>Email Address : <b>admin@admin.com</b></li>
+                        <li>Password : <b>password</b></li>
                     </ul>
                 </div>
             </div>
