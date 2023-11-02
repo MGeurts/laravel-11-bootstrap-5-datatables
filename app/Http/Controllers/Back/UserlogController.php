@@ -98,7 +98,7 @@ class UserlogController extends Controller
         ]);
     }
 
-    public function statsPeriode()
+    public function statsPeriod()
     {
         $statistics = match (session('APP.PERIOD')) {
             'year' => Userlog::selectRaw('YEAR(created_at) AS period')
@@ -135,7 +135,7 @@ class UserlogController extends Controller
             'data' => $statistics->pluck('visitors'),
         ]);
 
-        return view('back.userslog.stats-periode')->with([
+        return view('back.userslog.stats-period')->with([
             'chart_data' => $chart_data,
         ]);
     }

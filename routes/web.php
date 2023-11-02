@@ -78,7 +78,7 @@ Route::prefix('back')->as('back.')->group(function () {
             Route::get('/userslog/index', 'index')->name('userslog.index');
             Route::get('/userslog/statsCountry', 'statsCountry')->name('userslog.statsCountry');
             Route::get('/userslog/statsCountryMap', 'statsCountryMap')->name('userslog.statsCountryMap');
-            Route::get('/userslog/statsPeriode', 'statsPeriode')->name('userslog.statsPeriode');
+            Route::get('/userslog/statsPeriod', 'statsPeriod')->name('userslog.statsPeriod');
         });
         /* ------------------------------------------------------------------------ */
     });

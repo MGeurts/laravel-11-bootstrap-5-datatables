@@ -31,7 +31,7 @@
                 <li><a class="dropdown-item" href="{{ route('back.userslog.index') }}"><i class="bi bi-person-lines-fill nav-icon"></i>User Log</a></li>
                 <li><a class="dropdown-item" href="{{ route('back.userslog.statsCountry') }}"><i class="bi bi-person-lines-fill nav-icon"></i>User Statistics (Country)</a></li>
                 <li><a class="dropdown-item" href="{{ route('back.userslog.statsCountryMap') }}"><i class="bi bi-person-lines-fill nav-icon"></i>User Statistics (Country Map)</a></li>
-                <li><a class="dropdown-item" href="{{ route('back.userslog.statsPeriode') }}"><i class="bi bi-person-lines-fill nav-icon"></i>User Statistics (Periode)</a></li>
+                <li><a class="dropdown-item" href="{{ route('back.userslog.statsPeriod') }}"><i class="bi bi-person-lines-fill nav-icon"></i>User Statistics (Period)</a></li>
                 <hr class="narrow">
 
                 <li><a class="dropdown-item" href="{{ url('/back/developer/log-monitor') }}" target="_blank"><i class="bi bi-book-half nav-icon"></i>Log Viewer</a></li>
