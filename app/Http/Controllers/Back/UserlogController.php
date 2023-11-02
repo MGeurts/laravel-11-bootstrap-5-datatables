@@ -33,12 +33,12 @@ class UserlogController extends Controller
             ->orderBy('visitors', 'desc')->orderBy('country_name')
             ->get();
 
-        $data['chart_data'] = json_encode([
+        $chart_data = json_encode([
             'label' => $statistics->pluck('country_name'),
             'data' => $statistics->pluck('visitors'),
         ]);
 
-        return view('back.userslog.stats-country', $data);
+        return view('back.userslog.stats-country', compact('chart_data'));
     }
 
     public function statsCountryMap()
@@ -123,11 +123,11 @@ class UserlogController extends Controller
                 ->get()
         };
 
-        $data['chart_data'] = json_encode([
+        $chart_data = json_encode([
             'label' => $statistics->pluck('period'),
             'data' => $statistics->pluck('visitors'),
         ]);
 
-        return view('back.userslog.stats-periode', $data);
+        return view('back.userslog.stats-periode', compact('chart_data'));
     }
 }
