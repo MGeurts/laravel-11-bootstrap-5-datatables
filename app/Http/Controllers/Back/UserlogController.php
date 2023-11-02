@@ -9,18 +9,21 @@ use Khill\Lavacharts\Lavacharts;
 
 class UserlogController extends Controller
 {
-    public function index()
+    public function index($months = 3)
     {
         $userlogs_by_date = Userlog::query()
             ->select('userlogs.country_name', 'userlogs.country_code', 'userlogs.created_at', 'users.name', 'users.is_developer')
             ->leftjoin('users', 'userlogs.user_id', '=', 'users.id')
             ->where('userlogs.user_id', '!=', 2)
-            ->where('userlogs.created_at', '>=', carbon::now()->startOfMonth()->subMonths(3))
+            ->where('userlogs.created_at', '>=', carbon::now()->startOfMonth()->subMonths($months))
             ->orderBy('userlogs.created_at', 'desc')
             ->get()
             ->groupBy('date');
 
-        return view('back.userslog.index', compact('userlogs_by_date'));
+        return view('back.userslog.index')->with([
+            'userlogs_by_date' => $userlogs_by_date,
+            'months' => $months,
+        ]);
     }
 
     public function statsCountry()
@@ -38,7 +41,9 @@ class UserlogController extends Controller
             'data' => $statistics->pluck('visitors'),
         ]);
 
-        return view('back.userslog.stats-country', compact('chart_data'));
+        return view('back.userslog.stats-country')->with([
+            'chart_data' => $chart_data,
+        ]);
     }
 
     public function statsCountryMap()
@@ -88,7 +93,9 @@ class UserlogController extends Controller
             'regioncoderVersion' => 1,
         ]);
 
-        return view('back.userslog.stats-country-map', compact('lava'));
+        return view('back.userslog.stats-country-map')->with([
+            'lava' => $lava,
+        ]);
     }
 
     public function statsPeriode()
@@ -128,6 +135,8 @@ class UserlogController extends Controller
             'data' => $statistics->pluck('visitors'),
         ]);
 
-        return view('back.userslog.stats-periode', compact('chart_data'));
+        return view('back.userslog.stats-periode')->with([
+            'chart_data' => $chart_data,
+        ]);
     }
 }

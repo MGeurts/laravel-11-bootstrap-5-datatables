@@ -8,7 +8,7 @@
     <div class="card mb-2">
         <div class="card-header d-print-none">
             <div class="row">
-                <div class="col">Users - Log (Last 3 months)</div>
+                <div class="col">Users - Log (Last {{ $months }} months)</div>
 
                 <div class="col fs-5 text-end">
                     <button type="button" class="btn btn-outline-secondary btn-sm me-2" title="Print" tabindex="-1" onclick="window.print();">
