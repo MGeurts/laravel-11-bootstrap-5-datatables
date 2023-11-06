@@ -155,7 +155,7 @@
                                         @endif
                                     </td>
                                     <td class="text-center">@php echo phpversion(); @endphp</td>
-                                    <td class="text-center">8.0.34</td>
+                                    <td class="text-center">8.0.35</td>
                                     <td class="text-center">5.2.1</td>
                                 </tr>
 
