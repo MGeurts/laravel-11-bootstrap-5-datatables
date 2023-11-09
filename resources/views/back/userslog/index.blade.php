@@ -35,7 +35,7 @@
                 @forelse ($userlogs_by_date as $day => $userlogs)
                     <tr class="table-secondary">
                         <td colspan="6">
-                            <b>{{ strtoupper(Carbon\Carbon::parse($day)->translatedFormat('l j F Y')) }}</b> ({{ count($userlogs) }})
+                            <b>{{ $day }}</b> ({{ count($userlogs) }})
                         </td>
                     </tr>
 

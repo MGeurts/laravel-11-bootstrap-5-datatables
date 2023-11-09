@@ -2,9 +2,11 @@
 
 namespace App\Models;
 
+use Illuminate\Database\Eloquent\Casts\Attribute;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
+use Illuminate\Support\Carbon;
 
 class Userlog extends Model
 {
@@ -19,22 +21,21 @@ class Userlog extends Model
         'created_at',
     ];
 
-    // protected $appends = [
-    //     'date',
-    //     'time',
-    // ];
-
     /* -------------------------------------------------------------------------------------------- */
-    // Accessors (GET) Attribute (APPENDED)
+    // Accessors & Mutators (APPENDABLE)
     /* -------------------------------------------------------------------------------------------- */
-    public function getDateAttribute()
+    protected function date(): Attribute
     {
-        return date('d-m-Y', strtotime($this->attributes['created_at']));
+        return new Attribute(
+            get: fn (mixed $value, array $attributes) => Carbon::parse($attributes['created_at'])->isoFormat('dddd LL'),
+        );
     }
 
-    public function getTimeAttribute()
+    protected function time(): Attribute
     {
-        return date('H:i', strtotime($this->attributes['created_at']));
+        return new Attribute(
+            get: fn (mixed $value, array $attributes) => Carbon::parse($attributes['created_at'])->format('H:i:s'),
+        );
     }
 
     /* -------------------------------------------------------------------------------------------- */
@@ -44,4 +45,5 @@ class Userlog extends Model
     {
         return $this->belongsTo(User::class)->withTrashed();
     }
+    /* -------------------------------------------------------------------------------------------- */
 }
