@@ -76,7 +76,7 @@
 
                             <ul>
                                 <li><a target="_blank" href="https://stuk.github.io/jszip/">JSZip</a> - 3.10.1</li>
-                                <li><a target="_blank" href="https://github.com/bpampuch/pdfmake/">PDFMake</a> - 0.2.7</li>
+                                <li><a target="_blank" href="https://github.com/bpampuch/pdfmake/">PDFMake</a> - 0.2.8</li>
                             </ul>
 
                             <ul>

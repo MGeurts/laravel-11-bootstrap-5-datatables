@@ -24,7 +24,7 @@
     "src": "resources/js/custom.js"
   },
   "resources/js/datatables.js": {
-    "file": "assets/datatables-3f71df5b.js",
+    "file": "assets/datatables-6c76d659.js",
     "imports": [
       "_jquery-11e88dd7.js"
     ],
