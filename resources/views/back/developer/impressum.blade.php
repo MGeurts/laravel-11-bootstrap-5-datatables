@@ -49,7 +49,7 @@
 
                             <ul>
                                 <li><a target="_blank" href="https://getbootstrap.com/">Bootstrap</a> - 5.3.2</li>
-                                <li><a target="_blank" href="https://icons.getbootstrap.com//">Bootstrap Icons</a> - 1.11.1</li>
+                                <li><a target="_blank" href="https://icons.getbootstrap.com//">Bootstrap Icons</a> - 1.11.2</li>
                                 <li><a target="_blank" href="https://github.com/coliff/bootstrap-print-css/">Bootstrap Print CSS</a> - 1.0.1</li>
                             </ul>
 
@@ -63,7 +63,7 @@
                             </ul>
 
                             <ul>
-                                <li><a target="_blank" href="https://datatables.net/download/packages">DataTables</a> - 1.13.7</li>
+                                <li><a target="_blank" href="https://datatables.net/download/packages">DataTables</a> - 1.13.8</li>
                             </ul>
                         </div>
 
