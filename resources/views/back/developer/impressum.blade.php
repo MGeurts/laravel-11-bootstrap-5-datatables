@@ -16,7 +16,7 @@
                             <p>Laravel :</p>
 
                             <ul>
-                                <li><a target="_blank" href="https://github.com/yajra/laravel-datatables/">yajra/laravel-datatables</a> - 10.11.2</li>
+                                <li><a target="_blank" href="https://github.com/yajra/laravel-datatables/">yajra/laravel-datatables</a> - 10.11.3</li>
                             </ul>
 
                             <ul>
@@ -28,7 +28,7 @@
                             </ul>
 
                             <ul>
-                                <li><a target="_blank" href="https://github.com/stevebauman/location/">stevebauman/location</a> - 7.1.0</li>
+                                <li><a target="_blank" href="https://github.com/stevebauman/location/">stevebauman/location</a> - 7.1.1</li>
                             </ul>
 
                             <ul>
@@ -49,7 +49,7 @@
 
                             <ul>
                                 <li><a target="_blank" href="https://getbootstrap.com/">Bootstrap</a> - 5.3.2</li>
-                                <li><a target="_blank" href="https://icons.getbootstrap.com//">Bootstrap Icons</a> - 1.11.2</li>
+                                <li><a target="_blank" href="https://icons.getbootstrap.com//">Bootstrap Icons</a> - 1.11.3</li>
                                 <li><a target="_blank" href="https://github.com/coliff/bootstrap-print-css/">Bootstrap Print CSS</a> - 1.0.1</li>
                             </ul>
 
@@ -76,7 +76,7 @@
 
                             <ul>
                                 <li><a target="_blank" href="https://stuk.github.io/jszip/">JSZip</a> - 3.10.1</li>
-                                <li><a target="_blank" href="https://github.com/bpampuch/pdfmake/">PDFMake</a> - 0.2.8</li>
+                                <li><a target="_blank" href="https://github.com/bpampuch/pdfmake/">PDFMake</a> - 0.2.9</li>
                             </ul>
 
                             <ul>

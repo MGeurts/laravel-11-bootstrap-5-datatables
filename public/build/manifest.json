@@ -3,15 +3,15 @@
     "file": "assets/jquery-11e88dd7.js"
   },
   "node_modules/bootstrap-icons/font/fonts/bootstrap-icons.woff": {
-    "file": "assets/bootstrap-icons-d0346eea.woff",
+    "file": "assets/bootstrap-icons-bb1de989.woff",
     "src": "node_modules/bootstrap-icons/font/fonts/bootstrap-icons.woff"
   },
   "node_modules/bootstrap-icons/font/fonts/bootstrap-icons.woff2": {
-    "file": "assets/bootstrap-icons-5b2dd4d4.woff2",
+    "file": "assets/bootstrap-icons-476adf42.woff2",
     "src": "node_modules/bootstrap-icons/font/fonts/bootstrap-icons.woff2"
   },
   "resources/js/app.js": {
-    "file": "assets/app-421259f4.js",
+    "file": "assets/app-8f883cc0.js",
     "imports": [
       "_jquery-11e88dd7.js"
     ],
@@ -24,7 +24,7 @@
     "src": "resources/js/custom.js"
   },
   "resources/js/datatables.js": {
-    "file": "assets/datatables-78e1ff0e.js",
+    "file": "assets/datatables-fb120cae.js",
     "imports": [
       "_jquery-11e88dd7.js"
     ],
@@ -32,7 +32,7 @@
     "src": "resources/js/datatables.js"
   },
   "resources/sass/app.scss": {
-    "file": "assets/app-55f263f6.css",
+    "file": "assets/app-0f9a4d4c.css",
     "isEntry": true,
     "src": "resources/sass/app.scss"
   },
