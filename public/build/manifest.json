@@ -11,7 +11,7 @@
     "src": "node_modules/bootstrap-icons/font/fonts/bootstrap-icons.woff2"
   },
   "resources/js/app.js": {
-    "file": "assets/app-8f883cc0.js",
+    "file": "assets/app-dfc4f684.js",
     "imports": [
       "_jquery-11e88dd7.js"
     ],
