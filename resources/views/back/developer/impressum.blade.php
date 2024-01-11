@@ -20,7 +20,7 @@
                             </ul>
 
                             <ul>
-                                <li><a target="_blank" href="https://github.com/spatie/laravel-backup/">spatie/laravel-backup</a> - 8.4.0</li>
+                                <li><a target="_blank" href="https://github.com/spatie/laravel-backup/">spatie/laravel-backup</a> - 8.5.0</li>
                             </ul>
 
                             <ul>
@@ -28,7 +28,7 @@
                             </ul>
 
                             <ul>
-                                <li><a target="_blank" href="https://github.com/stevebauman/location/">stevebauman/location</a> - 7.1.1</li>
+                                <li><a target="_blank" href="https://github.com/stevebauman/location/">stevebauman/location</a> - 7.1.2</li>
                             </ul>
 
                             <ul>
