@@ -13,7 +13,7 @@
         "bootstrap-print-css": "^1.0.1",
         "chart.js": "^4.3.0",
         "datatables.mark.js": "^2.1.0",
-        "datatables.net": "^1.13.4",
+        "datatables.net": "1.13.8",
         "datatables.net-bs5": "^1.13.4",
         "datatables.net-buttons-bs5": "^2.3.6",
         "datatables.net-responsive-bs5": "^2.4.1",
