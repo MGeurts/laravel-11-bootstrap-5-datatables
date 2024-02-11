@@ -20,7 +20,7 @@
                             </ul>
 
                             <ul>
-                                <li><a target="_blank" href="https://github.com/spatie/laravel-backup/">spatie/laravel-backup</a> - 8.5.1</li>
+                                <li><a target="_blank" href="https://github.com/spatie/laravel-backup/">spatie/laravel-backup</a> - 8.6.0</li>
                             </ul>
 
                             <ul>
@@ -28,7 +28,7 @@
                             </ul>
 
                             <ul>
-                                <li><a target="_blank" href="https://github.com/stevebauman/location/">stevebauman/location</a> - 7.1.3</li>
+                                <li><a target="_blank" href="https://github.com/stevebauman/location/">stevebauman/location</a> - 7.1.4</li>
                             </ul>
 
                             <ul>
@@ -63,7 +63,7 @@
                             </ul>
 
                             <ul>
-                                <li><a target="_blank" href="https://datatables.net/download/packages">DataTables</a> - 1.13.8</li>
+                                <li><a target="_blank" href="https://datatables.net/download/packages">DataTables</a> - 1.13.10</li>
                             </ul>
                         </div>
 
@@ -155,7 +155,7 @@
                                         @endif
                                     </td>
                                     <td class="text-center">@php echo phpversion(); @endphp</td>
-                                    <td class="text-center">8.2.0</td>
+                                    <td class="text-center">8.3.0</td>
                                     <td class="text-center">5.2.1</td>
                                 </tr>
 
