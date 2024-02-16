@@ -32,7 +32,7 @@
                             </ul>
 
                             <ul>
-                                <li><a target="_blank" href="https://github.com/barryvdh/laravel-debugbar/">barryvdh/laravel-debugbar</a> - 3.9.2</li>
+                                <li><a target="_blank" href="https://github.com/barryvdh/laravel-debugbar/">barryvdh/laravel-debugbar</a> - 3.10.5</li>
                             </ul>
 
                             <ul>
