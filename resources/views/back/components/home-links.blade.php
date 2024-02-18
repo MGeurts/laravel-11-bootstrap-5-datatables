@@ -18,9 +18,9 @@
         <div class="alert alert-secondary p-2" role="alert">
             This application requires at least <a href="https://www.php.net/" target="_blank">PHP 8.1</a> and is built using :
             <ul>
-                <li><a href="https://laravel.com/" target="_blank">Laravel 10</a> (featuring <a href="https://vitejs.dev/" target="_blank">Vite</a>)</li>
-                <li><a href="https://getbootstrap.com/" target="_blank">Bootstrap 5.3</a></li>
-                <li><a href="https://datatables.net/" target="_blank">DataTables</a></li>
+                <li><a href="https://laravel.com/" target="_blank">Laravel</a> 10.x (featuring <a href="https://vitejs.dev/" target="_blank">Vite</a>)</li>
+                <li><a href="https://getbootstrap.com/" target="_blank">Bootstrap</a> 5.x</li>
+                <li><a href="https://datatables.net/" target="_blank">DataTables</a> 2.x</li>
             </ul>
         </div>
 
