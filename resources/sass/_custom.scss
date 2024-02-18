@@ -72,7 +72,7 @@ print {
     }
 
     /* -------------------------------------------- */
-    table.mytable {
+    table.myTable {
         box-sizing: border-box;
         border-collapse: collapse;
         font-size: .8rem;
@@ -80,11 +80,11 @@ print {
         margin-bottom: 0px !important;
     }
 
-    table.mytable thead th {
+    table.myTable thead th {
         padding: 0.2rem;
     }
 
-    table.mytable tbody td {
+    table.myTable tbody td {
         padding: 0.2rem;
     }
 

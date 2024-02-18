@@ -24,7 +24,7 @@
     "src": "resources/js/custom.js"
   },
   "resources/js/datatables.js": {
-    "file": "assets/datatables-541b534d.js",
+    "file": "assets/datatables-6cdcbadc.js",
     "imports": [
       "_jquery-11e88dd7.js"
     ],
@@ -32,7 +32,7 @@
     "src": "resources/js/datatables.js"
   },
   "resources/sass/app.scss": {
-    "file": "assets/app-ceda8231.css",
+    "file": "assets/app-3aa38f64.css",
     "isEntry": true,
     "src": "resources/sass/app.scss"
   },

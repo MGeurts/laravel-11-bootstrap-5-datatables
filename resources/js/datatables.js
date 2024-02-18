@@ -19,14 +19,6 @@ pdfMake.vfs = window.pdfMake.vfs;
 DataTable.Buttons.jszip(JSZip);
 DataTable.Buttons.pdfMake(pdfMake);
 
-$.extend(true, DataTable.Buttons.defaults, {
-    dom: {
-        buttonLiner: {
-            tag: ''
-        },
-    },
-});
-
 $.extend(true, $.fn.dataTable.Buttons.defaults.dom.container, {
     className: 'dt-buttons'
 })
@@ -34,18 +26,26 @@ $.extend(true, $.fn.dataTable.Buttons.defaults.dom.button, {
     className: 'btn btn-sm'
 })
 
-$.extend(DataTable.ext.classes, {
-    sTable: "dataTable table table-striped table-bordered table-hover table-sm",
-});
-
 $.extend(true, $.fn.dataTable.defaults, {
     serverSide: true,
     retrieve: true,
-    dom: "<'row px-1 mb-1'<'col-sm-12 col-md-8'i><'col-sm-12 col-md-4'f>>" +
-        "<'row px-1'<'col-sm-12 col-md-3'l><'col-sm-12 col-md-9'p>>" +
-        "<'row'<'col-sm-12'tr>>",
+    layout: {
+        top2Start: {
+            info: {},
+        },
+        topStart: {
+            pageLength: {},
+        },
+        top2End: {
+            search: {},
+        },
+        topEnd: {
+            paging: {},
+        },
+        bottomStart: null,
+        bottomEnd: null,
+    },
     processing: true,
-    deferRender: true,
     stateSave: true,
     stateDuration: -1,
     responsive: true,
@@ -53,11 +53,10 @@ $.extend(true, $.fn.dataTable.defaults, {
         url: "../json/datatables/i18n/en-GB.json",
     },
     lengthMenu: [
-        [20, 25, 50, 75, 100, -1],
-        [20, 25, 50, 75, 100, "All"]
+        [10, 20, 25, 50, 75, 100, -1],
+        [10, 20, 25, 50, 75, 100, "All"]
     ],
     pageLength: 20,
-    pagingType: 'full_numbers',
     mark: {
         element: 'span',
         className: 'bg-info'

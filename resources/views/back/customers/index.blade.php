@@ -23,7 +23,7 @@
                 <div id="ToolbarRight"></div>
             </div>
 
-            <table id="sqltable">
+            <table id="sqltable" class="table table-bordered table-striped table-sm table-hover dataTable">
                 <thead class="table-primary">
                     <tr>
                         <th scope="col" width="4%">ID</th>
@@ -224,12 +224,13 @@
             preDrawCallback: function(settings) {
                 oTable.columns.adjust();
             },
-            drawCallback: function () {
+            drawCallback: function() {
                 $('.dataTables_paginate > .pagination').addClass('pagination-sm');
             },
             createdRow: function(row, data, dataIndex) {
                 if (data['send_newsletter'] > 0) {
                     $(row).find('td.toggleSendNewsletter').addClass('table-success');
+                    $(row).find('td.toggleSendNewsletter').attr('style', 'width: 100px !important');
                 }
             }
         };
@@ -311,7 +312,7 @@
             }
 
             let strHTML = '';
-            strHTML += '<table class="table table-bordered table-sm mytable">';
+            strHTML += '<table class="table table-bordered table-sm myTable">';
             strHTML += '<thead class="table-primary">';
             strHTML +=
                 '<tr><th class="text-center">ID</th><th>Customer</th><th>Company</th><th>Place</th><th class="text-center">Send newsletter ?</th></tr>';

@@ -63,7 +63,7 @@
                             </ul>
 
                             <ul>
-                                <li><a target="_blank" href="https://datatables.net/download/packages">DataTables</a> - 1.13.10</li>
+                                <li><a target="_blank" href="https://datatables.net/download/packages">DataTables</a> - 2.0.0</li>
                             </ul>
                         </div>
 

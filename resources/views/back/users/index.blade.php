@@ -23,7 +23,7 @@
                 <div id="ToolbarRight"></div>
             </div>
 
-            <table id="sqltable">
+            <table id="sqltable" class="table table-bordered table-striped table-sm table-hover dataTable">
                 <thead class="table-primary">
                     <tr>
                         <th scope="col" class="text-primary">Log</th>
@@ -158,9 +158,8 @@
                 url: "{{ route('back.users.index') }}",
                 data: function(d) {}
             },
-            columns: [
-                {
-                data: 'userlogs_count',
+            columns: [{
+                    data: 'userlogs_count',
                     name: "userlogs",
                     searchable: false,
                     sortable: false,
@@ -223,7 +222,7 @@
             preDrawCallback: function(settings) {
                 oTable.columns.adjust();
             },
-            drawCallback: function () {
+            drawCallback: function() {
                 $('.dataTables_paginate > .pagination').addClass('pagination-sm');
             },
             createdRow: function(row, data, dataIndex) {
@@ -341,7 +340,7 @@
             }
 
             let strHTML = '';
-            strHTML += '<table class="table table-bordered table-sm mytable">';
+            strHTML += '<table class="table table-bordered table-sm myTable">';
             strHTML += '<thead class="table-primary">';
             strHTML += '<tr><th class="text-center">ID</th><th>Name</th><th>E-mail</th><th>Developer ?</th></tr>';
             strHTML += '</thead>';
