@@ -6,9 +6,9 @@
 
 This application requires at least PHP 8.1 and is built using :
 <ul>
-    <li><a href="https://laravel.com/" target="_blank">Laravel 10</a> (featuring <a href="https://vitejs.dev/" target="_blank">Vite</a>)</li>
-    <li><a href="https://getbootstrap.com/" target="_blank">Bootstrap 5</a></li>
-    <li><a href="https://datatables.net/" target="_blank">DataTables 2</a></li>
+    <li><a href="https://laravel.com/" target="_blank">Laravel</a> 10.x (featuring <a href="https://vitejs.dev/" target="_blank">Vite</a>)</li>
+    <li><a href="https://getbootstrap.com/" target="_blank">Bootstrap</a> 5.x</li>
+    <li><a href="https://datatables.net/" target="_blank">DataTables</a> 2.x</li>
 </ul>
 
 ## Now supporting Datatables 2.0 !!
