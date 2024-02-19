@@ -34,7 +34,9 @@ $.extend(true, $.fn.dataTable.defaults, {
             info: {},
         },
         topStart: {
-            pageLength: {},
+            pageLength: {
+                menu: [10, 20, 25, 50, 75, 100, { label: 'All', value: -1 }]
+            },
         },
         top2End: {
             search: {},
@@ -52,10 +54,6 @@ $.extend(true, $.fn.dataTable.defaults, {
     language: {
         url: "../json/datatables/i18n/en-GB.json",
     },
-    lengthMenu: [
-        [10, 20, 25, 50, 75, 100, -1],
-        [10, 20, 25, 50, 75, 100, "All"]
-    ],
     pageLength: 20,
     mark: {
         element: 'span',
