@@ -14,7 +14,6 @@ table.dataTable {
 
 table.dataTable thead th {
   padding: 0.2rem;
-  background-color: #cfe2ff !important;
 }
 
 table.dataTable tbody td {
@@ -70,3 +69,9 @@ table.dataTable.table-hover>tbody>tr.selected:hover>* {
 }
 
 /* -------------------------------------------- */
+.table-primary {
+    background-color: #cfe2ff !important;
+}
+.table-success {
+    background-color: #d1e7dd !important;
+}

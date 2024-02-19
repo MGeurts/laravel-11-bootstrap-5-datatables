@@ -210,6 +210,11 @@
                             return '&nbsp;';
                         }
                     },
+                    createdCell: function(td, cellData, rowData, row, col) {
+                        if (cellData == 1) {
+                            $(td).addClass('table-success');
+                        }
+                    },
                 }
             ],
             select: {
@@ -224,15 +229,6 @@
             preDrawCallback: function(settings) {
                 oTable.columns.adjust();
             },
-            drawCallback: function() {
-                $('.dataTables_paginate > .pagination').addClass('pagination-sm');
-            },
-            createdRow: function(row, data, dataIndex) {
-                if (data['send_newsletter'] > 0) {
-                    $(row).find('td.toggleSendNewsletter').addClass('table-success');
-                    $(row).find('td.toggleSendNewsletter').attr('style', 'width: 100px !important');
-                }
-            }
         };
         /* ------------------------------------------- */
         let oTable = $('#sqltable').DataTable(dtOverrideGlobals);

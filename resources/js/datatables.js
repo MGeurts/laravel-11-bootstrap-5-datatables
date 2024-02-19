@@ -1,12 +1,12 @@
 import DataTable from 'datatables.net-bs5';
 window.DataTable = DataTable;
 
-import 'datatables.net-select-bs5';
-import 'dataTables.net-responsive';
 import 'datatables.net-buttons-bs5';
 import 'dataTables.net-buttons/js/buttons.colVis.min.mjs';
 import 'dataTables.net-buttons/js/buttons.html5.min.mjs';
 import 'dataTables.net-buttons/js/buttons.print.min.mjs';
+import 'dataTables.net-responsive';
+import 'datatables.net-select-bs5';
 
 import 'dataTables.mark.js';
 
@@ -94,7 +94,7 @@ $.extend(true, $.fn.dataTable.defaults, {
                 text: 'Show all',
                 className: 'bg-info',
             }],
-            columns: ':not(.no-visible)'
+            columns: ':not(.no-visible)',
         },
         {
             extend: 'copyHtml5',
