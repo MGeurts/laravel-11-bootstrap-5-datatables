@@ -13,10 +13,10 @@ This application requires at least PHP 8.1 and is built using :
 
 ## Now supporting DataTables 2.0 !!
 
-To Do:
+To Do (not working yet):
 <ul>
-    <li>Column Visibility not working yet</li>
-    <li>Export to PDF not workng yet</li>
+    <li>Column Visibility</li>
+    <li>Export to PDF</li>
 </ul>
 
 ## Features
