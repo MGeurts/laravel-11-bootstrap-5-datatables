@@ -16,7 +16,6 @@ This application requires at least PHP 8.1 and is built using :
 To Do (not working yet):
 <ul>
     <li>Column Visibility</li>
-    <li>Export to PDF</li>
 </ul>
 
 ## Features

@@ -1,12 +1,12 @@
 import DataTable from 'datatables.net-bs5';
 window.DataTable = DataTable;
 
+//import 'dataTables.net-responsive';
+import 'datatables.net-select-bs5';
 import 'datatables.net-buttons-bs5';
 import 'dataTables.net-buttons/js/buttons.colVis.min.mjs';
 import 'dataTables.net-buttons/js/buttons.html5.min.mjs';
 import 'dataTables.net-buttons/js/buttons.print.min.mjs';
-import 'dataTables.net-responsive';
-import 'datatables.net-select-bs5';
 
 import 'dataTables.mark.js';
 
@@ -14,7 +14,7 @@ import JSZip from 'jszip';
 
 import pdfMake from 'pdfmake';
 import * as pdfFonts from "pdfmake/build/vfs_fonts.js";
-pdfMake.vfs = window.pdfMake.vfs;
+pdfMake.vfs = pdfFonts.pdfMake.vfs;
 /* -------------------------------------------------------------------------------------- */
 DataTable.Buttons.jszip(JSZip);
 DataTable.Buttons.pdfMake(pdfMake);
@@ -29,24 +29,6 @@ $.extend(true, $.fn.dataTable.Buttons.defaults.dom.button, {
 $.extend(true, $.fn.dataTable.defaults, {
     serverSide: true,
     retrieve: true,
-    layout: {
-        top2Start: {
-            info: {},
-        },
-        topStart: {
-            pageLength: {
-                menu: [10, 20, 25, 50, 75, 100, { label: 'All', value: -1 }]
-            },
-        },
-        top2End: {
-            search: {},
-        },
-        topEnd: {
-            paging: {},
-        },
-        bottomStart: null,
-        bottomEnd: null,
-    },
     processing: true,
     stateSave: true,
     stateDuration: -1,
@@ -198,6 +180,24 @@ $.extend(true, $.fn.dataTable.defaults, {
                 }).select()
             }
         },
-    ]
+    ],
+    layout: {
+        top2Start: {
+            info: {},
+        },
+        topStart: {
+            pageLength: {
+                menu: [10, 20, 25, 50, 75, 100, { label: 'All', value: -1 }]
+            },
+        },
+        top2End: {
+            search: {},
+        },
+        topEnd: {
+            paging: {},
+        },
+        bottomStart: null,
+        bottomEnd: null,
+    },
 });
 /* -------------------------------------------------------------------------------------- */
