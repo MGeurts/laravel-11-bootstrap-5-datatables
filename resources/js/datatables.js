@@ -65,18 +65,6 @@ $.extend(true, $.fn.dataTable.defaults, {
             }
         },
         {
-            extend: 'colvis',
-            className: 'btn-outline-secondary',
-            text: '<i class="bi bi-columns"></i>',
-            titleAttr: 'Column visibility',
-            postfixButtons: [{
-                extend: 'colvisRestore',
-                text: 'Show all',
-                className: 'bg-info',
-            }],
-            columns: ':not(.no-visible)',
-        },
-        {
             extend: 'copyHtml5',
             className: 'btn-outline-secondary',
             text: '<i class="bi bi-clipboard"></i>',
@@ -196,7 +184,22 @@ $.extend(true, $.fn.dataTable.defaults, {
         topEnd: {
             paging: {},
         },
-        bottomStart: null,
+        bottomStart: {
+            buttons: [
+                {
+                    extend: 'colvis',
+                        postfixButtons: [{
+                        extend: 'colvisRestore',
+                        text: 'Show all',
+                        className: 'table-primary',
+                    }],
+                    columnText: function (dt, idx, title) {
+                        return idx + 1 + ': ' + title;
+                    },
+                    columns: ':not(.no-visible)',
+                }
+            ],
+        },
         bottomEnd: null,
     },
 });

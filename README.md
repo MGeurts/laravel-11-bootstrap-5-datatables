@@ -5,6 +5,7 @@
 ## About this project
 
 This application requires at least PHP 8.1 and is built using :
+
 <ul>
     <li><a href="https://laravel.com/" target="_blank">Laravel</a> 10.x (featuring <a href="https://vitejs.dev/" target="_blank">Vite</a>)</li>
     <li><a href="https://getbootstrap.com/" target="_blank">Bootstrap</a> 5.x</li>
@@ -12,11 +13,6 @@ This application requires at least PHP 8.1 and is built using :
 </ul>
 
 ## Now supporting DataTables 2.0 !!
-
-To Do (not working yet):
-<ul>
-    <li>Column Visibility</li>
-</ul>
 
 ## Features
 
@@ -67,6 +63,7 @@ To Do (not working yet):
 ## Models implemented
 
 In this demo project, 3 models are already implemented :
+
 <ul>
     <li><b>Customers</b>, available to all logged in users</li><br />
     <li><b>Users</b> and <b>Users Log</b>, only available to logged in users with the property <b>Developer</b>
