@@ -1,14 +1,12 @@
 <div class="accordion" id="accordionDatatablesHelp">
     <div class="accordion-item">
         <h2 class="accordion-header" id="headingDT1">
-            <button class="accordion-button" type="button" data-bs-toggle="collapse" aria-expanded="true"
-                data-bs-target="#collapseDT1" aria-expanded="false" aria-controls="collapseDT1">
+            <button class="accordion-button" type="button" data-bs-toggle="collapse" aria-expanded="true" data-bs-target="#collapseDT1" aria-expanded="false" aria-controls="collapseDT1">
                 In general
             </button>
         </h2>
 
-        <div id="collapseDT1" class="accordion-collapse collapse" aria-labelledby="headingDT1"
-            data-bs-parent="#accordionDatatablesHelp">
+        <div id="collapseDT1" class="accordion-collapse collapse" aria-labelledby="headingDT1" data-bs-parent="#accordionDatatablesHelp">
             <div class="accordion-body">
                 <small>
                     <ol>
@@ -98,14 +96,12 @@
 
     <div class="accordion-item">
         <h2 class="accordion-header" id="headingDT3">
-            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                data-bs-target="#collapseDT3" aria-controls="collapseDT3">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseDT3" aria-controls="collapseDT3">
                 Sorting
             </button>
         </h2>
 
-        <div id="collapseDT3" class="accordion-collapse collapse" aria-labelledby="headingDT3"
-            data-bs-parent="#accordionDatatablesHelp">
+        <div id="collapseDT3" class="accordion-collapse collapse" aria-labelledby="headingDT3" data-bs-parent="#accordionDatatablesHelp">
             <div class="accordion-body">
                 <small>
                     <ol>
@@ -116,7 +112,7 @@
                         <li>Above the table, on the right-hand side, the button
                             <button type="button" class="btn btn-secondary btn-sm disabled">
                                 <i class="bi bi-arrow-counterclockwise"></i>
-                            </button> resets the sorting and also clears the search
+                            </button> resets the sorting and also clears the search.
                         </li>
                     </ol>
                 </small>
@@ -126,14 +122,12 @@
 
     <div class="accordion-item">
         <h2 class="accordion-header" id="headingDT4">
-            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                data-bs-target="#collapseDT4" aria-controls="collapseDT4">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseDT4" aria-controls="collapseDT4">
                 Search
             </button>
         </h2>
 
-        <div id="collapseDT4" class="accordion-collapse collapse" aria-labelledby="headingDT4"
-            data-bs-parent="#accordionDatatablesHelp">
+        <div id="collapseDT4" class="accordion-collapse collapse" aria-labelledby="headingDT4" data-bs-parent="#accordionDatatablesHelp">
             <div class="accordion-body">
                 <small>
                     <ol>
@@ -146,7 +140,7 @@
                         <li>Above the table, on the right-hand side, the button
                             <button type="button" class="btn btn-secondary btn-sm disabled">
                                 <i class="bi bi-arrow-counterclockwise"></i>
-                            </button> not only clears the search but also resets the sorting
+                            </button> not only clears the search but also resets the sorting.
                         </li>
                     </ol>
                 </small>
@@ -156,22 +150,17 @@
 
     <div class="accordion-item">
         <h2 class="accordion-header" id="headingDT5">
-            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                data-bs-target="#collapseDT5" aria-controls="collapseDT5">
-                Column visibility
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseDT5" aria-controls="collapseDT5">
+                Column Visibility
             </button>
         </h2>
 
-        <div id="collapseDT5" class="accordion-collapse collapse" aria-labelledby="headingDT5"
-            data-bs-parent="#accordionDatatablesHelp">
+        <div id="collapseDT5" class="accordion-collapse collapse" aria-labelledby="headingDT5" data-bs-parent="#accordionDatatablesHelp">
             <div class="accordion-body">
                 <small>
                     <ol>
                         <li>
-                            Above the table, on the left-hand side, use the dropdown
-                            <button type="button" class="btn btn-outline-secondary btn-sm disabled">
-                                <i class="bi bi-columns"></i>
-                            </button> to show or hide certain columns.
+                            In the table footer, on the left-hand side, use the dropdown <b>Column Visibility</b> to show or hide certain columns.
                         </li>
                     </ol>
                 </small>
@@ -181,14 +170,12 @@
 
     <div class="accordion-item">
         <h2 class="accordion-header" id="headingDT6">
-            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                data-bs-target="#collapseDT6" aria-controls="collapseDT6">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseDT6" aria-controls="collapseDT6">
                 Show details - Toggle values
             </button>
         </h2>
 
-        <div id="collapseDT6" class="accordion-collapse collapse" aria-labelledby="headingDT6"
-            data-bs-parent="#accordionDatatablesHelp">
+        <div id="collapseDT6" class="accordion-collapse collapse" aria-labelledby="headingDT6" data-bs-parent="#accordionDatatablesHelp">
             <div class="accordion-body">
                 <small>
                     <ol>
@@ -211,14 +198,12 @@
 
     <div class="accordion-item">
         <h2 class="accordion-header" id="headingDT7">
-            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                data-bs-target="#collapseDT7" aria-controls="collapseDT7">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseDT7" aria-controls="collapseDT7">
                 Export - Print
             </button>
         </h2>
 
-        <div id="collapseDT7" class="accordion-collapse collapse" aria-labelledby="headingDT7"
-            data-bs-parent="#accordionDatatablesHelp">
+        <div id="collapseDT7" class="accordion-collapse collapse" aria-labelledby="headingDT7" data-bs-parent="#accordionDatatablesHelp">
             <div class="accordion-body">
                 <small>
                     <ol>
@@ -227,10 +212,7 @@
                         <li>Above the table, on the left-hand side, use the dropdown to set the numbers of rows per page
                             to ALL.</li>
                         <li>
-                            If needed, above the table, on the left-hand side, use the dropdown
-                            <button type="button" class="btn btn-outline-secondary btn-sm disabled">
-                                <i class="bi bi-columns"></i>
-                            </button> to show or hide certain columns.
+                            If needed, in the table footer, on the left-hand side, use the dropdown <b>Column Visibility</b> to show or hide certain columns.
                         </li>
                         <hr />
                         <li>Above the table, on the left-hand side, use the button :

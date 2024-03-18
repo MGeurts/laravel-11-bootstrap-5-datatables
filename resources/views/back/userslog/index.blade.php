@@ -19,7 +19,7 @@
             </div>
         </div>
 
-        <table class="table table-bordered table-striped table-hover table-sm mb-0 mytable">
+        <table class="table table-bordered table-striped table-hover table-sm mb-0 myTable">
             <thead class="table-primary">
                 <tr>
                     <th class="text-center">Date</th>

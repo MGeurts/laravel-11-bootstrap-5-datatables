@@ -1,15 +1,18 @@
 <p align="center">
-    <img src="https://www.kreaweb.be/wp-content/uploads/2023/07/laravel-10-bootstrap-datatables-004.webp"/>
+    <img src="https://www.kreaweb.be/wp-content/uploads/2024/03/laravel-11-bootstrap-datatables-004.webp"/>
 </p>
 
 ## About this project
 
 This application requires at least PHP 8.1 and is built using :
+
 <ul>
-    <li><a href="https://laravel.com/" target="_blank">Laravel 10</a> (featuring <a href="https://vitejs.dev/" target="_blank">Vite</a>)</li>
-    <li><a href="https://getbootstrap.com/" target="_blank">Bootstrap 5.3</a></li>
-    <li><a href="https://datatables.net/" target="_blank">DataTables</a></li>
+    <li><a href="https://laravel.com/" target="_blank">Laravel</a> 11.x (featuring <a href="https://vitejs.dev/" target="_blank">Vite</a>)</li>
+    <li><a href="https://getbootstrap.com/" target="_blank">Bootstrap</a> 5.x</li>
+    <li><a href="https://datatables.net/" target="_blank">DataTables</a> 2.x</li>
 </ul>
+
+## Now supporting DataTables 2.0 !!
 
 ## Features
 
@@ -60,6 +63,7 @@ This application requires at least PHP 8.1 and is built using :
 ## Models implemented
 
 In this demo project, 3 models are already implemented :
+
 <ul>
     <li><b>Customers</b>, available to all logged in users</li><br />
     <li><b>Users</b> and <b>Users Log</b>, only available to logged in users with the property <b>Developer</b>
@@ -69,7 +73,7 @@ You can use their controllers and the corresponding views as a base to create ne
 
 ## Documentation
 
-<a href="https://www.kreaweb.be/laravel-10-bootstrap-5-datatables/" target="_blank">https://www.kreaweb.be/laravel-10-bootstrap-5-datatables/</a>
+<a href="https://www.kreaweb.be/laravel-11-bootstrap-5-datatables/" target="_blank">https://www.kreaweb.be/laravel-11-bootstrap-5-datatables/</a>
 
 ## Online demo
 
@@ -91,33 +95,33 @@ This demo Larevel project is open-sourced software licensed under the [MIT licen
 ## Screenshots
 
 <p align="center">
-    <img src="https://www.kreaweb.be/wp-content/uploads/2023/07/laravel-10-bootstrap-datatables-002.webp"/>
+    <img src="https://www.kreaweb.be/wp-content/uploads/2024/03/laravel-11-bootstrap-datatables-002.webp"/>
 </p>
 
 <p align="center">
-    <img src="https://www.kreaweb.be/wp-content/uploads/2023/07/laravel-10-bootstrap-datatables-003.webp"/>
+    <img src="https://www.kreaweb.be/wp-content/uploads/2024/03/laravel-11-bootstrap-datatables-003.webp"/>
 </p>
 
 <p align="center">
-    <img src="https://www.kreaweb.be/wp-content/uploads/2023/07/laravel-10-bootstrap-datatables-004.webp"/>
+    <img src="https://www.kreaweb.be/wp-content/uploads/2024/03/laravel-11-bootstrap-datatables-004.webp"/>
 </p>
 
 <p align="center">
-    <img src="https://www.kreaweb.be/wp-content/uploads/2023/07/laravel-10-bootstrap-datatables-005.webp"/>
+    <img src="https://www.kreaweb.be/wp-content/uploads/2024/03/laravel-11-bootstrap-datatables-005.webp"/>
 </p>
 
 <p align="center">
-    <img src="https://www.kreaweb.be/wp-content/uploads/2023/07/laravel-10-bootstrap-datatables-006.webp"/>
+    <img src="https://www.kreaweb.be/wp-content/uploads/2024/03/laravel-11-bootstrap-datatables-006.webp"/>
 </p>
 
 <p align="center">
-    <img src="https://www.kreaweb.be/wp-content/uploads/2023/07/laravel-10-bootstrap-datatables-007.webp"/>
+    <img src="https://www.kreaweb.be/wp-content/uploads/2024/03/laravel-11-bootstrap-datatables-007.webp"/>
 </p>
 
 <p align="center">
-    <img src="https://www.kreaweb.be/wp-content/uploads/2023/07/laravel-10-bootstrap-datatables-008.webp"/>
+    <img src="https://www.kreaweb.be/wp-content/uploads/2024/03/laravel-11-bootstrap-datatables-008.webp"/>
 </p>
 
 <p align="center">
-    <img src="https://www.kreaweb.be/wp-content/uploads/2023/07/laravel-10-bootstrap-datatables-009.webp"/>
+    <img src="https://www.kreaweb.be/wp-content/uploads/2024/03/laravel-11-bootstrap-datatables-009.webp"/>
 </p>

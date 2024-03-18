@@ -1,8 +1,8 @@
 import DataTable from 'datatables.net-bs5';
 window.DataTable = DataTable;
 
+//import 'dataTables.net-responsive';
 import 'datatables.net-select-bs5';
-import 'dataTables.net-responsive';
 import 'datatables.net-buttons-bs5';
 import 'dataTables.net-buttons/js/buttons.colVis.min.mjs';
 import 'dataTables.net-buttons/js/buttons.html5.min.mjs';
@@ -19,14 +19,6 @@ pdfMake.vfs = window.pdfMake.vfs;
 DataTable.Buttons.jszip(JSZip);
 DataTable.Buttons.pdfMake(pdfMake);
 
-$.extend(true, DataTable.Buttons.defaults, {
-    dom: {
-        buttonLiner: {
-            tag: ''
-        },
-    },
-});
-
 $.extend(true, $.fn.dataTable.Buttons.defaults.dom.container, {
     className: 'dt-buttons'
 })
@@ -34,30 +26,17 @@ $.extend(true, $.fn.dataTable.Buttons.defaults.dom.button, {
     className: 'btn btn-sm'
 })
 
-$.extend(DataTable.ext.classes, {
-    sTable: "dataTable table table-striped table-bordered table-hover table-sm",
-});
-
 $.extend(true, $.fn.dataTable.defaults, {
     serverSide: true,
     retrieve: true,
-    dom: "<'row px-1 mb-1'<'col-sm-12 col-md-8'i><'col-sm-12 col-md-4'f>>" +
-        "<'row px-1'<'col-sm-12 col-md-3'l><'col-sm-12 col-md-9'p>>" +
-        "<'row'<'col-sm-12'tr>>",
     processing: true,
-    deferRender: true,
     stateSave: true,
     stateDuration: -1,
     responsive: true,
     language: {
         url: "../json/datatables/i18n/en-GB.json",
     },
-    lengthMenu: [
-        [20, 25, 50, 75, 100, -1],
-        [20, 25, 50, 75, 100, "All"]
-    ],
     pageLength: 20,
-    pagingType: 'full_numbers',
     mark: {
         element: 'span',
         className: 'bg-info'
@@ -84,18 +63,6 @@ $.extend(true, $.fn.dataTable.defaults, {
                     }
                 });
             }
-        },
-        {
-            extend: 'colvis',
-            className: 'btn-outline-secondary',
-            text: '<i class="bi bi-columns"></i>',
-            titleAttr: 'Column visibility',
-            postfixButtons: [{
-                extend: 'colvisRestore',
-                text: 'Show all',
-                className: 'bg-info',
-            }],
-            columns: ':not(.no-visible)'
         },
         {
             extend: 'copyHtml5',
@@ -201,6 +168,39 @@ $.extend(true, $.fn.dataTable.defaults, {
                 }).select()
             }
         },
-    ]
+    ],
+    layout: {
+        top2Start: {
+            info: {},
+        },
+        topStart: {
+            pageLength: {
+                menu: [10, 20, 25, 50, 75, 100, { label: 'All', value: -1 }]
+            },
+        },
+        top2End: {
+            search: {},
+        },
+        topEnd: {
+            paging: {},
+        },
+        bottomStart: {
+            buttons: [
+                {
+                    extend: 'colvis',
+                        postfixButtons: [{
+                        extend: 'colvisRestore',
+                        text: 'Show all',
+                        className: 'table-primary',
+                    }],
+                    columnText: function (dt, idx, title) {
+                        return idx + 1 + ': ' + title;
+                    },
+                    columns: ':not(.no-visible)',
+                }
+            ],
+        },
+        bottomEnd: null,
+    },
 });
 /* -------------------------------------------------------------------------------------- */

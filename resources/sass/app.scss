@@ -6,6 +6,7 @@
 
 // Bootstrap
 @import 'bootstrap/scss/bootstrap';
+@import 'bootstrap-icons/font/bootstrap-icons.css';
 
 // Bootstrap Icons
 @import 'bootstrap-icons/font/bootstrap-icons.css';
@@ -16,6 +17,7 @@
 // DataTables
 @import "datatables.net-bs5/css/dataTables.bootstrap5.min.css";
 @import "datatables.net-buttons-bs5/css/buttons.bootstrap5.min.css";
+@import 'datatables.net-responsive-bs5/css/responsive.bootstrap5.min.css';
 @import 'datatables.net-select-bs5/css/select.bootstrap5.min.css';
 @import 'datatables';
 

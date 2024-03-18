@@ -1,5 +1,5 @@
 {
-    "lengthMenu": "<div class=\"input-group input-group-sm\"><span class=\"input-group-text\"><i class=\"bi bi-list\"></i></span>_MENU_</div>",
+    "lengthMenu": "_MENU_ resultaten weergeven",
     "zeroRecords": "Geen resultaten gevonden",
     "infoEmpty": "Geen resultaten om weer te geven",
     "search": "<div class=\"input-group input-group-sm\"><span class=\"input-group-text\"><i class=\"bi bi-search\"></i></span>_INPUT_</div>",

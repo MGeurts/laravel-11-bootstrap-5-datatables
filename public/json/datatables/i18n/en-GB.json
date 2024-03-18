@@ -4,7 +4,7 @@
     "infoEmpty": "Showing 0 to 0 of 0 entries",
     "infoFiltered": "(filtered from _MAX_ total entries)",
     "infoThousands": ",",
-    "lengthMenu": "<div class=\"input-group input-group-sm\"><span class=\"input-group-text\"><i class=\"bi bi-list\"></i></span>_MENU_</div>",
+    "lengthMenu": "Show _MENU_ entries",
     "loadingRecords": "Loading...",
     "processing": "Processing...",
     "search": "<div class=\"input-group input-group-sm\"><span class=\"input-group-text\"><i class=\"bi bi-search\"></i></span>_INPUT_</div>",

@@ -7,7 +7,7 @@
         </div>
     </div>
 
-    <table class="table table-bordered table-sm mytable">
+    <table class="table table-bordered table-sm myTable">
         <thead class="table-primary">
             <tr>
                 <th class="text-center">Date</th>

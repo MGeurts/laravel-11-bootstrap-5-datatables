@@ -1,44 +1,44 @@
 {
-  "_jquery-11e88dd7.js": {
-    "file": "assets/jquery-11e88dd7.js"
+  "_jquery-BbSKnqzy.js": {
+    "file": "assets/jquery-BbSKnqzy.js"
   },
   "node_modules/bootstrap-icons/font/fonts/bootstrap-icons.woff": {
-    "file": "assets/bootstrap-icons-bb1de989.woff",
+    "file": "assets/bootstrap-icons-BOrJxbIo.woff",
     "src": "node_modules/bootstrap-icons/font/fonts/bootstrap-icons.woff"
   },
   "node_modules/bootstrap-icons/font/fonts/bootstrap-icons.woff2": {
-    "file": "assets/bootstrap-icons-476adf42.woff2",
+    "file": "assets/bootstrap-icons-BtvjY1KL.woff2",
     "src": "node_modules/bootstrap-icons/font/fonts/bootstrap-icons.woff2"
   },
   "resources/js/app.js": {
-    "file": "assets/app-8f4205f4.js",
-    "imports": [
-      "_jquery-11e88dd7.js"
-    ],
+    "file": "assets/app-CqcAByRH.js",
+    "src": "resources/js/app.js",
     "isEntry": true,
-    "src": "resources/js/app.js"
+    "imports": [
+      "_jquery-BbSKnqzy.js"
+    ]
   },
   "resources/js/custom.js": {
-    "file": "assets/custom-edb36f20.js",
-    "isEntry": true,
-    "src": "resources/js/custom.js"
+    "file": "assets/custom-6P9dJSsL.js",
+    "src": "resources/js/custom.js",
+    "isEntry": true
   },
   "resources/js/datatables.js": {
-    "file": "assets/datatables-fb120cae.js",
-    "imports": [
-      "_jquery-11e88dd7.js"
-    ],
+    "file": "assets/datatables-BFhueC7G.js",
+    "src": "resources/js/datatables.js",
     "isEntry": true,
-    "src": "resources/js/datatables.js"
+    "imports": [
+      "_jquery-BbSKnqzy.js"
+    ]
   },
   "resources/sass/app.scss": {
-    "file": "assets/app-ceda8231.css",
-    "isEntry": true,
-    "src": "resources/sass/app.scss"
+    "file": "assets/app-CoDbkt1G.css",
+    "src": "resources/sass/app.scss",
+    "isEntry": true
   },
   "resources/sass/deferred.scss": {
-    "file": "assets/deferred-84535efd.css",
-    "isEntry": true,
-    "src": "resources/sass/deferred.scss"
+    "file": "assets/deferred-T0Y5PVxv.css",
+    "src": "resources/sass/deferred.scss",
+    "isEntry": true
   }
 }
