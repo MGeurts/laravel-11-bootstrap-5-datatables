@@ -12,13 +12,16 @@
 
     <div class="card-body p-2">
         <p>
-            You could use this card to display all kind of <b>hyperlinks</b> or buttons to navigate quickly to certain parts of your applcation.
+            You could use this card to display all kind of <b>hyperlinks</b> or buttons to navigate quickly to certain
+            parts of your applcation.
         </p>
 
         <div class="alert alert-secondary p-2" role="alert">
-            This application requires at least <a href="https://www.php.net/" target="_blank">PHP 8.1</a> and is built using :
+            This application requires at least <a href="https://www.php.net/" target="_blank">PHP 8.2</a> and is built
+            using :
             <ul>
-                <li><a href="https://laravel.com/" target="_blank">Laravel</a> 10.x (featuring <a href="https://vitejs.dev/" target="_blank">Vite</a>)</li>
+                <li><a href="https://laravel.com/" target="_blank">Laravel</a> 11.x (featuring <a
+                        href="https://vitejs.dev/" target="_blank">Vite</a>)</li>
                 <li><a href="https://getbootstrap.com/" target="_blank">Bootstrap</a> 5.x</li>
                 <li><a href="https://datatables.net/" target="_blank">DataTables</a> 2.x</li>
             </ul>
@@ -50,9 +53,12 @@
             </ul>
             <hr />
             <b>Special feature</b> :
-            <p>The top menu contains in its center a dropdown selector for the year. This is implemented as a global session
-                variable <b>[APP].[YEAR]</b> and allows you to easely filter datatable datasets (when needed) to reflect the
-                data concerning the selected year. This is extreem helpfull if you manage models that depend on the year,
+            <p>The top menu contains in its center a dropdown selector for the year. This is implemented as a global
+                session
+                variable <b>[APP].[YEAR]</b> and allows you to easely filter datatable datasets (when needed) to reflect
+                the
+                data concerning the selected year. This is extreem helpfull if you manage models that depend on the
+                year,
                 like for instance deliveries, orders, productions, and so on...
             </p>
         </div>
