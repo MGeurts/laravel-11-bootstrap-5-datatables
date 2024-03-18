@@ -14,7 +14,8 @@ import JSZip from 'jszip';
 
 import pdfMake from 'pdfmake';
 import * as pdfFonts from "pdfmake/build/vfs_fonts.js";
-pdfMake.vfs = window.pdfMake.vfs;
+//pdfMake.vfs = window.pdfMake.vfs;
+pdfMake.vfs = pdfFonts.pdfMake.vfs;
 /* -------------------------------------------------------------------------------------- */
 DataTable.Buttons.jszip(JSZip);
 DataTable.Buttons.pdfMake(pdfMake);
