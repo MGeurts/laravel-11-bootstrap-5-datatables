@@ -1,7 +1,7 @@
 import DataTable from 'datatables.net-bs5';
 window.DataTable = DataTable;
 
-//import 'dataTables.net-responsive';
+import 'dataTables.net-responsive';
 import 'datatables.net-select-bs5';
 import 'datatables.net-buttons-bs5';
 import 'dataTables.net-buttons/js/buttons.colVis.min.mjs';
@@ -11,13 +11,8 @@ import 'dataTables.net-buttons/js/buttons.print.min.mjs';
 import 'dataTables.mark.js';
 
 import JSZip from 'jszip';
-
-// import pdfMake from 'pdfmake';
-// import * as pdfFonts from "pdfmake/build/vfs_fonts.js";
-// pdfMake.vfs = window.pdfMake.vfs;
 /* -------------------------------------------------------------------------------------- */
 DataTable.Buttons.jszip(JSZip);
-// DataTable.Buttons.pdfMake(pdfMake);
 
 $.extend(true, $.fn.dataTable.Buttons.defaults.dom.container, {
     className: 'dt-buttons'
@@ -44,26 +39,26 @@ $.extend(true, $.fn.dataTable.defaults, {
     select: true,
     order: [],
     buttons: [
-        {
-            className: 'btn-info',
-            text: '<i class="bi bi-question"></i>',
-            titleAttr: 'Help',
-            action: function (e, dt, node, config) {
-                $.ajax({
-                    method: 'GET',
-                    url: route('back.general.getDatatablesHelp'),
-                    success: function (response) {
-                        bootbox.dialog({
-                            title: "Help",
-                            message: response,
-                            size: 'xl',
-                            onEscape: true,
-                            backdrop: true,
-                        });
-                    }
-                });
-            }
-        },
+        // {
+        //     className: 'btn-info',
+        //     text: '<i class="bi bi-question"></i>',
+        //     titleAttr: 'Help',
+        //     action: function (e, dt, node, config) {
+        //         $.ajax({
+        //             method: 'GET',
+        //             url: route('back.general.getDatatablesHelp'),
+        //             success: function (response) {
+        //                 bootbox.dialog({
+        //                     title: "Help",
+        //                     message: response,
+        //                     size: 'xl',
+        //                     onEscape: true,
+        //                     backdrop: true,
+        //                 });
+        //             }
+        //         });
+        //     }
+        // },
         {
             extend: 'copyHtml5',
             className: 'btn-outline-secondary',
@@ -74,22 +69,6 @@ $.extend(true, $.fn.dataTable.defaults, {
                 orthogonal: "myExport",
             }
         },
-        // {
-        //     extend: 'pdfHtml5',
-        //     className: 'btn-secondary',
-        //     text: '<i class="bi bi-file-earmark-pdf"></i>',
-        //     titleAttr: 'Export to PDF',
-        //     exportOptions: {
-        //         columns: ':visible:not(.no-export)',
-        //         orthogonal: "myExport",
-        //     },
-        //     download: 'open',
-        //     orientation: 'landscape',
-        //     customize: function (doc) {
-        //         doc.pageMargins = [10, 15, 10, 15];
-        //         doc.defaultStyle.fontSize = 9;
-        //     },
-        // },
         {
             extend: 'excelHtml5',
             className: 'btn-secondary',
