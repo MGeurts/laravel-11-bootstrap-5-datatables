@@ -171,7 +171,7 @@
 
                                 <tr>
                                     <td class="text-center">
-                                        @if (App::environment('local'))
+                                        @if (env('APP_ENV') == 'local')
                                             {{ apache_get_version() }}
                                         @else
                                             ????
