@@ -12,8 +12,6 @@ This application requires at least PHP 8.1 and is built using :
     <li><a href="https://datatables.net/" target="_blank">DataTables</a> 2.x</li>
 </ul>
 
-## Now supporting DataTables 2.0 !!
-
 ## Features
 
 <ul>
