@@ -12,13 +12,12 @@ import 'dataTables.mark.js';
 
 import JSZip from 'jszip';
 
-import pdfMake from 'pdfmake';
-import * as pdfFonts from "pdfmake/build/vfs_fonts.js";
-//pdfMake.vfs = window.pdfMake.vfs;
-pdfMake.vfs = pdfFonts.pdfMake.vfs;
+// import pdfMake from 'pdfmake';
+// import * as pdfFonts from "pdfmake/build/vfs_fonts.js";
+// pdfMake.vfs = window.pdfMake.vfs;
 /* -------------------------------------------------------------------------------------- */
 DataTable.Buttons.jszip(JSZip);
-DataTable.Buttons.pdfMake(pdfMake);
+// DataTable.Buttons.pdfMake(pdfMake);
 
 $.extend(true, $.fn.dataTable.Buttons.defaults.dom.container, {
     className: 'dt-buttons'
@@ -75,22 +74,22 @@ $.extend(true, $.fn.dataTable.defaults, {
                 orthogonal: "myExport",
             }
         },
-        {
-            extend: 'pdfHtml5',
-            className: 'btn-secondary',
-            text: '<i class="bi bi-file-earmark-pdf"></i>',
-            titleAttr: 'Export to PDF',
-            exportOptions: {
-                columns: ':visible:not(.no-export)',
-                orthogonal: "myExport",
-            },
-            download: 'open',
-            orientation: 'landscape',
-            customize: function (doc) {
-                doc.pageMargins = [10, 15, 10, 15];
-                doc.defaultStyle.fontSize = 9;
-            },
-        },
+        // {
+        //     extend: 'pdfHtml5',
+        //     className: 'btn-secondary',
+        //     text: '<i class="bi bi-file-earmark-pdf"></i>',
+        //     titleAttr: 'Export to PDF',
+        //     exportOptions: {
+        //         columns: ':visible:not(.no-export)',
+        //         orthogonal: "myExport",
+        //     },
+        //     download: 'open',
+        //     orientation: 'landscape',
+        //     customize: function (doc) {
+        //         doc.pageMargins = [10, 15, 10, 15];
+        //         doc.defaultStyle.fontSize = 9;
+        //     },
+        // },
         {
             extend: 'excelHtml5',
             className: 'btn-secondary',
