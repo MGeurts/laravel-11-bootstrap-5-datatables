@@ -6,10 +6,10 @@
     "license": "MIT",
     "require": {
         "php": "^8.2",
+        "arcanedev/log-viewer": "^11.0",
         "khill/lavacharts": "3.1.*",
         "laravel/framework": "^11.0",
         "laravel/tinker": "^2.9",
-        "opcodesio/log-viewer": "^3.6",
         "spatie/laravel-backup": "^8.6",
         "stevebauman/location": "^7.2",
         "yajra/laravel-datatables-oracle": "^11.0"

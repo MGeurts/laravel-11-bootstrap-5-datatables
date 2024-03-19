@@ -25,7 +25,7 @@ This application requires at least PHP 8.1 and is built using :
             <a href="https://codeseven.github.io/toastr/" target="_blank">Toastr</a> notifications
         </li>
         <li>Copy to clipboard</li>
-        <li>Export to PDF and Excel</li>
+        <li>Export to Excel</li>
         <li>Print function</li>
         <li>Items per page selector</li>
         <li>Column visibility selector</li>

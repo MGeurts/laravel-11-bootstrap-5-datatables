@@ -31,8 +31,7 @@
 
                             <ul>
                                 <li><a target="_blank"
-                                        href="https://github.com/opcodesio/log-viewer/">opcodesio/log-viewer</a> - 3.6.0
-                                </li>
+                                        href="https://github.com/ARCANEDEV/LogViewer/">ARCANEDEV/LogViewer</a> - 11.0.1</li>
                             </ul>
 
                             <ul>
