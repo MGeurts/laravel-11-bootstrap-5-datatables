@@ -82,9 +82,9 @@ You can use their controllers and the corresponding views as a base to create ne
 <p>Email Address : <b>admin@admin.com</b></p>
 <p>Password : <b>password</b></p>
 
-## PHP
+## Requirements
 
-<b>Be aware you need at least PHP 8.1 to use this project!</b>
+Be aware you need at least <b>PHP 8.2</b> to use this project!
 
 ## License
 
