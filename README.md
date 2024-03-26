@@ -4,7 +4,7 @@
 
 ## About this project
 
-This application requires at least PHP 8.1 and is built using :
+This application requires at least PHP 8.2 and is built using :
 
 <ul>
     <li><a href="https://laravel.com/" target="_blank">Laravel</a> 11.x (featuring <a href="https://vitejs.dev/" target="_blank">Vite</a>)</li>
