@@ -4,51 +4,43 @@
     <div class="accordion" id="accordionImpressum">
         <div class="accordion-item">
             <h2 class="accordion-header" id="headingOne">
-                <button class="accordion-button" type="button" data-bs-toggle="collapse" aria-expanded="true"
-                    data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" aria-expanded="true" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
                     Dependencies (*)
                 </button>
             </h2>
 
-            <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
-                data-bs-parent="#accordionImpressum">
+            <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionImpressum">
                 <div class="accordion-body">
                     <div class="row">
                         <div class="col-4">
                             <p>Laravel :</p>
 
                             <ul>
-                                <li><a target="_blank"
-                                        href="https://github.com/yajra/laravel-datatables/">yajra/laravel-datatables</a> -
+                                <li><a target="_blank" href="https://github.com/yajra/laravel-datatables/">yajra/laravel-datatables</a> -
                                     11.0.0</li>
                             </ul>
 
                             <ul>
-                                <li><a target="_blank"
-                                        href="https://github.com/spatie/laravel-backup/">spatie/laravel-backup</a> - 8.6.0
+                                <li><a target="_blank" href="https://github.com/spatie/laravel-backup/">spatie/laravel-backup</a> - 8.6.0
                                 </li>
                             </ul>
 
                             <ul>
-                                <li><a target="_blank"
-                                        href="https://github.com/ARCANEDEV/LogViewer/">ARCANEDEV/LogViewer</a> - 11.0.1</li>
+                                <li><a target="_blank" href="https://github.com/ARCANEDEV/LogViewer/">ARCANEDEV/LogViewer</a> - 11.0.1</li>
                             </ul>
 
                             <ul>
-                                <li><a target="_blank"
-                                        href="https://github.com/stevebauman/location/">stevebauman/location</a> - 7.2.0
+                                <li><a target="_blank" href="https://github.com/stevebauman/location/">stevebauman/location</a> - 7.2.0
                                 </li>
                             </ul>
 
                             <ul>
-                                <li><a target="_blank"
-                                        href="https://github.com/barryvdh/laravel-debugbar/">barryvdh/laravel-debugbar</a> -
-                                    3.12.2</li>
+                                <li><a target="_blank" href="https://github.com/barryvdh/laravel-debugbar/">barryvdh/laravel-debugbar</a> -
+                                    3.13.3</li>
                             </ul>
 
                             <ul>
-                                <li><a target="_blank"
-                                        href="https://github.com/kevinkhill/lavacharts/">kevinkhill/lavacharts</a> - 3.1.14
+                                <li><a target="_blank" href="https://github.com/kevinkhill/lavacharts/">kevinkhill/lavacharts</a> - 3.1.14
                                 </li>
                             </ul>
                         </div>
@@ -57,8 +49,7 @@
                             <p>jQuery :</p>
 
                             <ul>
-                                <li><a target="_blank" href="http://jquery.com/">jQuery</a> - <span
-                                        class="jQuery_version"></span></li>
+                                <li><a target="_blank" href="http://jquery.com/">jQuery</a> - <span class="jQuery_version"></span></li>
                             </ul>
 
                             <ul>
@@ -111,14 +102,12 @@
 
         <div class="accordion-item">
             <h2 class="accordion-header" id="headingWebserver">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#collapseWebserver" aria-controls="collapseWebserver">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseWebserver" aria-controls="collapseWebserver">
                     Webserver
                 </button>
             </h2>
 
-            <div id="collapseWebserver" class="accordion-collapse collapse" aria-labelledby="headingWebserver"
-                data-bs-parent="#accordionImpressum">
+            <div id="collapseWebserver" class="accordion-collapse collapse" aria-labelledby="headingWebserver" data-bs-parent="#accordionImpressum">
                 <div class="accordion-body">
                     <div class="row">
                         <div class="col-md-7">
@@ -126,8 +115,7 @@
                                 <tr>
                                     <td colspan="4" class="text-center">
                                         <a target="_blank" href="https://github.com/leokhoa/laragon/releases">
-                                            <img src="{{ asset('img/general/laragon.png') }}" alt="LARAGON"
-                                                width="200px" />
+                                            <img src="{{ asset('img/general/laragon.png') }}" alt="LARAGON" width="200px" />
                                         </a>
                                     </td>
                                 </tr>
@@ -157,8 +145,7 @@
                                     </td>
                                     <td class="text-center">
                                         <a target="_blank" href="http://www.phpmyadmin.net/">
-                                            <img src="{{ asset('img/general/xampp-phpmyadmin-001.png') }}"
-                                                alt="phpMyAdmin" />
+                                            <img src="{{ asset('img/general/xampp-phpmyadmin-001.png') }}" alt="phpMyAdmin" />
                                         </a>
                                     </td>
                                 </tr>
@@ -203,8 +190,7 @@
                         </div>
 
                         <div class="col-md-5 text-center">
-                            <img src="{{ asset('img/general/datatables-serverside-processing.png') }}" class="img-fluid"
-                                alt="Datatables-SSP" />
+                            <img src="{{ asset('img/general/datatables-serverside-processing.png') }}" class="img-fluid" alt="Datatables-SSP" />
                         </div>
                     </div>
                 </div>
