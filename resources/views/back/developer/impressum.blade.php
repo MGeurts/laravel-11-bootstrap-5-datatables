@@ -26,17 +26,17 @@
                             </ul>
 
                             <ul>
-                                <li><a target="_blank" href="https://github.com/ARCANEDEV/LogViewer/">ARCANEDEV/LogViewer</a> - 11.0.1</li>
+                                <li><a target="_blank" href="https://github.com/opcodesio/log-viewer/">opcodesio/log-viewer</a> - 3.8.0</li>
                             </ul>
 
                             <ul>
-                                <li><a target="_blank" href="https://github.com/stevebauman/location/">stevebauman/location</a> - 7.2.0
+                                <li><a target="_blank" href="https://github.com/stevebauman/location/">stevebauman/location</a> - 7.2.1
                                 </li>
                             </ul>
 
                             <ul>
                                 <li><a target="_blank" href="https://github.com/barryvdh/laravel-debugbar/">barryvdh/laravel-debugbar</a> -
-                                    3.13.3</li>
+                                    3.13.4</li>
                             </ul>
 
                             <ul>
