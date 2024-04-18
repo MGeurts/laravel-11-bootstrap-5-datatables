@@ -17,7 +17,7 @@
 
                             <ul>
                                 <li><a target="_blank" href="https://github.com/yajra/laravel-datatables/">yajra/laravel-datatables</a> -
-                                    11.0.0</li>
+                                    11.1.0</li>
                             </ul>
 
                             <ul>
