@@ -86,6 +86,28 @@ You can use their controllers and the corresponding views as a base to create ne
 
 Be aware you need at least <b>PHP 8.2</b> to use this project!
 
+## Installation
+
+create a new project folder, cd into the folder
+
+`git clone https://github.com/MGeurts/laravel-11-bootstrap-5-datatables.git .`
+
+`cp .env.example .env`
+
+make the needed changes regarding name, url, database connection & mail server
+
+`composer install`
+
+`php artisan key:generate`
+
+`php artisan storage:link`
+
+`php artisan migrate:fresh --seed`
+
+`npm install & npm run build`
+
+`php artisan serve` or `npm run dev`
+
 ## License
 
 This demo Larevel project is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
