@@ -104,7 +104,9 @@ make the needed changes regarding name, url, database connection & mail server
 
 `php artisan migrate:fresh --seed`
 
-`npm install & npm run build`
+`npm install`
+
+`npm run build`
 
 `php artisan serve` or `npm run dev`
 
