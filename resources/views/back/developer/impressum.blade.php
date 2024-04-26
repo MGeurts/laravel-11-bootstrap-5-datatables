@@ -26,7 +26,7 @@
                             </ul>
 
                             <ul>
-                                <li><a target="_blank" href="https://github.com/opcodesio/log-viewer/">opcodesio/log-viewer</a> - 3.8.0</li>
+                                <li><a target="_blank" href="https://github.com/opcodesio/log-viewer/">opcodesio/log-viewer</a> - 3.8.1</li>
                             </ul>
 
                             <ul>
@@ -72,7 +72,7 @@
 
                             <ul>
                                 <li><a target="_blank" href="https://datatables.net/download/packages">DataTables</a> -
-                                    2.0.3</li>
+                                    2.0.5</li>
                             </ul>
                         </div>
 
