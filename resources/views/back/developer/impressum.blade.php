@@ -92,7 +92,7 @@
                             </ul>
 
                             <ul>
-                                <li><a target="_blank" href="https://github.com/iamkun/dayjs/">dayjs</a> - 1.11.10</li>
+                                <li><a target="_blank" href="https://github.com/iamkun/dayjs/">dayjs</a> - 1.11.11</li>
                             </ul>
                         </div>
                     </div>
