@@ -3,7 +3,6 @@
 namespace App\Http\Controllers\Back;
 
 use App\Http\Controllers\Controller;
-use Exception;
 use Illuminate\Support\Carbon;
 use Illuminate\Support\Facades\Artisan;
 use Illuminate\Support\Facades\Log;
@@ -82,10 +81,10 @@ class BackupController extends Controller
 
     public function create()
     {
-        try {
-            Artisan::call('backup:run --only-db');
-            $output = Artisan::output();
+        $exitCode = Artisan::call('backup:run --only-db');
+        $output = Artisan::output();
 
+        if ($exitCode == 0) {
             Log::info("Backup (Manually) -- Backup started \r\n" . $output);
 
             $notification = [
@@ -93,13 +92,13 @@ class BackupController extends Controller
                 'title' => 'Backups ...',
                 'message' => 'The backup was created.',
             ];
-        } catch (Exception $e) {
-            Log::info("Backup (Manually) -- Backup failed \r\n" . $e->getMessage());
+        } else {
+            Log::error("Backup (Manually) -- Backup failed \r\n" . $output);
 
             $notification = [
                 'type' => 'error',
                 'title' => 'Backups ...',
-                'message' => $e->getMessage(),
+                'message' => 'The backup failed.',
             ];
         }
 
