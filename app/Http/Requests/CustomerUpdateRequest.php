@@ -43,12 +43,76 @@ class CustomerUpdateRequest extends FormRequest
                 'max:50',
                 'required_without_all:customer_last_name,customer_first_name',
             ],
+            'company_vat' => [
+                'nullable',
+                'string',
+                'max:50',
+            ],
+
+            'address_street' => [
+                'nullable',
+                'string',
+                'max:50',
+            ],
+            'address_number' => [
+                'nullable',
+                'string',
+                'max:20',
+            ],
+            'address_country' => [
+                'nullable',
+                'string',
+                'max:2',
+            ],
+            'address_postal_code' => [
+                'nullable',
+                'string',
+                'max:10',
+            ],
+            'address_place' => [
+                'nullable',
+                'string',
+                'max:100',
+            ],
+
+            'phone' => [
+                'nullable',
+                'string',
+                'max:50',
+            ],
+
             'email' => [
                 'nullable',
                 'string',
                 'max:191',
                 'email',
                 Rule::unique('customers', 'email')->whereNull('deleted_at')->ignore($this->customer),
+            ],
+
+            'delivery_address_street' => [
+                'nullable',
+                'string',
+                'max:50',
+            ],
+            'delivery_address_number' => [
+                'nullable',
+                'string',
+                'max:20',
+            ],
+            'delivery_address_country' => [
+                'nullable',
+                'string',
+                'max:2',
+            ],
+            'delivery_address_postal_code' => [
+                'nullable',
+                'string',
+                'max:10',
+            ],
+            'delivery_address_place' => [
+                'nullable',
+                'string',
+                'max:100',
             ],
         ];
     }
