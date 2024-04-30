@@ -7,6 +7,7 @@ use Illuminate\Support\Carbon;
 use Illuminate\Support\Facades\Artisan;
 use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Storage;
+use Illuminate\Support\Number;
 
 class BackupController extends Controller
 {
@@ -65,7 +66,7 @@ class BackupController extends Controller
                     'file_path' => $f,
                     'file_name' => str_replace(config('backup.backup.name') . '/', '', $f),
                     'file_size_byte' => $disk->size($f),
-                    'file_size' => $this->humanFilesize($disk->size($f)),
+                    'file_size' => Number::fileSize($disk->size($f), 2),
                     'last_modified_timestamp' => $disk->lastModified($f),
                     'date_created' => Carbon::createFromTimestamp($disk->lastModified($f))->format('d-m-Y H:i'),
                     'date_ago' => Carbon::createFromTimestamp($disk->lastModified($f))->diffForHumans(Carbon::now()),
@@ -145,13 +146,5 @@ class BackupController extends Controller
         }
 
         return redirect()->back()->with('notification', $notification);
-    }
-
-    protected function humanFilesize($bytes, $decimals = 2)
-    {
-        $sz = 'BKMGTP';
-        $factor = floor((strlen($bytes) - 1) / 3);
-
-        return sprintf("%.{$decimals}f", $bytes / pow(1024, $factor)) . ' ' . @$sz[$factor];
     }
 }
