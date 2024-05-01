@@ -14,14 +14,17 @@ class BackupController extends Controller
     // ------------------------------------------------------------------------------
     // To make this BACKUP controller work, you need to :
     // ------------------------------------------------------------------------------
-    //      1. add and configure this to your .env :
+    //      1. install laravel-backup
+    //         https://github.com/spatie/laravel-backup
+    //
+    //      2. add and configure this to your .env :
     //
     //          BACKUP_DISK="backups"
     //          BACKUP_DAILY_CLEANUP="22:30"
     //          BACKUP_DAILY_RUN="23:00"
     //          BACKUP_MAIL_ADDRESS="webmaster@yourdomain.com"
     //
-    //      2. configure this to a working mail system in your .env :
+    //      3. configure this to a working mail system in your .env :
     //          MAIL_MAILER=smtp
     //          MAIL_HOST=mailpit
     //          MAIL_PORT=1025
@@ -31,7 +34,7 @@ class BackupController extends Controller
     //          MAIL_FROM_ADDRESS="no-reply@yourdomain.com"
     //          MAIL_FROM_NAME="${APP_NAME}"
     // ------------------------------------------------------------------------------
-    //      2. add this to your config/filesystem.php :
+    //      4. add this to your config/filesystem.php :
     //
     //          env('BACKUP_DISK', 'backups') => [
     //              'driver' => 'local',
@@ -39,7 +42,7 @@ class BackupController extends Controller
     //              'throw' => false,
     //          ],
     // ------------------------------------------------------------------------------
-    //      3. configure this in your config/backup.php :
+    //      5. configure this in your config/backup.php :
     //
     //          // backup --> destination --> disks :
     //          'disks' => [
@@ -53,7 +56,7 @@ class BackupController extends Controller
     // ------------------------------------------------------------------------------
     public function index()
     {
-        $disk = Storage::disk(env('BACKUP_DISK', 'backups'));
+        $disk = Storage::disk(config('app.backup_disk'));
         $files = $disk->files(config('backup.backup.name'));
 
         $backups = [];
@@ -108,11 +111,11 @@ class BackupController extends Controller
 
     public function download($file_name)
     {
-        $disk = Storage::disk(env('BACKUP_DISK', 'backups'));
+        $disk = Storage::disk(config('app.backup_disk'));
         $file = config('backup.backup.name') . '/' . $file_name;
 
         if ($disk->exists($file)) {
-            return Storage::download(env('BACKUP_DISK', 'backups') . '/' . $file);
+            return Storage::download(config('app.backup_disk') . '/' . $file);
         } else {
             $notification = [
                 'type' => 'warning',
@@ -126,7 +129,7 @@ class BackupController extends Controller
 
     public function delete($file_name)
     {
-        $disk = Storage::disk(env('BACKUP_DISK', 'backups'));
+        $disk = Storage::disk(config('app.backup_disk'));
         $file = config('backup.backup.name') . '/' . $file_name;
 
         if ($disk->exists($file)) {

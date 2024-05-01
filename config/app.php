@@ -123,4 +123,15 @@ return [
         'store' => env('APP_MAINTENANCE_STORE', 'database'),
     ],
 
+    /*
+    |--------------------------------------------------------------------------
+    | Custom values used in the application outside of the config files
+    |--------------------------------------------------------------------------
+    */
+
+    'backup_disk' => env('BACKUP_DISK', 'backups'),
+    'backup_daily_cleanup' => env('BACKUP_DAILY_CLEANUP', '22:30'),
+    'backup_daily_run' => env('BACKUP_DAILY_RUN', '23:00'),
+    'backup_mail_address' => env('BACKUP_MAIL_ADDRESS', 'webmaster@yourdomain.com'),
+
 ];
