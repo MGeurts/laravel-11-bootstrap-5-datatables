@@ -36,7 +36,7 @@
 
                             <ul>
                                 <li><a target="_blank" href="https://github.com/barryvdh/laravel-debugbar/">barryvdh/laravel-debugbar</a> -
-                                    3.13.4</li>
+                                    3.13.5</li>
                             </ul>
 
                             <ul>
