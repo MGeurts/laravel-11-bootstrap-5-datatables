@@ -21,7 +21,7 @@
                             </ul>
 
                             <ul>
-                                <li><a target="_blank" href="https://github.com/spatie/laravel-backup/">spatie/laravel-backup</a> - 8.6.0
+                                <li><a target="_blank" href="https://github.com/spatie/laravel-backup/">spatie/laravel-backup</a> - 8.8.0
                                 </li>
                             </ul>
 
@@ -72,7 +72,7 @@
 
                             <ul>
                                 <li><a target="_blank" href="https://datatables.net/download/packages">DataTables</a> -
-                                    2.0.5</li>
+                                    2.0.6</li>
                             </ul>
                         </div>
 
