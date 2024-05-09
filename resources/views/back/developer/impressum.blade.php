@@ -72,7 +72,7 @@
 
                             <ul>
                                 <li><a target="_blank" href="https://datatables.net/download/packages">DataTables</a> -
-                                    2.0.6</li>
+                                    2.0.7</li>
                             </ul>
                         </div>
 
