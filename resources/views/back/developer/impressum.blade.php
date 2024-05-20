@@ -26,7 +26,7 @@
                             </ul>
 
                             <ul>
-                                <li><a target="_blank" href="https://github.com/opcodesio/log-viewer/">opcodesio/log-viewer</a> - 3.10.0</li>
+                                <li><a target="_blank" href="https://github.com/opcodesio/log-viewer/">opcodesio/log-viewer</a> - 3.10.1</li>
                             </ul>
 
                             <ul>
