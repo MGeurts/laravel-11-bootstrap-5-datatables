@@ -24,7 +24,7 @@ $.extend(true, $.fn.dataTable.Buttons.defaults.dom.button, {
 $.extend(true, $.fn.dataTable.defaults, {
     serverSide: true,
     retrieve: true,
-    processing: false,
+    processing: true,
     stateSave: true,
     stateDuration: -1,
     responsive: true,
