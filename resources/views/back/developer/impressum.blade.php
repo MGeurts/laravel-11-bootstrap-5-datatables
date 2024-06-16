@@ -30,7 +30,7 @@
                             </ul>
 
                             <ul>
-                                <li><a target="_blank" href="https://github.com/stevebauman/location/">stevebauman/location</a> - 7.2.2
+                                <li><a target="_blank" href="https://github.com/stevebauman/location/">stevebauman/location</a> - 7.3.0
                                 </li>
                             </ul>
 
