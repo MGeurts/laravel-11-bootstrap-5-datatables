@@ -17,11 +17,11 @@
 
                             <ul>
                                 <li><a target="_blank" href="https://github.com/yajra/laravel-datatables/">yajra/laravel-datatables</a> -
-                                    11.1.1</li>
+                                    11.1.2</li>
                             </ul>
 
                             <ul>
-                                <li><a target="_blank" href="https://github.com/spatie/laravel-backup/">spatie/laravel-backup</a> - 8.8.1
+                                <li><a target="_blank" href="https://github.com/spatie/laravel-backup/">spatie/laravel-backup</a> - 9.0.2
                                 </li>
                             </ul>
 
