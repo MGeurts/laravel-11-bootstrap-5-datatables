@@ -1,3 +1,8 @@
+![](https://img.shields.io/badge/PHP-8.3-informational?style=flat&logo=php&color=4f5b93)
+![](https://img.shields.io/badge/Laravel-11-informational?style=flat&logo=laravel&color=ef3b2d)
+
+![Latest Stable Version](https://img.shields.io/github/release/MGeurts/laravel-11-bootstrap-5-datatables)
+
 <p align="center">
     <img src="https://www.kreaweb.be/wp-content/uploads/2024/03/laravel-11-bootstrap-datatables-004.webp"/>
 </p>
