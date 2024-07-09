@@ -1,31 +1,39 @@
 <header>
-    <nav class="navbar bg-secondary fixed-top">
+    <nav class="navbar navbar-expand-lg bg-body-tertiary  fixed-top">
         <div class="container-fluid">
-            {{-- left --}}
-            <div>
-                <a class="btn btn-lg btn-primary text-white me-1" href="https://www.facebook.com/yourcompany/" target="_blank" title="Your Company Name on Facebook" role="button" tabindex="-1">
-                    <i class="bi bi-facebook"></i>
-                </a>
+            <a class="navbar-brand" href="#"> {{ env('APP_NAME') }} </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-between" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="/">Home</a>
+                    </li>
 
-                <a class="btn btn-lg btn-light me-1" href="https://www.yourcompany.com" target="_blank" title="yourcompany.com" role="button" tabindex="-1">
-                    <img src="{{ asset('img/logo/laravel-025.png') }}" alt="yourcompany.com">
-                </a>
-            </div>
+                </ul>
 
-            {{-- center --}}
-            <div>
-                @include('components.switch')
-            </div>
+                <div class="d-flex">
+                    <div class="dropdown mx-1">
+                        <button class="btn btn-sm text-light bg-info-subtle border-info-subtle px-2  border  rounded-2 dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            <svg fill="currentColor" width="18" height="18">
+                                <use href="#icon-auto"></use>
+                            </svg>
 
-            {{-- right --}}
-            <div>
-                <a class="btn btn-lg btn-success text-white me-1" href="/" title="Home" role="button" tabindex="-1">
-                    <i class="bi bi-house-fill"></i>
-                </a>
 
-                <a class="btn btn-lg btn-success text-white" href="{{ route('login') }}" title="Login" role="button" tabindex="-1">
-                    <i class="bi bi-box-arrow-in-right"></i>
-                </a>
+                        </button>
+                        <ul class="dropdown-menu dropdown-menu-dark">
+                            @include('components.layout.guest.theme')
+                        </ul>
+                    </div>
+
+                    <a class="btn btn-sm text-light bg-info-subtle border-info-subtle px-2  border  rounded-2" href="{{ route('login') }}" title="Login"
+                        role="button" tabindex="-1">
+                        <i class="bi bi-box-arrow-in-right"></i> Login
+                    </a>
+                </div>
             </div>
         </div>
     </nav>
