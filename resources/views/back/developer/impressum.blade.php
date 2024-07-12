@@ -21,7 +21,7 @@
                             </ul>
 
                             <ul>
-                                <li><a target="_blank" href="https://github.com/spatie/laravel-backup/">spatie/laravel-backup</a> - 9.0.2
+                                <li><a target="_blank" href="https://github.com/spatie/laravel-backup/">spatie/laravel-backup</a> - 9.0.3
                                 </li>
                             </ul>
 
