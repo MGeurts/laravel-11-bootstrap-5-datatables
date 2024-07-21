@@ -17,11 +17,11 @@
 
                             <ul>
                                 <li><a target="_blank" href="https://github.com/yajra/laravel-datatables/">yajra/laravel-datatables</a> -
-                                    11.1.2</li>
+                                    11.1.3</li>
                             </ul>
 
                             <ul>
-                                <li><a target="_blank" href="https://github.com/spatie/laravel-backup/">spatie/laravel-backup</a> - 9.0.3
+                                <li><a target="_blank" href="https://github.com/spatie/laravel-backup/">spatie/laravel-backup</a> - 9.0.4
                                 </li>
                             </ul>
 
@@ -72,7 +72,7 @@
 
                             <ul>
                                 <li><a target="_blank" href="https://datatables.net/download/packages">DataTables</a> -
-                                    2.0.8</li>
+                                    2.1.0</li>
                             </ul>
                         </div>
 
@@ -92,7 +92,7 @@
                             </ul>
 
                             <ul>
-                                <li><a target="_blank" href="https://github.com/iamkun/dayjs/">dayjs</a> - 1.11.11</li>
+                                <li><a target="_blank" href="https://github.com/iamkun/dayjs/">dayjs</a> - 1.11.12</li>
                             </ul>
                         </div>
                     </div>
