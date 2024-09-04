@@ -17,7 +17,7 @@
 
                             <ul>
                                 <li><a target="_blank" href="https://github.com/yajra/laravel-datatables/">yajra/laravel-datatables</a> -
-                                    11.1.3</li>
+                                    11.1.5</li>
                             </ul>
 
                             <ul>
@@ -26,7 +26,7 @@
                             </ul>
 
                             <ul>
-                                <li><a target="_blank" href="https://github.com/opcodesio/log-viewer/">opcodesio/log-viewer</a> - 3.10.1</li>
+                                <li><a target="_blank" href="https://github.com/opcodesio/log-viewer/">opcodesio/log-viewer</a> - 3.11.1</li>
                             </ul>
 
                             <ul>
@@ -72,7 +72,7 @@
 
                             <ul>
                                 <li><a target="_blank" href="https://datatables.net/download/packages">DataTables</a> -
-                                    2.1.0</li>
+                                    2.1.5</li>
                             </ul>
                         </div>
 
@@ -88,11 +88,11 @@
                             </ul>
 
                             <ul>
-                                <li><a target="_blank" href="https://www.chartjs.org/">chart.js</a> - 4.4.3</li>
+                                <li><a target="_blank" href="https://www.chartjs.org/">chart.js</a> - 4.4.4</li>
                             </ul>
 
                             <ul>
-                                <li><a target="_blank" href="https://github.com/iamkun/dayjs/">dayjs</a> - 1.11.12</li>
+                                <li><a target="_blank" href="https://github.com/iamkun/dayjs/">dayjs</a> - 1.11.13</li>
                             </ul>
                         </div>
                     </div>
