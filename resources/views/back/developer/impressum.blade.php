@@ -21,12 +21,12 @@
                             </ul>
 
                             <ul>
-                                <li><a target="_blank" href="https://github.com/spatie/laravel-backup/">spatie/laravel-backup</a> - 9.0.4
+                                <li><a target="_blank" href="https://github.com/spatie/laravel-backup/">spatie/laravel-backup</a> - 9.1.2
                                 </li>
                             </ul>
 
                             <ul>
-                                <li><a target="_blank" href="https://github.com/opcodesio/log-viewer/">opcodesio/log-viewer</a> - 3.11.1</li>
+                                <li><a target="_blank" href="https://github.com/opcodesio/log-viewer/">opcodesio/log-viewer</a> - 3.11.2</li>
                             </ul>
 
                             <ul>
@@ -36,7 +36,7 @@
 
                             <ul>
                                 <li><a target="_blank" href="https://github.com/barryvdh/laravel-debugbar/">barryvdh/laravel-debugbar</a> -
-                                    3.13.5</li>
+                                    3.14.3</li>
                             </ul>
 
                             <ul>
@@ -72,7 +72,7 @@
 
                             <ul>
                                 <li><a target="_blank" href="https://datatables.net/download/packages">DataTables</a> -
-                                    2.1.5</li>
+                                    2.1.8</li>
                             </ul>
                         </div>
 
