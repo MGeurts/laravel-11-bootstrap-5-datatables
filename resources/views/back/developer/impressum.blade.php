@@ -21,7 +21,7 @@
                             </ul>
 
                             <ul>
-                                <li><a target="_blank" href="https://github.com/spatie/laravel-backup/">spatie/laravel-backup</a> - 9.1.2
+                                <li><a target="_blank" href="https://github.com/spatie/laravel-backup/">spatie/laravel-backup</a> - 9.1.3
                                 </li>
                             </ul>
 
@@ -30,13 +30,13 @@
                             </ul>
 
                             <ul>
-                                <li><a target="_blank" href="https://github.com/stevebauman/location/">stevebauman/location</a> - 7.3.2
+                                <li><a target="_blank" href="https://github.com/stevebauman/location/">stevebauman/location</a> - 7.4.0
                                 </li>
                             </ul>
 
                             <ul>
                                 <li><a target="_blank" href="https://github.com/barryvdh/laravel-debugbar/">barryvdh/laravel-debugbar</a> -
-                                    3.14.3</li>
+                                    3.14.6</li>
                             </ul>
 
                             <ul>
@@ -88,7 +88,7 @@
                             </ul>
 
                             <ul>
-                                <li><a target="_blank" href="https://www.chartjs.org/">chart.js</a> - 4.4.4</li>
+                                <li><a target="_blank" href="https://www.chartjs.org/">chart.js</a> - 4.4.6</li>
                             </ul>
 
                             <ul>
