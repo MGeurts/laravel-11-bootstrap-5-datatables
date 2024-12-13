@@ -26,7 +26,7 @@
                             </ul>
 
                             <ul>
-                                <li><a target="_blank" href="https://github.com/opcodesio/log-viewer/">opcodesio/log-viewer</a> - 3.11.2</li>
+                                <li><a target="_blank" href="https://github.com/opcodesio/log-viewer/">opcodesio/log-viewer</a> - 3.12.0</li>
                             </ul>
 
                             <ul>
@@ -36,7 +36,7 @@
 
                             <ul>
                                 <li><a target="_blank" href="https://github.com/barryvdh/laravel-debugbar/">barryvdh/laravel-debugbar</a> -
-                                    3.14.6</li>
+                                    3.14.9</li>
                             </ul>
 
                             <ul>
@@ -88,7 +88,7 @@
                             </ul>
 
                             <ul>
-                                <li><a target="_blank" href="https://www.chartjs.org/">chart.js</a> - 4.4.6</li>
+                                <li><a target="_blank" href="https://www.chartjs.org/">chart.js</a> - 4.4.7</li>
                             </ul>
 
                             <ul>
@@ -118,3 +118,11 @@
 
     <p><small>(*) Version numbers can be bumped up.</small></p>
 @endsection
+
+@push('scripts')
+    <script type="module">
+        /* -------------------------------------------------------------------------------------------- */
+        $(".jQuery_version").html(jQuery.fn.jquery);
+        /* -------------------------------------------------------------------------------------------- */
+    </script>
+@endpush
