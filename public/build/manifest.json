@@ -27,7 +27,7 @@
     "isEntry": true
   },
   "resources/js/datatables.js": {
-    "file": "assets/datatables-B2JA0Tm6.js",
+    "file": "assets/datatables-DnFEjomJ.js",
     "name": "datatables",
     "src": "resources/js/datatables.js",
     "isEntry": true,
@@ -36,7 +36,7 @@
     ]
   },
   "resources/sass/app.scss": {
-    "file": "assets/app-C3rWx0Ex.css",
+    "file": "assets/app-pDFOp5j4.css",
     "src": "resources/sass/app.scss",
     "isEntry": true
   },
