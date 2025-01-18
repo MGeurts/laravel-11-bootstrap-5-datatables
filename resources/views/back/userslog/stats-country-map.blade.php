@@ -22,10 +22,33 @@
                     </div>
                 </div>
 
-                <div class="card-body p-0" id="pop-div">
-                    <?= $lava->render('GeoChart', 'Visitors', 'pop-div') ?>
-                </div>
+                <div class="card-body p-0" id="svgMap"></div>
             </div>
         </div>
     </div>
+
+    <link href="https://cdn.jsdelivr.net/gh/StephanWagner/svgMap@v2.12.0/dist/svgMap.min.css" rel="stylesheet">
+
+    <script src="https://cdn.jsdelivr.net/npm/svg-pan-zoom@3.6.1/dist/svg-pan-zoom.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/StephanWagner/svgMap@v2.12.0/dist/svgMap.min.js"></script>
+
+    <script>
+        const map = new svgMap({
+            countryNames: @json($countries),
+            targetElementID: 'svgMap',
+            flagType: 'emoji',
+            noDataText: @json('No data'),
+            data: {
+                data: {
+                    visitors: {
+                        name: @json('Visitors'),
+                        format: '{0}',
+                        thousandSeparator: ',',
+                    }
+                },
+                applyData: 'visitors',
+                values: @json($data),
+            },
+        });
+    </script>
 @endsection

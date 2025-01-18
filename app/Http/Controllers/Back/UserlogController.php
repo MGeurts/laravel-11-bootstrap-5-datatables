@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers\Back;
 
+use App\Countries;
 use App\Http\Controllers\Controller;
 use App\Models\Userlog;
 use Illuminate\Support\Carbon;
-use Khill\Lavacharts\Lavacharts;
 
 class UserlogController extends Controller
 {
@@ -48,54 +48,21 @@ class UserlogController extends Controller
 
     public function statsCountryMap()
     {
-        $countries = Userlog::select('country_code')
-            ->selectRaw('MIN(country_name) AS country_name')
+        $countries = (new Countries(app()->getLocale()))->getCountryNamesForSvgMap();
+
+        $data = Userlog::select('country_code')
             ->selectRaw('COUNT(*) AS visitors')
-            ->where('user_id', '!=', 2)
-            ->whereNotNull('country_code')
             ->groupBy('country_code')
-            ->get();
+            ->get()
+            ->mapWithKeys(function ($item) {
+                return [
+                    $item->country_code => [
+                        'visitors' => $item->visitors,
+                    ],
+                ];
+            })->toArray();
 
-        $data = $countries->map(function ($country) {
-            return [
-                [
-                    $country->country_code, // v:
-                    $country->country_name, // f:
-                ],
-                $country->visitors,
-            ];
-        })->toArray();
-
-        $lava = new Lavacharts([
-            // This is a fake Google API key, replace it with your own legal Google API key !!
-            'maps_api_key' => '23ay5t987354inr28m9crg893crgt9arc98tr2a896tarc2896ta28',
-            // The key is only needed for markers, not used in this example !!
-        ]);
-
-        $visitors = $lava->DataTable()
-            ->addStringColumn('Country')
-            ->addNumberColumn('Visitors')
-            ->addRows($data);
-
-        $lava->GeoChart('Visitors', $visitors, [
-            'colorAxis' => ['minValue' => 0,  'colors' => ['#BCD2E8', '#1E3F66']],   // ColorAxis Options
-            'datalessRegionColor' => '#d0d0d0',
-            'displayMode' => 'auto',
-            'enableRegionInteractivity' => true,
-            'keepAspectRatio' => true,
-            'region' => 'world',
-            'magnifyingGlass' => ['enable' => true, 'zoomFactor' => 7.5],            // MagnifyingGlass Options
-            'markerOpacity' => 1.0,
-            'resolution' => 'countries',
-            'sizeAxis' => null,
-            'backgroundColor' => '#f0f0f0',
-            'geochartVersion' => 11,
-            'regioncoderVersion' => 1,
-        ]);
-
-        return view('back.userslog.stats-country-map')->with([
-            'lava' => $lava,
-        ]);
+        return view('back.userslog.stats-country-map', compact('countries', 'data'));
     }
 
     public function statsPeriod()
