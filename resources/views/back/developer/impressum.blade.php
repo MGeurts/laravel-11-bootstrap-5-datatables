@@ -16,11 +16,11 @@
                             <p>Laravel :</p>
 
                             <ul>
-                                <li><a target="_blank" href="https://github.com/yajra/laravel-datatables/">yajra/laravel-datatables</a> - 11.1.5</li>
+                                <li><a target="_blank" href="https://github.com/yajra/laravel-datatables/">yajra/laravel-datatables</a> - 11.1.6</li>
                             </ul>
 
                             <ul>
-                                <li><a target="_blank" href="https://github.com/spatie/laravel-backup/">spatie/laravel-backup</a> - 9.2.1</li>
+                                <li><a target="_blank" href="https://github.com/spatie/laravel-backup/">spatie/laravel-backup</a> - 9.2.6</li>
                             </ul>
 
                             <ul>
@@ -36,7 +36,7 @@
                             </ul>
 
                             <ul>
-                                <li><a target="_blank" href="https://github.com/stefangabos/world_countries/">stefangabos/world_countries</a> - 2.9.0</li>
+                                <li><a target="_blank" href="https://github.com/stefangabos/world_countries/">stefangabos/world_countries</a> - 2.9.1</li>
                             </ul>
                         </div>
 
@@ -63,7 +63,7 @@
                             </ul>
 
                             <ul>
-                                <li><a target="_blank" href="https://datatables.net/download/packages">DataTables</a> - 2.2.1</li>
+                                <li><a target="_blank" href="https://datatables.net/download/packages">DataTables</a> - 2.2.2</li>
                             </ul>
                         </div>
 
