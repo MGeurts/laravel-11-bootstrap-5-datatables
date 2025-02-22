@@ -23,13 +23,11 @@
         "jquery": "^3.7.1",
         "jszip": "^3.10.1",
         "laravel-vite-plugin": "^1.2",
+        "pdfmake": "^0.2.18",
         "sass": "1.77.6",
         "select2": "^4.1.0-rc.0",
         "select2-bootstrap-5-theme": "^1.3.0",
         "toastr": "^2.1.4",
         "vite": "^6.1"
-    },
-    "dependencies": {
-        "pdfmake": "^0.2.18"
     }
 }
