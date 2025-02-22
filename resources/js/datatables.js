@@ -117,7 +117,7 @@ $.extend(true, $.fn.dataTable.defaults, {
             extend: 'pdfHtml5',
             className: 'btn-secondary',
             text: '<i class="bi bi-file-earmark-pdf"></i>',
-            titleAttr: 'Exporteer naar PDF',
+            titleAttr: 'Export to PDF',
             exportOptions: {
                 columns: ':visible:not(.no-export)',
                 orthogonal: "myExport",
