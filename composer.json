@@ -8,22 +8,22 @@
         "php": "^8.2",
         "laravel/framework": "^11.42",
         "laravel/tinker": "^2.10",
-        "opcodesio/log-viewer": "^3.4",
+        "opcodesio/log-viewer": "^3.15",
         "spatie/laravel-backup": "^9.2",
         "stefangabos/world_countries": "^2.9",
-        "stevebauman/location": "^7.4",
+        "stevebauman/location": "^7.5",
         "yajra/laravel-datatables-oracle": "^11.1"
     },
     "require-dev": {
-        "barryvdh/laravel-debugbar": "^3.14",
-        "fakerphp/faker": "^1.23",
-        "laravel/pint": "^1.18",
-        "laravel/sail": "^1.36",
-        "laravel/ui": "^4.5",
+        "barryvdh/laravel-debugbar": "^3.15",
+        "fakerphp/faker": "^1.24",
+        "laravel/pint": "^1.21",
+        "laravel/sail": "^1.41",
+        "laravel/ui": "^4.6",
         "mockery/mockery": "^1.6",
-        "nunomaduro/collision": "^8.5",
-        "phpunit/phpunit": "^11.4",
-        "spatie/laravel-ignition": "^2.8"
+        "nunomaduro/collision": "^8.6",
+        "phpunit/phpunit": "^11.5",
+        "spatie/laravel-ignition": "^2.9"
     },
     "autoload": {
         "psr-4": {
