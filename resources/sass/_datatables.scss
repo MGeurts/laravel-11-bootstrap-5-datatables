@@ -1,8 +1,10 @@
 /* -------------------------------------------- */
-#sqltable_wrapper .row.justify-content-between {
-  margin-top: 0px !important;
-  padding: 0rem 0.25rem;
+.dt-container .row:not(.dt-layout-table) {
+    padding: 0rem 0.25rem;
+    margin-top: 0px !important;
 }
+
+/* -------------------------------------------- */
 
 table.dataTable {
   box-sizing: border-box;

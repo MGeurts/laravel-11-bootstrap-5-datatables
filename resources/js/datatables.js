@@ -72,7 +72,7 @@ $.extend(true, $.fn.dataTable.defaults, {
     },
     lengthMenu: [
         [20, 25, 50, 75, 100, -1],
-        [20, 25, 50, 75, 100, "Alles"]
+        [20, 25, 50, 75, 100, "All"]
     ],
     pageLength: 20,
     pagingType: 'full_numbers',
@@ -104,7 +104,7 @@ $.extend(true, $.fn.dataTable.defaults, {
         //     }
         // },
         {
-            extend: 'copyHtml5',
+            extend: 'copy',
             className: 'btn-outline-secondary',
             text: '<i class="bi bi-clipboard"></i>',
             titleAttr: 'Copy to clipboard',
@@ -114,7 +114,7 @@ $.extend(true, $.fn.dataTable.defaults, {
             }
         },
         {
-            extend: 'pdfHtml5',
+            extend: 'pdf',
             className: 'btn-secondary',
             text: '<i class="bi bi-file-earmark-pdf"></i>',
             titleAttr: 'Export to PDF',
@@ -130,7 +130,7 @@ $.extend(true, $.fn.dataTable.defaults, {
             },
         },
         {
-            extend: 'excelHtml5',
+            extend: 'excel',
             className: 'btn-secondary',
             text: '<i class="bi bi-file-earmark-excel"></i>',
             titleAttr: 'Export to spreadsheet',
