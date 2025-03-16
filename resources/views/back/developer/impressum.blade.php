@@ -20,7 +20,7 @@
                             </ul>
 
                             <ul>
-                                <li><a target="_blank" href="https://github.com/spatie/laravel-backup/">spatie/laravel-backup</a> - 9.2.7</li>
+                                <li><a target="_blank" href="https://github.com/spatie/laravel-backup/">spatie/laravel-backup</a> - 9.2.9</li>
                             </ul>
 
                             <ul>
@@ -32,7 +32,7 @@
                             </ul>
 
                             <ul>
-                                <li><a target="_blank" href="https://github.com/barryvdh/laravel-debugbar/">barryvdh/laravel-debugbar</a> - 3.15.0</li>
+                                <li><a target="_blank" href="https://github.com/barryvdh/laravel-debugbar/">barryvdh/laravel-debugbar</a> - 3.15.2</li>
                             </ul>
 
                             <ul>

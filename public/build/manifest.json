@@ -12,7 +12,7 @@
     "src": "node_modules/bootstrap-icons/font/fonts/bootstrap-icons.woff2"
   },
   "resources/js/app.js": {
-    "file": "assets/app-B7oKmIhq.js",
+    "file": "assets/app-mPCLtsdd.js",
     "name": "app",
     "src": "resources/js/app.js",
     "isEntry": true,
@@ -27,7 +27,7 @@
     "isEntry": true
   },
   "resources/js/datatables.js": {
-    "file": "assets/datatables-AAEprKEA.js",
+    "file": "assets/datatables-DmT-bOhk.js",
     "name": "datatables",
     "src": "resources/js/datatables.js",
     "isEntry": true,
