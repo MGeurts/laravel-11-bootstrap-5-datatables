@@ -24,7 +24,7 @@
                             </ul>
 
                             <ul>
-                                <li><a target="_blank" href="https://github.com/opcodesio/log-viewer/">opcodesio/log-viewer</a> - 3.15.0</li>
+                                <li><a target="_blank" href="https://github.com/opcodesio/log-viewer/">opcodesio/log-viewer</a> - 3.15.5</li>
                             </ul>
 
                             <ul>
@@ -32,7 +32,7 @@
                             </ul>
 
                             <ul>
-                                <li><a target="_blank" href="https://github.com/barryvdh/laravel-debugbar/">barryvdh/laravel-debugbar</a> - 3.15.2</li>
+                                <li><a target="_blank" href="https://github.com/barryvdh/laravel-debugbar/">barryvdh/laravel-debugbar</a> - 3.15.4</li>
                             </ul>
 
                             <ul>
@@ -48,7 +48,7 @@
                             </ul>
 
                             <ul>
-                                <li><a target="_blank" href="https://getbootstrap.com/">Bootstrap</a> - 5.3.3</li>
+                                <li><a target="_blank" href="https://getbootstrap.com/">Bootstrap</a> - 5.3.5</li>
                                 <li><a target="_blank" href="https://icons.getbootstrap.com//">Bootstrap Icons</a> - 1.11.3</li>
                                 <li><a target="_blank" href="https://github.com/coliff/bootstrap-print-css/">Bootstrap Print CSS</a> - 1.0.1</li>
                             </ul>
@@ -79,7 +79,7 @@
                             </ul>
 
                             <ul>
-                                <li><a target="_blank" href="https://www.chartjs.org/">chart.js</a> - 4.4.8</li>
+                                <li><a target="_blank" href="https://www.chartjs.org/">chart.js</a> - 4.4.9</li>
                             </ul>
 
                             <ul>
