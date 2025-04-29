@@ -16,11 +16,11 @@
                             <p>Laravel :</p>
 
                             <ul>
-                                <li><a target="_blank" href="https://github.com/yajra/laravel-datatables/">yajra/laravel-datatables</a> - 11.1.6</li>
+                                <li><a target="_blank" href="https://github.com/yajra/laravel-datatables/">yajra/laravel-datatables</a> - 11.1.6 (Fixed)</li>
                             </ul>
 
                             <ul>
-                                <li><a target="_blank" href="https://github.com/spatie/laravel-backup/">spatie/laravel-backup</a> - 9.2.9</li>
+                                <li><a target="_blank" href="https://github.com/spatie/laravel-backup/">spatie/laravel-backup</a> - 9.3.2</li>
                             </ul>
 
                             <ul>
@@ -71,7 +71,7 @@
                             <p>JavaScript :</p>
 
                             <ul>
-                                <li><a target="_blank" href="http://bootboxjs.com/">Bootbox</a> - 6.0.0</li>
+                                <li><a target="_blank" href="http://bootboxjs.com/">Bootbox</a> - 6.0.3</li>
                             </ul>
 
                             <ul>
