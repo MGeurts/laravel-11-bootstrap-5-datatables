@@ -20,11 +20,11 @@
                             </ul>
 
                             <ul>
-                                <li><a target="_blank" href="https://github.com/spatie/laravel-backup/">spatie/laravel-backup</a> - 9.3.2</li>
+                                <li><a target="_blank" href="https://github.com/spatie/laravel-backup/">spatie/laravel-backup</a> - 9.3.3</li>
                             </ul>
 
                             <ul>
-                                <li><a target="_blank" href="https://github.com/opcodesio/log-viewer/">opcodesio/log-viewer</a> - 3.15.5</li>
+                                <li><a target="_blank" href="https://github.com/opcodesio/log-viewer/">opcodesio/log-viewer</a> - 3.17.1</li>
                             </ul>
 
                             <ul>
@@ -36,7 +36,7 @@
                             </ul>
 
                             <ul>
-                                <li><a target="_blank" href="https://github.com/stefangabos/world_countries/">stefangabos/world_countries</a> - 2.9.1</li>
+                                <li><a target="_blank" href="https://github.com/stefangabos/world_countries/">stefangabos/world_countries</a> - 3.0.0</li>
                             </ul>
                         </div>
 
@@ -48,8 +48,8 @@
                             </ul>
 
                             <ul>
-                                <li><a target="_blank" href="https://getbootstrap.com/">Bootstrap</a> - 5.3.5</li>
-                                <li><a target="_blank" href="https://icons.getbootstrap.com//">Bootstrap Icons</a> - 1.11.3</li>
+                                <li><a target="_blank" href="https://getbootstrap.com/">Bootstrap</a> - 5.3.6</li>
+                                <li><a target="_blank" href="https://icons.getbootstrap.com//">Bootstrap Icons</a> - 1.13.1</li>
                                 <li><a target="_blank" href="https://github.com/coliff/bootstrap-print-css/">Bootstrap Print CSS</a> - 1.0.1</li>
                             </ul>
 
@@ -63,7 +63,7 @@
                             </ul>
 
                             <ul>
-                                <li><a target="_blank" href="https://datatables.net/download/packages">DataTables</a> - 2.2.2</li>
+                                <li><a target="_blank" href="https://datatables.net/download/packages">DataTables</a> - 2.3.1</li>
                             </ul>
                         </div>
 
@@ -71,7 +71,7 @@
                             <p>JavaScript :</p>
 
                             <ul>
-                                <li><a target="_blank" href="http://bootboxjs.com/">Bootbox</a> - 6.0.3</li>
+                                <li><a target="_blank" href="http://bootboxjs.com/">Bootbox</a> - 6.0.4</li>
                             </ul>
 
                             <ul>
