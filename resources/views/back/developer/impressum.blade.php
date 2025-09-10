@@ -20,15 +20,15 @@
                             </ul>
 
                             <ul>
-                                <li><a target="_blank" href="https://github.com/spatie/laravel-backup/">spatie/laravel-backup</a> - 9.3.3</li>
+                                <li><a target="_blank" href="https://github.com/spatie/laravel-backup/">spatie/laravel-backup</a> - 9.3.4</li>
                             </ul>
 
                             <ul>
-                                <li><a target="_blank" href="https://github.com/opcodesio/log-viewer/">opcodesio/log-viewer</a> - 3.18.0</li>
+                                <li><a target="_blank" href="https://github.com/opcodesio/log-viewer/">opcodesio/log-viewer</a> - 3.19.0</li>
                             </ul>
 
                             <ul>
-                                <li><a target="_blank" href="https://github.com/stevebauman/location/">stevebauman/location</a> - 7.5.0</li>
+                                <li><a target="_blank" href="https://github.com/stevebauman/location/">stevebauman/location</a> - 7.5.1</li>
                             </ul>
 
                             <ul>
@@ -48,7 +48,7 @@
                             </ul>
 
                             <ul>
-                                <li><a target="_blank" href="https://getbootstrap.com/">Bootstrap</a> - 5.3.7</li>
+                                <li><a target="_blank" href="https://getbootstrap.com/">Bootstrap</a> - 5.3.8</li>
                                 <li><a target="_blank" href="https://icons.getbootstrap.com//">Bootstrap Icons</a> - 1.13.1</li>
                                 <li><a target="_blank" href="https://github.com/coliff/bootstrap-print-css/">Bootstrap Print CSS</a> - 1.0.1</li>
                             </ul>
@@ -63,7 +63,7 @@
                             </ul>
 
                             <ul>
-                                <li><a target="_blank" href="https://datatables.net/download/packages">DataTables</a> - 2.3.2</li>
+                                <li><a target="_blank" href="https://datatables.net/download/packages">DataTables</a> - 2.3.4</li>
                             </ul>
                         </div>
 
@@ -83,11 +83,11 @@
                             </ul>
 
                             <ul>
-                                <li><a target="_blank" href="https://github.com/iamkun/dayjs/">dayjs</a> - 1.11.13</li>
+                                <li><a target="_blank" href="https://github.com/iamkun/dayjs/">dayjs</a> - 1.11.18</li>
                             </ul>
 
                             <ul>
-                                <li><a target="_blank" href="https://github.com/StephanWagner/svgMap/" target="_blank">svgMap</a> - 2.12.2</li>
+                                <li><a target="_blank" href="https://github.com/StephanWagner/svgMap/" target="_blank">svgMap</a> - 2.14.0</li>
                             </ul>
                         </div>
                     </div>
